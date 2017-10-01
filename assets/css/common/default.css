@@ -1,0 +1,48 @@
+* {
+  font: 100% Helvetica, sans-serif;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  padding: 50px; }
+
+input[type="text"], input[type="textarea"] {
+  border: 0;
+  border-bottom: 2px solid #000;
+  font-size: 12pt;
+  padding-bottom: 2px; }
+  input[type="text"]:focus, input[type="textarea"]:focus {
+    border-bottom: 2px solid blue; }
+
+button, .btn-default, .btn-negative, .btn-positive {
+  display: block;
+  padding: 10px 15px;
+  border: 0;
+  box-shadow: 0 0 5px #777;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 12pt; }
+
+.btn-default {
+  background-color: #2196F3;
+  color: white; }
+  .btn-default:hover {
+    background-color: #1E88E5; }
+
+.btn-negative {
+  background-color: #F44336;
+  color: white; }
+  .btn-negative:hover {
+    background-color: #E53935; }
+
+.btn-positive {
+  background-color: #43A047;
+  color: white; }
+  .btn-positive:hover {
+    background-color: #388E3C; }
+
+/*# sourceMappingURL=default.css.map */
