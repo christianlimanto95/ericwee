@@ -1,4 +1,18 @@
+var windowLoad = false, timeoutDone = false;
 var menuCanClick = true;
+
+var timeout = setTimeout(function() {
+    $(".loading-container").velocity({
+        opacity: 0
+    }, 1000, function() {
+        timeoutDone = true;
+        if (windowLoad) {
+            $(".loading-container").addClass("hidden");
+            $("body").trigger("allLoaded");
+        }
+    });
+}, 1000);
+
 $(function() {
     var menuInside = $(".menu-inside");
     menuInside.find("[data-anim='fade-anim'], .menu-inside-section-line").on("webkitAnimationEnd oanimationend msAnimationEnd animationend", function(e) {
@@ -29,4 +43,12 @@ $(function() {
             }
         }
     });
+});
+
+$(window).on("load", function() {
+    windowLoad = true;
+    if (timeoutDone) {
+        $(".loading-container").addClass("hidden");
+        $("body").trigger("allLoaded");
+    }
 });

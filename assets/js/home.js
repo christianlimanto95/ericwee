@@ -1,9 +1,5 @@
 $(function() {
-    timeout = setTimeout(function() {
-        $(".loading-container").velocity({
-            opacity: 0
-        }, 1000, function() {
-           $(".loading-container").addClass("hidden");
-        });
-    }, 1000);
+    $("body").on("allLoaded", function() {
+        $(".section-1").addClass("show");
+    });
 });

@@ -7,6 +7,11 @@
 			font-family: copperplate-bold;
 			src: url(<?php echo base_url("assets/fonts/Copperplate_Gothic_Bold_Regular.ttf"); ?>);
 		}
+
+		@font-face {
+			font-family: copperplate-light;
+			src: url(<?php echo base_url("assets/fonts/Copperplate_Gothic_Light_Regular.ttf"); ?>);
+		}
 	</style>
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/common/default.css"); ?>" />
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/common/header.css"); ?>" />
