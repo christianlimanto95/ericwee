@@ -21,6 +21,9 @@
 <body>
 <div class="header">
 </div>
+<div class="menu-inside">
+	
+</div>
 <div class="menu" id="menu">
 	<div class="menu-text">menu</div>
 	<div class="menu-icon">
