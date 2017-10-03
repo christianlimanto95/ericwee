@@ -34,19 +34,14 @@
 body.menu-open .menu-text-menu, body.menu-open .menu-text-close, body.menu-close .menu-text-menu, body.menu-close .menu-text-close {
     -webkit-animation-duration: 0.3s;
     -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     -moz-animation-duration: 0.3s;
     -moz-animation-fill-mode: forwards;
-    -moz-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     -ms-animation-duration: 0.3s;
     -ms-animation-fill-mode: forwards;
-    -ms-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     -o-animation-duration: 0.3s;
     -o-animation-fill-mode: forwards;
-    -o-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.5, .31, .84, .05);
 }
 
 body.menu-open .menu-text-menu, body.menu-close .menu-text-close {
@@ -100,19 +95,14 @@ body.menu-open .menu-text-close, body.menu-close .menu-text-menu {
 body.menu-open .menu-icon-line-1, body.menu-close .menu-icon-line-1, body.menu-open .menu-icon-line-2, body.menu-close .menu-icon-line-2, body.menu-open .menu-icon-line-3, body.menu-close .menu-icon-line-3 {
     -webkit-animation-duration: 0.3s;
     -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     -moz-animation-duration: 0.3s;
     -moz-animation-fill-mode: forwards;
-    -moz-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     -ms-animation-duration: 0.3s;
     -ms-animation-fill-mode: forwards;
-    -ms-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     -o-animation-duration: 0.3s;
     -o-animation-fill-mode: forwards;
-    -o-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.5, .31, .84, .05);
 }
 
 body.menu-open .menu-icon-line-1 {
