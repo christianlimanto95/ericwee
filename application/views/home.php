@@ -7,6 +7,6 @@
         </div>
     </div>
     <div class="section section-2">
-
+        <div class="section-2-title">OUR SELECTED WORKS</div>
     </div>
 </div>

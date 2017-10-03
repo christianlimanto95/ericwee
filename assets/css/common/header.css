@@ -10,6 +10,17 @@
     float: left;
 }
 
+.menu-text-menu {
+    position: relative;
+}
+
+.menu-text-close {
+    position: absolute;
+    top: 0;
+    color: white;
+    opacity: 0;
+}
+
 .menu-icon {
     float: left;
     overflow: hidden;
@@ -18,6 +29,72 @@
 .menu-icon-line {
     width: 100%;
     background-color: #252525;
+}
+
+body.menu-open .menu-text-menu, body.menu-open .menu-text-close, body.menu-close .menu-text-menu, body.menu-close .menu-text-close {
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
+    -moz-animation-duration: 0.3s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
+    -ms-animation-duration: 0.3s;
+    -ms-animation-fill-mode: forwards;
+    -ms-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
+    -o-animation-duration: 0.3s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: cubic-bezier(.5, .31, .84, .05);
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.5, .31, .84, .05);
+}
+
+body.menu-open .menu-text-menu, body.menu-close .menu-text-close {
+    -webkit-animation-name: menu-text-menu-anim;
+    -moz-animation-name: menu-text-menu-anim;
+    -ms-animation-name: menu-text-menu-anim;
+    -o-animation-name: menu-text-menu-anim;
+    animation-name: menu-text-menu-anim;    
+}
+
+@-webkit-keyframes menu-text-menu-anim {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes menu-text-menu-anim {
+    100% {
+        opacity: 0;
+    }
+}
+
+body.menu-opened .menu-text-menu {
+    opacity: 0;
+}
+
+body.menu-opened .menu-text-close {
+    opacity: 1;
+}
+
+body.menu-open .menu-text-close, body.menu-close .menu-text-menu {
+    -webkit-animation-name: menu-text-menu-anim-reversed;
+    -moz-animation-name: menu-text-menu-anim-reversed;
+    -ms-animation-name: menu-text-menu-anim-reversed;
+    -o-animation-name: menu-text-menu-anim-reversed;
+    animation-name: menu-text-menu-anim-reversed;
+}
+
+@-webkit-keyframes menu-text-menu-anim-reversed {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes menu-text-menu-anim-reversed {
+    100% {
+        opacity: 1;
+    }
 }
 
 body.menu-open .menu-icon-line-1, body.menu-close .menu-icon-line-1, body.menu-open .menu-icon-line-2, body.menu-close .menu-icon-line-2, body.menu-open .menu-icon-line-3, body.menu-close .menu-icon-line-3 {
@@ -62,8 +139,26 @@ body.menu-open .menu-icon-line-3 {
     animation-name: menu-icon-line-3-anim;
 }
 
+body.menu-opened .menu-icon-line-1 {
+    -webkit-transform: rotate(42deg) translate(0px, 8px);
+    -moz-transform: rotate(42deg) translate(0px, 8px);
+    -ms-transform: rotate(42deg) translate(0px, 8px);
+    -o-transform: rotate(42deg) translate(0px, 8px);
+    transform: rotate(42deg) translate(0px, 8px);
+    background-color: white;
+}
+
 body.menu-opened .menu-icon-line-2 {
     opacity: 0;
+}
+
+body.menu-opened .menu-icon-line-3 {
+    -webkit-transform: rotate(-42deg) translate(0px, -8px);
+    -moz-transform: rotate(-42deg) translate(0px, -8px);
+    -ms-transform: rotate(-42deg) translate(0px, -8px);
+    -o-transform: rotate(-42deg) translate(0px, -8px);
+    transform: rotate(-42deg) translate(0px, -8px);
+    background-color: white;
 }
 
 body.menu-close .menu-icon-line-1, body.menu-close .menu-icon-line-3 {
@@ -84,7 +179,8 @@ body.menu-close .menu-icon-line-2 {
 
 @-webkit-keyframes menu-icon-line-1-anim {
     100% {
-        -webkit-transform: rotate(40deg) translate(0px, 10px); /* Chrome, Safari, Opera */
+        -webkit-transform: rotate(42deg) translate(0px, 8px); /* Chrome, Safari, Opera */
+        background-color: white;
     }
 }
 
@@ -96,16 +192,18 @@ body.menu-close .menu-icon-line-2 {
 
 @-webkit-keyframes menu-icon-line-3-anim {
     100% {
-        -webkit-transform: rotate(-40deg) translate(0, -10px); /* Chrome, Safari, Opera */
+        -webkit-transform: rotate(-42deg) translate(0, -8px); /* Chrome, Safari, Opera */
+        background-color: white;
     }
 }
 
 @keyframes menu-icon-line-1-anim {
     100% {
-        -moz-transform: rotate(40deg) translate(0px, 10px);
-        -ms-transform: rotate(40deg) translate(0px, 10px);
-        -o-transform: rotate(40deg) translate(0px, 10px);
+        -moz-transform: rotate(42deg) translate(0px, 8px);
+        -ms-transform: rotate(42deg) translate(0px, 8px);
+        -o-transform: rotate(42deg) translate(0px, 8px);
         transform: rotate(42deg) translate(0px, 8px);
+        background-color: white;
     }
 }
 
@@ -117,16 +215,18 @@ body.menu-close .menu-icon-line-2 {
 
 @keyframes menu-icon-line-3-anim {
     100% {
-        -moz-transform: rotate(-40deg) translate(0, -10px);
-        -ms-transform: rotate(-40deg) translate(0, -10px);
-        -o-transform: rotate(-40deg) translate(0, -10px);
+        -moz-transform: rotate(-42deg) translate(0, -8px);
+        -ms-transform: rotate(-42deg) translate(0, -8px);
+        -o-transform: rotate(-42deg) translate(0, -8px);
         transform: rotate(-42deg) translate(0, -8px);
+        background-color: white;
     }
 }
 
 @-webkit-keyframes menu-icon-line-1-anim-reversed {
     100% {
         -webkit-transform: rotate(0deg) translate(0, 0);
+        background-color: #252525;
     }
 }
 
@@ -142,6 +242,7 @@ body.menu-close .menu-icon-line-2 {
         -ms-transform: rotate(0deg) translate(0, 0);
         -o-transform: rotate(0deg) translate(0, 0);
         transform: rotate(0deg) translate(0, 0);
+        background-color: #252525;
     }
 }
 
@@ -158,8 +259,43 @@ body.menu-close .menu-icon-line-2 {
     background-color: #171818;
     z-index: 1001;
     overflow: hidden;
-    opacity: 0;
     display: none;
+}
+
+.menu-inside-menu-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.menu-inside-menu {
+    color: white;
+    display: inline-block;
+    margin-right: 200px;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.menu-inside-menu-3 {
+    margin-right: 0;
+}
+
+.menu-inside-menu-line {
+    height: 2px;
+    background-color: white;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.menu-inside-menu:hover .menu-inside-menu-line {
+    width: 100%;
 }
 
 body.menu-open .menu-inside, body.menu-close .menu-inside {
@@ -177,6 +313,8 @@ body.menu-open .menu-inside, body.menu-close .menu-inside {
 
 body.menu-open .menu-inside {
     display: block;
+    opacity: 0;
+
     -webkit-animation-name: menu-inside-show-anim;
     -moz-animation-name: menu-inside-show-anim;
     -ms-animation-name: menu-inside-show-anim;
@@ -191,15 +329,10 @@ body.menu-opened .menu-inside {
 
 body.menu-close .menu-inside {
     -webkit-animation-name: menu-inside-close-anim;
-    -webkit-animation-delay: 0.6s;
     -moz-animation-name: menu-inside-close-anim;
-    -moz-animation-delay: 0.6s;
     -ms-animation-name: menu-inside-close-anim;
-    -ms-animation-delay: 0.6s;
     -o-animation-name: menu-inside-close-anim;
-    -o-animation-delay: 0.6s;
     animation-name: menu-inside-close-anim;
-    animation-delay: 0.6s;
 }
 
 @-webkit-keyframes menu-inside-show-anim {
@@ -214,7 +347,7 @@ body.menu-close .menu-inside {
 
 @keyframes menu-inside-show-anim {
     0% {
-        opacity: 1;
+        opacity: 0;
     }
 
     100% {
@@ -316,9 +449,5 @@ body.menu-close .menu-inside {
     .menu-icon-line {
         height: 2px;
         margin-bottom: 5px;
-    }
-
-    .footer {
-        height: 200px;
     }
 }

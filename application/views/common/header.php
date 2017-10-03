@@ -22,10 +22,26 @@
 <div class="header">
 </div>
 <div class="menu-inside">
-	
+	<div class="menu-inside-menu-container">
+		<div class="menu-inside-menu menu-inside-menu-1">
+			<div class="menu-inside-menu-text">SERVICES</div>
+			<div class="menu-inside-menu-line"></div>
+		</div>
+		<div class="menu-inside-menu menu-inside-menu-2">
+			<div class="menu-inside-menu-text">WORKS</div>
+			<div class="menu-inside-menu-line"></div>
+		</div>
+		<div class="menu-inside-menu menu-inside-menu-3">
+			<div class="menu-inside-menu-text">CONTACT</div>
+			<div class="menu-inside-menu-line"></div>
+		</div>
+	</div>
 </div>
 <div class="menu" id="menu">
-	<div class="menu-text">menu</div>
+	<div class="menu-text">
+		<div class="menu-text-close">close</div>
+		<div class="menu-text-menu">menu</div>
+	</div>
 	<div class="menu-icon">
 		<div class="menu-icon-line menu-icon-line-1"></div>
 		<div class="menu-icon-line menu-icon-line-2"></div>
