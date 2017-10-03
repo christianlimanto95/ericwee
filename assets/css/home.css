@@ -85,8 +85,22 @@
 }
 
 .section-2-title {
+    font-size: 12pt;
     text-align: center;
     margin-top: 100px;
+}
+
+.section-2-see-all-our-works {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 10pt;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section-2-see-all-our-works:hover > .arrow {
+    transform: translateX(5px);
 }
 
 .selected-works-container {
@@ -109,22 +123,42 @@
 }
 
 .selected-work-1 {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
 }
 
 .selected-work-2 {
+    -webkit-transform: translateX(600px);
+    -moz-transform: translateX(600px);
+    -ms-transform: translateX(600px);
+    -o-transform: translateX(600px);
     transform: translateX(600px);
 }
 
 .selected-work-3 {
+    -webkit-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+    -moz-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+    -ms-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+    -o-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
     transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
 }
 
 .selected-work-4 {
+    -webkit-transform: translateX(calc(600px + 100vw));
+    -moz-transform: translateX(calc(600px + 100vw));
+    -ms-transform: translateX(calc(600px + 100vw));
+    -o-transform: translateX(calc(600px + 100vw));
     transform: translateX(calc(600px + 100vw));
 }
 
 .selected-work-5 {
+    -webkit-transform: translateX(calc(1600px + 100vw));
+    -moz-transform: translateX(calc(1600px + 100vw));
+    -ms-transform: translateX(calc(1600px + 100vw));
+    -o-transform: translateX(calc(1600px + 100vw));
     transform: translateX(calc(1600px + 100vw));
 }
 
@@ -145,4 +179,21 @@
     top: 85px;
     left: calc((100vw / 2 + (1.3 * 400px / 2) + (100vw - 200px)) / 2 - 25px);
     transform: rotate(180deg);
+}
+
+.selected-works-left, .selected-works-right {
+    position: absolute;
+    top: 0;
+    width: calc((100vw / 2 - (1.3 * 400px / 2) + 200px) / 2 + 25px);
+    height: 225px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.selected-works-left {
+    left: 0;
+}
+
+.selected-works-right {
+    right: 0;
 }
