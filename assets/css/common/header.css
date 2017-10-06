@@ -1,3 +1,15 @@
+.logo {
+    width: 30px;
+    height: 15px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    cursor: pointer;
+    z-index: 1005;
+    top: 15px;
+    left: 15px;
+}
+
 .menu {
     position: fixed;
     cursor: pointer;

@@ -19,7 +19,22 @@
 	<?php echo $additional_css; ?>
 </head>
 <body>
+<div class="loading-container">
+	<div class="loading-text">welcome to ericwee</div>
+</div>
 <div class="header">
+</div>
+<div class="logo" style="background-image: url('assets/icons/logo.png');"></div>
+<div class="menu" id="menu">
+	<div class="menu-text">
+		<div class="menu-text-close">close</div>
+		<div class="menu-text-menu">menu</div>
+	</div>
+	<div class="menu-icon">
+		<div class="menu-icon-line menu-icon-line-1"></div>
+		<div class="menu-icon-line menu-icon-line-2"></div>
+		<div class="menu-icon-line menu-icon-line-3"></div>
+	</div>
 </div>
 <div class="menu-inside">
 	<div class="menu-inside-menu-container">
@@ -36,19 +51,5 @@
 			<div class="menu-inside-menu-line"></div>
 		</div>
 	</div>
-</div>
-<div class="menu" id="menu">
-	<div class="menu-text">
-		<div class="menu-text-close">close</div>
-		<div class="menu-text-menu">menu</div>
-	</div>
-	<div class="menu-icon">
-		<div class="menu-icon-line menu-icon-line-1"></div>
-		<div class="menu-icon-line menu-icon-line-2"></div>
-		<div class="menu-icon-line menu-icon-line-3"></div>
-	</div>
-</div>
-<div class="loading-container">
-	<div class="loading-text">welcome to ericwee</div>
 </div>
 <div class="container">

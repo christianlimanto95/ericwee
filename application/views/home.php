@@ -22,6 +22,14 @@
         </div>
     </div>
     <div class="section section-3">
-
+        <div class="section-3-center">
+            <div class="section-3-contact-me">CONTACT ME</div>
+            <div class="social-media">
+                <div class="social-media-item">087852112522</div>
+                <div class="social-media-item">instagram</div>
+                <div class="social-media-item">facebook</div>
+                <div class="social-media-item">behance</div>
+            </div>
+        </div>
     </div>
 </div>
