@@ -21,4 +21,7 @@
             <div class="selected-works-arrow-right" style="background-image: url('assets/icons/ic_keyboard_arrow_left_black_48px.svg');"></div>
         </div>
     </div>
+    <div class="section section-3">
+
+    </div>
 </div>

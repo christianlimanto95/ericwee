@@ -219,3 +219,17 @@
 .selected-works-right {
     right: 0;
 }
+
+.section-3 {
+    position: relative;
+    height: 270vh;
+    margin-top: -200vh;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #252525;
+}
+
+.section-3.show {
+    visibility: visible;
+}
