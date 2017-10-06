@@ -6,12 +6,13 @@
 }
 
 .menu-text {
-    color: #252525;
     float: left;
+    letter-spacing: 1px;
 }
 
 .menu-text-menu {
     position: relative;
+    color: #444;
 }
 
 .menu-text-close {
@@ -269,8 +270,15 @@ body.menu-close .menu-icon-line-2 {
     color: white;
     display: inline-block;
     margin-right: 200px;
-    font-size: 14pt;
+    font-size: 12pt;
     cursor: pointer;
+    letter-spacing: 1px;
+    
+    -webkit-transform: scaleY(0.9);
+    -moz-transform: scaleY(0.9);
+    -ms-transform: scaleY(0.9);
+    -o-transform: scaleY(0.9);
+    transform: scaleY(0.9);
 }
 
 .menu-inside-menu-3 {

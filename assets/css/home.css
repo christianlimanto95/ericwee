@@ -3,6 +3,7 @@
     height: 100vh;
     background-color: #F1F1F1;
     overflow: hidden;
+    color: #444;
 }
 
 .section-1-center {
@@ -36,8 +37,16 @@
 }
 
 .section-1-text {
-    font-size: 12pt;
+    font-size: 10pt;
     opacity: 0;
+    letter-spacing: 1px;
+    margin-top: 20px;
+
+    -webkit-transform: scaleY(0.9);
+    -moz-transform: scaleY(0.9);
+    -ms-transform: scaleY(0.9);
+    -o-transform: scaleY(0.9);
+    transform: scaleY(0.9);
 }
 
 .section.show .section-1-text {
@@ -54,6 +63,9 @@
     cursor: pointer;
     display: inline-block;
     opacity: 0;
+    font-family: copperplate-light;
+    letter-spacing: 1px;
+    color: #000;
 }
 
 .section.show .section-1-about-us {
@@ -88,6 +100,13 @@
     font-size: 12pt;
     text-align: center;
     margin-top: 100px;
+    letter-spacing: 1px;
+
+    -webkit-transform: scaleY(0.9);
+    -moz-transform: scaleY(0.9);
+    -ms-transform: scaleY(0.9);
+    -o-transform: scaleY(0.9);
+    transform: scaleY(0.9);
 }
 
 .section-2-see-all-our-works {
@@ -97,6 +116,9 @@
     margin-top: 20px;
     text-align: center;
     cursor: pointer;
+    letter-spacing: 1px;
+    font-family: copperplate-light;
+    color: #000;
 }
 
 .section-2-see-all-our-works:hover > .arrow {
