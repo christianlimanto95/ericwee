@@ -45,7 +45,9 @@ function checkSection2ScrollUp() {
             });
             $(".menu-icon-line").velocity({
                 backgroundColor: "#000000"
-            }, 200);
+            }, 200, function() {
+                $(this).removeAttr("style");
+            });
 
             container.off("scroll", checkSection2ScrollUp);
             container.on("scroll", checkSection2ScrollDown);

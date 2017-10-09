@@ -63,8 +63,11 @@
     cursor: pointer;
     display: inline-block;
     opacity: 0;
+    color: #000;    
+}
+
+.section-1-about-us span {
     font-family: copperplate-light;
-    color: #000;
 }
 
 .section.show .section-1-about-us {
@@ -108,8 +111,11 @@
     margin-top: 20px;
     text-align: center;
     cursor: pointer;
-    font-family: copperplate-light;
     color: #000;
+}
+
+.section-2-see-all-our-works span {
+    font-family: copperplate-light;
 }
 
 .section-2-see-all-our-works:hover > .arrow {
