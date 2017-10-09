@@ -20,15 +20,22 @@
 }
 
 .section-1-logo {
-    width: 200px;
-    height: 58px;
+    width: 70px;
+    height: 37px;
     background-size: 100%;
     background-repeat: no-repeat;
     margin: 0 auto;
     opacity: 0;
 }
 
-.section.show .section-1-logo {
+.section-1-ericwee {
+    font-size: 10pt;
+    margin-top: 5px;
+    text-align: center;
+    opacity: 0;
+}
+
+.section.show .section-1-logo, .section.show .section-1-ericwee {
     -webkit-animation-delay: 0.3s;
     -moz-animation-delay: 0.3s;
     -ms-animation-delay: 0.3s;
@@ -39,14 +46,7 @@
 .section-1-text {
     font-size: 10pt;
     opacity: 0;
-    letter-spacing: 1px;
     margin-top: 20px;
-
-    -webkit-transform: scaleY(0.9);
-    -moz-transform: scaleY(0.9);
-    -ms-transform: scaleY(0.9);
-    -o-transform: scaleY(0.9);
-    transform: scaleY(0.9);
 }
 
 .section.show .section-1-text {
@@ -64,7 +64,6 @@
     display: inline-block;
     opacity: 0;
     font-family: copperplate-light;
-    letter-spacing: 1px;
     color: #000;
 }
 
@@ -100,13 +99,6 @@
     font-size: 12pt;
     text-align: center;
     margin-top: 100px;
-    letter-spacing: 1px;
-
-    -webkit-transform: scaleY(0.9);
-    -moz-transform: scaleY(0.9);
-    -ms-transform: scaleY(0.9);
-    -o-transform: scaleY(0.9);
-    transform: scaleY(0.9);
 }
 
 .section-2-see-all-our-works {
@@ -116,7 +108,6 @@
     margin-top: 20px;
     text-align: center;
     cursor: pointer;
-    letter-spacing: 1px;
     font-family: copperplate-light;
     color: #000;
 }
@@ -248,13 +239,7 @@
 }
 
 .section-3-contact-me, .social-media-item {
-    letter-spacing: 1px;
 
-    -webkit-transform: scaleY(0.9);
-    -moz-transform: scaleY(0.9);
-    -ms-transform: scaleY(0.9);
-    -o-transform: scaleY(0.9);
-    transform: scaleY(0.9);
 }
 
 .social-media {

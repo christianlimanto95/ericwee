@@ -19,11 +19,14 @@
 </head>
 <body>
 <div class="loading-container">
-	<div class="loading-text">welcome to ericwee</div>
+	<div class="loading-text" data-content-type="text">welcome to ericwee</div>
 </div>
 <div class="header">
 </div>
-<div class="logo" style="background-image: url('assets/icons/logo.png');"></div>
+<div class="logo">
+	<div class="logo-image" style="background-image: url('assets/icons/logo.png');"></div>
+	<div class="logo-text" data-content-type="text">ERICWEE</div>
+</div>
 <div class="menu" id="menu">
 	<div class="menu-text">
 		<div class="menu-text-close">close</div>
@@ -38,15 +41,15 @@
 <div class="menu-inside">
 	<div class="menu-inside-menu-container">
 		<div class="menu-inside-menu menu-inside-menu-1">
-			<div class="menu-inside-menu-text">SERVICES</div>
+			<div class="menu-inside-menu-text" data-content-type="text">SERVICES</div>
 			<div class="menu-inside-menu-line"></div>
 		</div>
 		<div class="menu-inside-menu menu-inside-menu-2">
-			<div class="menu-inside-menu-text">WORKS</div>
+			<div class="menu-inside-menu-text" data-content-type="text">WORKS</div>
 			<div class="menu-inside-menu-line"></div>
 		</div>
 		<div class="menu-inside-menu menu-inside-menu-3">
-			<div class="menu-inside-menu-text">CONTACT</div>
+			<div class="menu-inside-menu-text" data-content-type="text">CONTACT</div>
 			<div class="menu-inside-menu-line"></div>
 		</div>
 	</div>

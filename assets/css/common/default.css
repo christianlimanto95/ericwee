@@ -78,16 +78,35 @@ body {
   animation-fill-mode: forwards;
 }
 
+[data-content-type="text"] {
+  letter-spacing: 1px;
+  -webkit-transform: scaleY(0.9);
+  -moz-transform: scaleY(0.9);
+  -ms-transform: scaleY(0.9);
+  -o-transform: scaleY(0.9);
+  transform: scaleY(0.9);
+}
+
 .logo {
-  width: 30px;
-  height: 15px;
-  background-size: 100%;
-  background-repeat: no-repeat;
   position: fixed;
   cursor: pointer;
   z-index: 1005;
   top: 15px;
   left: 15px;
+}
+
+.logo-image {
+  width: 30px;
+  height: 15px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-bottom: -4px;
+}
+
+.logo-text {
+  display: inline-block;
+  font-size: 8pt;
 }
 
 .menu {
@@ -364,13 +383,6 @@ body.menu-close .menu-icon-line-2 {
   margin-right: 200px;
   font-size: 12pt;
   cursor: pointer;
-  letter-spacing: 1px;
-  
-  -webkit-transform: scaleY(0.9);
-  -moz-transform: scaleY(0.9);
-  -ms-transform: scaleY(0.9);
-  -o-transform: scaleY(0.9);
-  transform: scaleY(0.9);
 }
 
 .menu-inside-menu-3 {
@@ -526,14 +538,13 @@ body.menu-close .menu-inside {
   }
 
   .menu-text {
-    font-size: 11pt;
+    font-size: 9pt;
     margin-right: 15px;
   }
 
   .menu-icon {
     width: 25px;
     height: 17px;
-    margin-top: 1px;
   }
 
   .menu-icon-line {
