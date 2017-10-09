@@ -35,7 +35,7 @@
     opacity: 0;
 }
 
-.section.show .section-1-logo, .section.show .section-1-ericwee {
+.section-1.show .section-1-logo, .section-1.show .section-1-ericwee {
     -webkit-animation-delay: 0.3s;
     -moz-animation-delay: 0.3s;
     -ms-animation-delay: 0.3s;
@@ -49,7 +49,7 @@
     margin-top: 20px;
 }
 
-.section.show .section-1-text {
+.section-1.show .section-1-text {
     -webkit-animation-delay: 0.5s;
     -moz-animation-delay: 0.5s;
     -ms-animation-delay: 0.5s;
@@ -70,7 +70,7 @@
     font-family: copperplate-light;
 }
 
-.section.show .section-1-about-us {
+.section-1.show .section-1-about-us {
     -webkit-animation-delay: 0.6s;
     -moz-animation-delay: 0.6s;
     -ms-animation-delay: 0.6s;
@@ -102,6 +102,7 @@
     font-size: 12pt;
     text-align: center;
     margin-top: 100px;
+    opacity: 0;
 }
 
 .section-2-see-all-our-works {
@@ -112,6 +113,7 @@
     text-align: center;
     cursor: pointer;
     color: #000;
+    opacity: 0;
 }
 
 .section-2-see-all-our-works span {
@@ -122,12 +124,29 @@
     transform: translateX(5px);
 }
 
+.section-2.show .section-2-see-all-our-works {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
 .selected-works-container {
     width: 100%;
     height: 300px;
     overflow-y: visible;
     margin-top: 100px;
     position: relative;
+    opacity: 0;
+}
+
+.section-2.show .selected-works-container {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 .selected-work {
@@ -256,5 +275,18 @@
 .social-media-item {
     font-family: copperplate-light;
     display: inline-block;
+    text-decoration: none;
+    color: white;
     margin-right: 50px;
+    font-size: 11pt;
+}
+
+.social-media-item-icon {
+    width: 25px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-bottom: -12px;
+    margin-right: 10px;
 }

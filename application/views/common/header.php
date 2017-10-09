@@ -24,7 +24,7 @@
 <div class="header">
 </div>
 <div class="logo">
-	<div class="logo-image" style="background-image: url('assets/icons/logo.png');"></div>
+	<div class="logo-image" style="background-image: url('assets/icons/logo.svg');"></div>
 	<div class="logo-text" data-content-type="text">ERICWEE</div>
 </div>
 <div class="menu" id="menu">

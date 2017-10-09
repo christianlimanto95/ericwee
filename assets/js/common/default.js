@@ -2,6 +2,7 @@ var windowLoad = false, timeoutDone = false;
 var menuCanClick = true;
 var checkScrollDownHeader = true, checkScrollUpHeader = false;
 var container;
+var sectionFooter = false;
 
 var timeout = setTimeout(function() {
     $(".loading-container").velocity({
@@ -30,7 +31,7 @@ $(function() {
                 var dataAnim = menuInside.find("[data-anim='fade-anim']");
                 dataAnim.attr("data-anim-state", "done");
                 body.addClass("menu-close");
-                
+
                 if (checkScrollDownHeader) {
                     $(".menu-text-menu").velocity({
                         opacity: 1
@@ -39,16 +40,24 @@ $(function() {
                 $(".menu-text-close").velocity({
                     opacity: 0
                 }, 300);
+                
+                var backgroundColor = "#181818";
+                if (sectionFooter) {
+                    backgroundColor = "#FFF";
+                }
 
                 $(".menu-icon-line-1").velocity({
                     rotateZ: "0deg",
                     translateY: "0px",
-                    backgroundColor: "#181818"
+                    backgroundColor: backgroundColor
+                }, 300);
+                $(".menu-icon-line-2").velocity({
+                    opacity: 1
                 }, 300);
                 $(".menu-icon-line-3").velocity({
                     rotateZ: "0deg",
                     translateY: "0px",
-                    backgroundColor: "#181818"
+                    backgroundColor: backgroundColor
                 }, 300);
 
                 menuInside.one("webkitAnimationEnd oanimationend msAnimationEnd animationend", function() {
@@ -73,6 +82,9 @@ $(function() {
                     rotateZ: "42deg",
                     translateY: "8px",
                     backgroundColor: "#FFF"
+                }, 300);
+                $(".menu-icon-line-2").velocity({
+                    opacity: 0
                 }, 300);
                 $(".menu-icon-line-3").velocity({
                     rotateZ: "-42deg",
