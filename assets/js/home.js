@@ -21,11 +21,12 @@ $(function() {
 
     getSection2Transform();
 
-    $(document).on("click", ".selected-works-left", function() {
+    $(document).on("click", ".selected-works-right", function() {
         if (selectedWorkAnimationDone >= 5) {
             selectedWorkAnimationDone = 0;
 
             $(".selected-work[data-no='5']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue4[4] + "px", matrixValue5[4] + "px"],
                 scaleX: [matrixValue4[0], matrixValue5[0]],
                 scaleY: [matrixValue4[0], matrixValue5[0]]
@@ -35,6 +36,7 @@ $(function() {
             });
 
             $(".selected-work[data-no='4']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue3[4] + "px", matrixValue4[4] + "px"],
                 scaleX: [matrixValue3[0], matrixValue4[0]],
                 scaleY: [matrixValue3[0], matrixValue4[0]]
@@ -44,6 +46,7 @@ $(function() {
             });
 
             $(".selected-work[data-no='3']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue2[4] + "px", matrixValue3[4] + "px"],
                 scaleX: [matrixValue2[0], matrixValue3[0]],
                 scaleY: [matrixValue2[0], matrixValue3[0]]
@@ -62,6 +65,7 @@ $(function() {
             });
 
             $(".selected-work[data-no='1']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue5[4] + "px", matrixValue1[4] + "px"],
                 scaleX: [matrixValue5[0], matrixValue1[0]],
                 scaleY: [matrixValue5[0], matrixValue1[0]]
@@ -72,11 +76,12 @@ $(function() {
         }
     });
 
-    $(document).on("click", ".selected-works-right", function() {
+    $(document).on("click", ".selected-works-left", function() {
         if (selectedWorkAnimationDone >= 5) {
             selectedWorkAnimationDone = 0;
 
             $(".selected-work[data-no='5']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue1[4] + "px", matrixValue5[4] + "px"],
                 scaleX: [matrixValue1[0], matrixValue5[0]],
                 scaleY: [matrixValue1[0], matrixValue5[0]]
@@ -86,6 +91,7 @@ $(function() {
             });
 
             $(".selected-work[data-no='4']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue5[4] + "px", matrixValue4[4] + "px"],
                 scaleX: [matrixValue5[0], matrixValue4[0]],
                 scaleY: [matrixValue5[0], matrixValue4[0]]
@@ -95,6 +101,7 @@ $(function() {
             });
 
             $(".selected-work[data-no='3']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue4[4] + "px", matrixValue3[4] + "px"],
                 scaleX: [matrixValue4[0], matrixValue3[0]],
                 scaleY: [matrixValue4[0], matrixValue3[0]]
@@ -104,6 +111,7 @@ $(function() {
             });
 
             $(".selected-work[data-no='2']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue3[4] + "px", matrixValue2[4] + "px"],
                 scaleX: [matrixValue3[0], matrixValue2[0]],
                 scaleY: [matrixValue3[0], matrixValue2[0]]
@@ -113,6 +121,7 @@ $(function() {
             });
 
             $(".selected-work[data-no='1']").velocity({
+                translateZ: 0,
                 translateX: [matrixValue2[4] + "px", matrixValue1[4] + "px"],
                 scaleX: [matrixValue2[0], matrixValue1[0]],
                 scaleY: [matrixValue2[0], matrixValue1[0]]

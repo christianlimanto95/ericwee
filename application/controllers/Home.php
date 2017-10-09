@@ -12,8 +12,10 @@ class Home extends General_controller {
 	
 	public function index()
 	{
+		parent::set_url_referrer("home");
 		$data = array(
-			"title" => "Home"
+			"title" => "Home",
+			"opening_words" => ""
 		);
 		
 		parent::view("home", $data);

@@ -15,6 +15,15 @@ class General_controller extends CI_Controller
     {
         parent::__construct();
         $this->load->model('common/General_model');
+        $this->load->library("session");
+    }
+
+    public function set_url_referrer($url) {
+        $this->session->set_userdata("url_referrer", $url);
+    }
+
+    public function get_url_referrer() {
+        return $this->session->userdata("url_referrer");
     }
 
 	public function load_module($module_name) {
@@ -37,7 +46,11 @@ class General_controller extends CI_Controller
     public function view($file, $data){
 		$data["additional_css"] = $this->additional_css;
         $data["additional_js"] = $this->additional_js;
-		$data["page_name"] = $file;
+        $data["page_name"] = $file;
+        
+        if ($data["opening_words"] == "") {
+            $data["opening_words"] = "welcome to ericwee";
+        }
 		
         $this->load->view('common/header', $data);
         $this->load->view($file, $data);

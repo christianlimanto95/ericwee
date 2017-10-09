@@ -19,14 +19,14 @@
 </head>
 <body>
 <div class="loading-container">
-	<div class="loading-text" data-content-type="text">welcome to ericwee</div>
+	<div class="loading-text" data-content-type="text"><?php echo $opening_words; ?></div>
 </div>
-<div class="header">
+<div class="white-background">
 </div>
-<div class="logo">
+<a class="logo" href="<?php echo base_url(); ?>">
 	<div class="logo-image" style="background-image: url('assets/icons/logo.svg');"></div>
 	<div class="logo-text" data-content-type="text">ERICWEE</div>
-</div>
+</a>
 <div class="menu" id="menu">
 	<div class="menu-text">
 		<div class="menu-text-close">close</div>

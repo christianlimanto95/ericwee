@@ -12,8 +12,15 @@ class Works extends General_controller {
 	
 	public function index()
 	{
+		$opening_words = "";
+		if (parent::get_url_referrer() != null) {
+			$opening_words = "Here's some of our works";
+		}
+
+		parent::set_url_referrer("works");
 		$data = array(
-			"title" => "Works"
+			"title" => "Works",
+			"opening_words" => $opening_words
 		);
 		
 		parent::view("works", $data);
