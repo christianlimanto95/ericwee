@@ -40,18 +40,18 @@
 </div>
 <div class="menu-inside">
 	<div class="menu-inside-menu-container">
-		<div class="menu-inside-menu menu-inside-menu-1">
+		<a class="menu-inside-menu menu-inside-menu-1">
 			<div class="menu-inside-menu-text" data-content-type="text">SERVICES</div>
 			<div class="menu-inside-menu-line"></div>
-		</div>
-		<div class="menu-inside-menu menu-inside-menu-2">
+		</a>
+		<a href="works" class="menu-inside-menu menu-inside-menu-2">
 			<div class="menu-inside-menu-text" data-content-type="text">WORKS</div>
 			<div class="menu-inside-menu-line"></div>
-		</div>
-		<div class="menu-inside-menu menu-inside-menu-3">
+		</a>
+		<a class="menu-inside-menu menu-inside-menu-3">
 			<div class="menu-inside-menu-text" data-content-type="text">CONTACT</div>
 			<div class="menu-inside-menu-line"></div>
-		</div>
+		</a>
 	</div>
 </div>
 <div class="container">

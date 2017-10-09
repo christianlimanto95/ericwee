@@ -11,11 +11,11 @@
         <div class="section-2-title" data-anim="fade-anim"><span data-content-type="text">OUR SELECTED WORKS</span></div>
         <div class="section-2-see-all-our-works" data-anim="fade-anim"><span data-content-type="text">see all of our works</span><div class="arrow" style="background-image: url('assets/icons/arrow.svg');"></div></div>
         <div class="selected-works-container" data-anim="fade-anim">
-            <div class="selected-work selected-work-1" style="background-image: url('assets/images/1.jpg');"></div>
-            <div class="selected-work selected-work-2" style="background-image: url('assets/images/2.jpg');"></div>
-            <div class="selected-work selected-work-3" style="background-image: url('assets/images/3.jpg');"></div>
-            <div class="selected-work selected-work-4" style="background-image: url('assets/images/4.jpg');"></div>
-            <div class="selected-work selected-work-5" style="background-image: url('assets/images/5.jpg');"></div>
+            <div class="selected-work selected-work-1" data-no="1" style="background-image: url('assets/images/1.jpg');"></div>
+            <div class="selected-work selected-work-2" data-no="2" style="background-image: url('assets/images/2.jpg');"></div>
+            <div class="selected-work selected-work-3" data-no="3" style="background-image: url('assets/images/3.jpg');"></div>
+            <div class="selected-work selected-work-4" data-no="4" style="background-image: url('assets/images/4.jpg');"></div>
+            <div class="selected-work selected-work-5" data-no="5" style="background-image: url('assets/images/5.jpg');"></div>
             <div class="selected-works-left"></div>
             <div class="selected-works-arrow-left" style="background-image: url('assets/icons/ic_keyboard_arrow_left_black_48px.svg');"></div>
             <div class="selected-works-right"></div>

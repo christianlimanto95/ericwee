@@ -263,10 +263,6 @@
     margin: 0 auto;
 }
 
-.section-3-contact-me, .social-media-item {
-
-}
-
 .social-media {
     text-align: center;
     margin-top: 50px;
@@ -279,6 +275,10 @@
     color: white;
     margin-right: 50px;
     font-size: 11pt;
+}
+
+.social-media-item:nth-child(3) {
+    margin-right: 0;
 }
 
 .social-media-item-icon {
