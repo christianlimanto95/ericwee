@@ -36,7 +36,12 @@ $(function() {
                     $(".menu-text-menu").velocity({
                         opacity: 1
                     }, 300);
+
+                    $(".logo-text").velocity({
+                        color: "#444"
+                    }, 300);
                 }
+
                 $(".menu-text-close").velocity({
                     opacity: 0
                 }, 300);
@@ -73,7 +78,12 @@ $(function() {
                     $(".menu-text-menu").velocity({
                         opacity: 0
                     }, 300);
+
+                    $(".logo-text").velocity({
+                        color: "#FFF"
+                    }, 300);
                 }
+
                 $(".menu-text-close").velocity({
                     opacity: 1
                 }, 300);
@@ -103,7 +113,7 @@ $(function() {
 
     container.on("scroll", scrollDownHeader);
 
-    $(".menu-inside-menu").on("click", function(e) {
+    $(".menu-inside-menu, .logo").on("click", function(e) {
         var href = this.href;
         e.preventDefault();
         $(".white-background").css("display", "block");

@@ -40,7 +40,7 @@
 </div>
 <div class="menu-inside">
 	<div class="menu-inside-menu-container">
-		<a class="menu-inside-menu menu-inside-menu-1">
+		<a href="services" class="menu-inside-menu menu-inside-menu-1">
 			<div class="menu-inside-menu-text" data-content-type="text">SERVICES</div>
 			<div class="menu-inside-menu-line"></div>
 		</a>
@@ -48,7 +48,7 @@
 			<div class="menu-inside-menu-text" data-content-type="text">WORKS</div>
 			<div class="menu-inside-menu-line"></div>
 		</a>
-		<a class="menu-inside-menu menu-inside-menu-3">
+		<a href="contact" class="menu-inside-menu menu-inside-menu-3">
 			<div class="menu-inside-menu-text" data-content-type="text">CONTACT</div>
 			<div class="menu-inside-menu-line"></div>
 		</a>
