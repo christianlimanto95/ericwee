@@ -116,7 +116,7 @@
             <div class="social-media">
                 <a href="https://www.instagram.com/ericweephoto/" target="_blank" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/instagram.png');"></div>@ericweephoto</a>
                 <div class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/line.png');"></div>@ericwicak</div>
-                <div class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/whatsapp.png');"></div>0852 3051 5511</div>
+                <a href="tel:+6285230515511" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/whatsapp.png');"></div>0852 3051 5511</a>
             </div>
         </div>
     </div>

@@ -1,0 +1,91 @@
+.section-1-center {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.section-1-title {
+    text-align: center;
+    opacity: 0;
+}
+
+.section-1-works-container {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.section-1.show .section-1-works-container {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.section-1-description {
+    text-align: center;
+    font-family: copperplate-light;
+    margin-top: 20px;
+}
+
+.section-1-down-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px auto 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    -webkit-animation-name: section-1-down-icon-anim;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: section-1-down-icon-anim;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-name: section-1-down-icon-anim;
+    -ms-animation-duration: 2s;
+    -ms-animation-fill-mode: both;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-name: section-1-down-icon-anim;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: both;
+    -o-animation-iteration-count: infinite;
+    animation-name: section-1-down-icon-anim;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes section-1-down-icon-anim {
+    50% {
+        -webkit-transform: translateY(5px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@keyframes section-1-down-icon-anim {
+    50% {
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    100% {
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
