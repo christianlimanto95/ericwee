@@ -231,7 +231,7 @@
 .section-3 {
     position: relative;
     height: 270vh;
-    margin-top: -200vh;
+    margin-top: -180vh;
     z-index: 100;
     visibility: hidden;
     opacity: 0;

@@ -1,4 +1,4 @@
-var container, section2, section3, section3Threshold;
+var container, section1, section2, section3, section3Threshold;
 var checkScrollDown = true, checkScrollUp = false;
 var vh100 = 0, vh33 = 0;
 var matrix1, matrix2, matrix3, matrix4, matrix5;
@@ -7,9 +7,10 @@ var selectedWorkAnimationDone = 5;
 
 $(function() {
     container = $(".container");
+    section1 = $(".section-1");
     section2 = $(".section-2");
     section3 = $(".section-3");
-    vh100 =  parseInt(section2.css("height"));
+    vh100 =  parseInt(section1.css("height"));
     vh33 = vh100 / 3;
     section3Threshold = vh100 + vh100 / 2;
     $("body").on("allLoaded", function() {
