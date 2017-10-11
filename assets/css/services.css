@@ -13,16 +13,26 @@
 
 .section-1-title {
     text-align: center;
+    opacity: 0;
 }
 
 .section-1-services-container {
     cursor: pointer;
+    opacity: 0;
+}
+
+.section-1.show .section-1-services-container {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .section-1-description {
     text-align: center;
     font-family: copperplate-light;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .section-1-down-icon {
@@ -83,6 +93,7 @@
 .section-2 {
     padding: 50px 0;
     height: 1700px;
+    background-color: #F9F9F9;
 }
 
 .service-group {

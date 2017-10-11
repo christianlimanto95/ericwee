@@ -1,9 +1,9 @@
 <div class="content">
     <div class="section section-1">
         <div class="section-1-center">
-            <div class="section-1-title">WE CAPTURE YOUR SWEETEST MOMENTS</div>
-            <div class="section-1-services-container">
-                <div class="section-1-description">services that we offer</div>
+            <div class="section-1-title" data-anim="fade-anim"><span data-content-type="text">WE CAPTURE YOUR SWEETEST MOMENTS</span></div>
+            <div class="section-1-services-container" data-anim="fade-anim">
+                <div class="section-1-description" data-content-type="text">services that we offer</div>
                 <div class="section-1-down-icon" style="background-image: url('assets/icons/ic_keyboard_arrow_down_black_24px.svg');"></div>
             </div>
         </div>
