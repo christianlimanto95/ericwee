@@ -131,6 +131,7 @@
 
 .service-package-right {
     float: right;
+    min-width: 250px;
 }
 
 .service-package-title {
@@ -173,7 +174,7 @@
     animation-fill-mode: forwards;
 }
 
-.service-group.show .service-package-left {
+.service-group.show .service-package[data-no="1"] {
     -webkit-animation-delay: 0.2s;
     -moz-animation-delay: 0.2s;
     -ms-animation-delay: 0.2s;
@@ -181,12 +182,28 @@
     animation-delay: 0.2s;
 }
 
-.service-group.show .service-package-right {
+.service-group.show .service-package[data-no="2"] {
     -webkit-animation-delay: 0.4s;
     -moz-animation-delay: 0.4s;
     -ms-animation-delay: 0.4s;
     -o-animation-delay: 0.4s;
     animation-delay: 0.4s;
+}
+
+.service-group.show .service-package[data-no="3"] {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.service-group.show .service-package[data-no="4"] {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 
 .section-3 {
