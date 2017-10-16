@@ -1,3 +1,7 @@
+.content {
+    background-color: #F9F9F9;
+}
+
 .section-1-center {
     position: absolute;
     display: inline-block;
@@ -88,4 +92,126 @@
         -o-transform: translateY(0px);
         transform: translateY(0px);
     }
+}
+
+.section-2 .show [data-anim="fade-anim"] {
+    -webkit-animation-name: fade-out-anim;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: fade-out-anim;
+    -moz-animation-duration: 0.6s;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-name: fade-out-anim;
+    -ms-animation-duration: 0.6s;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-name: fade-out-anim;
+    -o-animation-duration: 0.6s;
+    -o-animation-fill-mode: forwards;
+    animation-name: fade-out-anim;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.section-2 {
+    height: auto;
+    overflow-y: auto;
+}
+
+.selected-works-title {
+    text-align: center;
+    font-size: 12pt;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.selected-works-container {
+    width: 1110px;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+.selected-works-item, .archived-works-item {
+    display: inline-block;
+    width: 300px;
+    height: 168px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px #333;
+}
+
+.selected-works-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.archived-works-title {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.archived-works-container {
+    width: 710px;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+.archived-works-item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.section-3 {
+    position: relative;
+    height: 270vh;
+    margin-top: -180vh;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #181818;
+    color: white;
+}
+
+.section-3.show {
+    visibility: visible;
+}
+
+.section-3-center {
+    position: absolute;
+    bottom: 50vh;
+    width: 100vw;
+}
+
+.section-3-contact-me {
+    font-size: 12pt;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-media-item {
+    font-family: copperplate-light;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin-right: 50px;
+    font-size: 11pt;
+}
+
+.social-media-item:nth-child(3) {
+    margin-right: 0;
+}
+
+.social-media-item-icon {
+    width: 25px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-bottom: -12px;
+    margin-right: 10px;
 }
