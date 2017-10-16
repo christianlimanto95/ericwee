@@ -11,26 +11,26 @@
     <div class="section section-2">
         <div class="selected-works-title" data-anim="fade-anim"><div data-content-type="text">SELECTED WORKS</div></div>
         <div class="selected-works-container">
-            <div class="selected-works-item selected-works-item-1" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="selected-works-item selected-works-item-2" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="selected-works-item selected-works-item-3" style="background-image: url(assets/images/3.jpg);"></div>
-            <div class="selected-works-item selected-works-item-4" style="background-image: url(assets/images/4.jpg);"></div>
-            <div class="selected-works-item selected-works-item-5" style="background-image: url(assets/images/5.jpg);"></div>
-            <div class="selected-works-item selected-works-item-6" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="selected-works-item selected-works-item-7" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="selected-works-item selected-works-item-8" style="background-image: url(assets/images/3.jpg);"></div>
-            <div class="selected-works-item selected-works-item-9" style="background-image: url(assets/images/4.jpg);"></div>
+            <div class="selected-works-item" data-no="0" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
+            <div class="selected-works-item" data-no="1" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
+            <div class="selected-works-item" data-no="2" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
+            <div class="selected-works-item" data-no="3" data-anim="fade-anim" style="background-image: url(assets/images/4.jpg);"></div>
+            <div class="selected-works-item" data-no="4" data-anim="fade-anim" style="background-image: url(assets/images/5.jpg);"></div>
+            <div class="selected-works-item" data-no="5" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
+            <div class="selected-works-item" data-no="6" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
+            <div class="selected-works-item" data-no="7" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
+            <div class="selected-works-item" data-no="8" data-anim="fade-anim" style="background-image: url(assets/images/4.jpg);"></div>
         </div>
-        <div class="archived-works-title"><div data-content-type="text">ARCHIVED WORKS</div></div>
+        <div class="archived-works-title" data-anim="fade-anim"><div data-content-type="text">ARCHIVED WORKS</div></div>
         <div class="archived-works-container">
-            <div class="archived-works-item archived-works-item-1" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="archived-works-item archived-works-item-2" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="archived-works-item archived-works-item-3" style="background-image: url(assets/images/3.jpg);"></div>
-            <div class="archived-works-item archived-works-item-4" style="background-image: url(assets/images/4.jpg);"></div>
-            <div class="archived-works-item archived-works-item-5" style="background-image: url(assets/images/5.jpg);"></div>
-            <div class="archived-works-item archived-works-item-6" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="archived-works-item archived-works-item-7" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="archived-works-item archived-works-item-8" style="background-image: url(assets/images/3.jpg);"></div>
+            <div class="archived-works-item" data-no="0" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
+            <div class="archived-works-item" data-no="1" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
+            <div class="archived-works-item" data-no="2" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
+            <div class="archived-works-item" data-no="3" data-anim="fade-anim" style="background-image: url(assets/images/4.jpg);"></div>
+            <div class="archived-works-item" data-no="4" data-anim="fade-anim" style="background-image: url(assets/images/5.jpg);"></div>
+            <div class="archived-works-item" data-no="5" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
+            <div class="archived-works-item" data-no="6" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
+            <div class="archived-works-item" data-no="7" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
         </div>
     </div>
     <div class="section section-3">

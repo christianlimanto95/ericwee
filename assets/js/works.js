@@ -9,7 +9,7 @@ $(function() {
     section2 = $(".section-2");
     section3 = $(".section-3");
     vh100 =  parseInt(section1.css("height"));
-    vh33 = vh100 / 3;
+    vh33 = vh100 / 2.5;
     section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
 
     selectedWorksThreshold = $(".selected-works-title").offset().top - vh33 * 2;
@@ -28,12 +28,69 @@ $(function() {
 
     container.on("scroll", checkSection2ScrollDown);
     container.on("scroll", selectedWorksShow);
+    container.on("scroll", archivedWorksShow);
+
+    var selectedWorksLength = 9;
+    for (var i = 0; i < selectedWorksLength; i+=3) {
+        var selectedWorksItem = $(".selected-works-item[data-no='" + i + "']");
+        var itemThreshold = selectedWorksItem.offset().top - vh33 * 2;
+        var doneFunction = false;
+        (function(item, threshold, done) {
+            container.on("scroll", function() {
+                if (!done) {
+                    if (container.scrollTop() >= threshold) {
+                        done = true;
+    
+                        item.addClass("show");
+                        var next = item.next();
+                        if (next.length > 0) {
+                            next.addClass("show");
+                            
+                            var secondNext = next.next();
+                            if (secondNext.length > 0) {
+                                secondNext.addClass("show");
+                            }
+                        }
+                    }
+                }
+            });
+        })(selectedWorksItem, itemThreshold, doneFunction);
+    }
+
+    var archivedWorksLength = 8;
+    for (var i = 0; i < archivedWorksLength; i+=2) {
+        var archivedWorksItem = $(".archived-works-item[data-no='" + i + "']");
+        var itemThreshold = archivedWorksItem.offset().top - vh33 * 2;
+        var doneFunction = false;
+        (function(item, threshold, done) {
+            container.on("scroll", function() {
+                if (!done) {
+                    if (container.scrollTop() >= threshold) {
+                        done = true;
+    
+                        item.addClass("show");
+                        var next = item.next();
+                        if (next.length > 0) {
+                            next.addClass("show");
+                        }
+                    }
+                }
+            });
+        })(archivedWorksItem, itemThreshold, doneFunction);
+    }
 });
 
 function selectedWorksShow() {
     if (container.scrollTop() >= selectedWorksThreshold) {
         $(".selected-works-title").addClass("show");
         container.off("scroll", selectedWorksShow);
+    }
+}
+
+function archivedWorksShow() {
+    if (container.scrollTop() >= archivedWorksThreshold) {
+        $(".archived-works-title").addClass("show");
+        container.off("scroll", archivedWorksShow);
     }
 }
 
