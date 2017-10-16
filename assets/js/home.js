@@ -132,6 +132,17 @@ $(function() {
             });
         }
     });
+
+    $(".href").on("click", function(e) {
+        var href = this.href;
+        e.preventDefault();
+        $(".white-background").css("display", "block");
+        $(".white-background").velocity({
+            opacity: 1
+        }, 500, function() {
+            location.href = href;
+        });
+    });
 });
 
 function getSection2Transform() {

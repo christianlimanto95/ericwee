@@ -50,6 +50,8 @@
 }
 
 .section-1-about-us {
+    display: block;
+    text-decoration: none;
     font-size: 10pt;
     margin-top: 20px;
     cursor: pointer;
@@ -98,6 +100,8 @@
 }
 
 .section-2-see-all-our-works {
+    display: block;
+    text-decoration: none;
     width: 300px;
     margin: 0 auto;
     font-size: 10pt;
