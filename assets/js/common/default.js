@@ -1,5 +1,6 @@
+var isMobile = false;
 var windowLoad = false, timeoutDone = false;
-var menuCanClick = true;
+var menuCanClick = true, menuLineTranslateY = {open: "8px", close: "0px"};
 var checkScrollDownHeader = true, checkScrollUpHeader = false;
 var container;
 var sectionFooter = false;
@@ -17,6 +18,12 @@ var timeout = setTimeout(function() {
 }, 1000);
 
 $(function() {
+    isMobile = $(".div-mobile").css("display") == "block" ? true : false;
+    if (isMobile) {
+        menuLineTranslateY.open = "2vw";
+        menuLineTranslateY.close = "0vw";
+    }
+
     container = $(".container");
     var menuInside = $(".menu-inside");
     menuInside.find("[data-anim='fade-anim'], .menu-inside-section-line").on("webkitAnimationEnd oanimationend msAnimationEnd animationend", function(e) {
@@ -53,7 +60,7 @@ $(function() {
 
                 $(".menu-icon-line-1").velocity({
                     rotateZ: "0deg",
-                    translateY: "0vw",
+                    translateY: menuLineTranslateY.close,
                     backgroundColor: backgroundColor
                 }, 300);
                 $(".menu-icon-line-2").velocity({
@@ -61,7 +68,7 @@ $(function() {
                 }, 300);
                 $(".menu-icon-line-3").velocity({
                     rotateZ: "0deg",
-                    translateY: "0vw",
+                    translateY: menuLineTranslateY.close,
                     backgroundColor: backgroundColor
                 }, 300);
 
@@ -90,7 +97,7 @@ $(function() {
 
                 $(".menu-icon-line-1").velocity({
                     rotateZ: "42deg",
-                    translateY: "2vw",
+                    translateY: menuLineTranslateY.open,
                     backgroundColor: "#FFF"
                 }, 300);
                 $(".menu-icon-line-2").velocity({
@@ -98,7 +105,7 @@ $(function() {
                 }, 300);
                 $(".menu-icon-line-3").velocity({
                     rotateZ: "-42deg",
-                    translateY: "-2vw",
+                    translateY: "-" + menuLineTranslateY.open,
                     backgroundColor: "#FFF"
                 }, 300);
 

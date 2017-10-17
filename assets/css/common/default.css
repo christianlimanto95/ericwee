@@ -182,10 +182,6 @@ body {
   text-decoration: none;
 }
 
-.menu-inside-menu-3 {
-  margin-right: 0;
-}
-
 .menu-inside-menu-line {
   height: 2px;
   background-color: white;
@@ -320,8 +316,6 @@ body.menu-close .menu-inside {
 
 .section-3 {
   position: relative;
-  height: 270vh;
-  margin-top: -180vh;
   z-index: 100;
   visibility: hidden;
   opacity: 0;
@@ -386,6 +380,10 @@ body.menu-close .menu-inside {
 }
 
 @media all and (max-width: 1279px) {
+  .div-mobile {
+    display: block;
+  }
+
   .logo {
     top: 4vw;
     left: 3vw;
@@ -427,6 +425,10 @@ body.menu-close .menu-inside {
     margin-bottom: 10vw;
   }
 
+  .menu-inside-menu-3 {
+    margin-bottom: 0;
+  }
+
   .loading-text {
     display: block;
     width: 100%;
@@ -442,6 +444,11 @@ body.menu-close .menu-inside {
   .section {
     height: 160vw;
   }
+
+  .section-3 {
+    height: 270vh;
+    margin-top: -180vh;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
@@ -449,6 +456,10 @@ body.menu-close .menu-inside {
 }
 
 @media all and (min-width: 1280px) {
+  .div-mobile {
+    display: none;
+  }
+
   .logo {
     top: 15px;
     left: 15px;
@@ -490,6 +501,10 @@ body.menu-close .menu-inside {
     font-size: 12pt;
   }
 
+  .menu-inside-menu-3 {
+    margin-right: 0;
+  }
+
   .loading-text {
     display: inline-block;
     left: 50%;
@@ -503,5 +518,10 @@ body.menu-close .menu-inside {
 
   .section {
     height: 100vh;
+  }
+
+  .section-3 {
+    height: 270vh;
+    margin-top: -180vh;
   }
 }

@@ -18,6 +18,7 @@
 	<?php echo $additional_css; ?>
 </head>
 <body>
+<div class="div-mobile"></div>
 <div class="loading-container">
 	<div class="loading-text" data-content-type="text"><?php echo $opening_words; ?></div>
 </div>

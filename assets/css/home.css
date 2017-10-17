@@ -41,10 +41,6 @@
 
 .arrow {
     display: inline-block;
-    width: 30px;
-    height: 12px;
-    margin-bottom: -3px;
-    margin-left: 10px;
 
     background-size: 100%;
     background-repeat: no-repeat;
@@ -56,19 +52,14 @@
 }
 
 .section-2-title {
-    font-size: 12pt;
     text-align: center;
-    margin-top: 100px;
     opacity: 0;
 }
 
 .section-2-see-all-our-works {
     display: block;
     text-decoration: none;
-    width: 300px;
     margin: 0 auto;
-    font-size: 10pt;
-    margin-top: 20px;
     text-align: center;
     cursor: pointer;
     color: #000;
@@ -77,10 +68,6 @@
 
 .section-2-see-all-our-works span {
     font-family: copperplate-light;
-}
-
-.section-2-see-all-our-works:hover > .arrow {
-    transform: translateX(5px);
 }
 
 .section-2.show .section-2-see-all-our-works {
@@ -93,9 +80,7 @@
 
 .selected-works-container {
     width: 100%;
-    height: 300px;
     overflow-y: visible;
-    margin-top: 100px;
     position: relative;
     opacity: 0;
 }
@@ -110,9 +95,6 @@
 
 .selected-work {
     position: absolute;
-    width: 400px;
-    height: 225px;
-    left: -800px;
 
     background-size: 100%;
     background-repeat: no-repeat;
@@ -125,74 +107,6 @@
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
-}
-
-.selected-work-2 {
-    -webkit-transform: translateX(600px);
-    -moz-transform: translateX(600px);
-    -ms-transform: translateX(600px);
-    -o-transform: translateX(600px);
-    transform: translateX(600px);
-}
-
-.selected-work-3 {
-    -webkit-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
-    -moz-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
-    -ms-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
-    -o-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
-    transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
-}
-
-.selected-work-4 {
-    -webkit-transform: translateX(calc(600px + 100vw));
-    -moz-transform: translateX(calc(600px + 100vw));
-    -ms-transform: translateX(calc(600px + 100vw));
-    -o-transform: translateX(calc(600px + 100vw));
-    transform: translateX(calc(600px + 100vw));
-}
-
-.selected-work-5 {
-    -webkit-transform: translateX(calc(1600px + 100vw));
-    -moz-transform: translateX(calc(1600px + 100vw));
-    -ms-transform: translateX(calc(1600px + 100vw));
-    -o-transform: translateX(calc(1600px + 100vw));
-    transform: translateX(calc(1600px + 100vw));
-}
-
-.selected-works-arrow-left, .selected-works-arrow-right {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.selected-works-arrow-left {
-    top: 85px;
-    left: calc((100vw / 2 - (1.3 * 400px / 2) + 200px) / 2 - 25px);
-}
-
-.selected-works-arrow-right {
-    top: 85px;
-    left: calc((100vw / 2 + (1.3 * 400px / 2) + (100vw - 200px)) / 2 - 25px);
-    transform: rotate(180deg);
-}
-
-.selected-works-left, .selected-works-right {
-    position: absolute;
-    top: 0;
-    width: calc((100vw / 2 - (1.3 * 400px / 2) + 200px) / 2 + 25px);
-    height: 225px;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.selected-works-left {
-    left: 0;
-}
-
-.selected-works-right {
-    right: 0;
 }
 
 @media all and (max-width: 1279px) {
@@ -224,6 +138,70 @@
         margin-top: 5vw;
         line-height: 6vw;
         padding: 0 5vw;
+    }
+
+    .arrow {
+        width: 8vw;
+        height: 3.2vw;
+        margin-bottom: -0.7vw;
+        margin-left: 2vw;
+    }
+
+    .section-2-title {
+        font-size: 4vw;
+        margin-top: 20vw;
+    }
+
+    .section-2-see-all-our-works {
+        font-size: 3.5vw;
+        margin-top: 5vw;
+    }
+
+    .selected-works-container {
+        height: 300px;
+        margin-top: 100px;
+    }
+
+    .selected-work {
+        width: 60vw;
+        height: 33vw;
+        left: -120vw;
+    }
+
+    .selected-work-2 {
+        -webkit-transform: translateX(70vw);
+        -moz-transform: translateX(70vw);
+        -ms-transform: translateX(70vw);
+        -o-transform: translateX(70vw);
+        transform: translateX(70vw);
+    }
+
+    .selected-work-3 {
+        -webkit-transform: translateX(107.5vw) scale(1.4, 1.4);
+        -moz-transform: translateX(107.5vw) scale(1.4, 1.4);
+        -ms-transform: translateX(107.5vw) scale(1.4, 1.4);
+        -o-transform: translateX(107.5vw) scale(1.4, 1.4);
+        transform: translateX(140vw);
+    }
+    
+    .selected-work-4 {
+        -webkit-transform: translateX(calc(70vw + 100vw));
+        -moz-transform: translateX(calc(70vw + 100vw));
+        -ms-transform: translateX(calc(70vw + 100vw));
+        -o-transform: translateX(calc(70vw + 100vw));
+        transform: translateX(210vw);
+    }
+    
+    .selected-work-5 {
+        -webkit-transform: translateX(280vw);
+        -moz-transform: translateX(280vw);
+        -ms-transform: translateX(280vw);
+        -o-transform: translateX(280vw);
+        transform: translateX(280vw);
+    }
+
+    .selected-works-arrow-left, .selected-works-arrow-right, .selected-works-left, .selected-works-right {
+        display: none;
     }
 }
 
@@ -258,5 +236,110 @@
         font-size: 10pt;
         margin-top: 20px;
         line-height: 20px;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 12px;
+        margin-bottom: -3px;
+        margin-left: 10px;
+    }
+
+    .section-2-title {
+        font-size: 12pt;
+        margin-top: 100px;
+    }
+
+    .section-2-see-all-our-works {
+        width: 300px;
+        font-size: 10pt;
+        margin-top: 20px;
+    }
+
+    .section-2-see-all-our-works:hover > .arrow {
+        -webkit-transform: translateX(5px);
+        -moz-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+        -o-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    .selected-works-container {
+        height: 300px;
+        margin-top: 100px;
+    }
+
+    .selected-work {
+        width: 400px;
+        height: 225px;
+        left: -800px;
+    }
+
+    .selected-work-2 {
+        -webkit-transform: translateX(600px);
+        -moz-transform: translateX(600px);
+        -ms-transform: translateX(600px);
+        -o-transform: translateX(600px);
+        transform: translateX(600px);
+    }
+
+    .selected-work-3 {
+        -webkit-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+        -moz-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+        -ms-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+        -o-transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+        transform: translateX(calc(600px + 100vw / 2)) scale(1.3, 1.3);
+    }
+    
+    .selected-work-4 {
+        -webkit-transform: translateX(calc(600px + 100vw));
+        -moz-transform: translateX(calc(600px + 100vw));
+        -ms-transform: translateX(calc(600px + 100vw));
+        -o-transform: translateX(calc(600px + 100vw));
+        transform: translateX(calc(600px + 100vw));
+    }
+    
+    .selected-work-5 {
+        -webkit-transform: translateX(calc(1600px + 100vw));
+        -moz-transform: translateX(calc(1600px + 100vw));
+        -ms-transform: translateX(calc(1600px + 100vw));
+        -o-transform: translateX(calc(1600px + 100vw));
+        transform: translateX(calc(1600px + 100vw));
+    }
+
+    .selected-works-arrow-left, .selected-works-arrow-right {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .selected-works-arrow-left {
+        top: 85px;
+        left: calc((100vw / 2 - (1.3 * 400px / 2) + 200px) / 2 - 25px);
+    }
+    
+    .selected-works-arrow-right {
+        top: 85px;
+        left: calc((100vw / 2 + (1.3 * 400px / 2) + (100vw - 200px)) / 2 - 25px);
+        transform: rotate(180deg);
+    }
+    
+    .selected-works-left, .selected-works-right {
+        position: absolute;
+        top: 0;
+        width: calc((100vw / 2 - (1.3 * 400px / 2) + 200px) / 2 + 25px);
+        height: 225px;
+        z-index: 10;
+        cursor: pointer;
+    }
+    
+    .selected-works-left {
+        left: 0;
+    }
+    
+    .selected-works-right {
+        right: 0;
     }
 }
