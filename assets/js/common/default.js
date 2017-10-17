@@ -53,7 +53,7 @@ $(function() {
 
                 $(".menu-icon-line-1").velocity({
                     rotateZ: "0deg",
-                    translateY: "0px",
+                    translateY: "0vw",
                     backgroundColor: backgroundColor
                 }, 300);
                 $(".menu-icon-line-2").velocity({
@@ -61,7 +61,7 @@ $(function() {
                 }, 300);
                 $(".menu-icon-line-3").velocity({
                     rotateZ: "0deg",
-                    translateY: "0px",
+                    translateY: "0vw",
                     backgroundColor: backgroundColor
                 }, 300);
 
@@ -90,7 +90,7 @@ $(function() {
 
                 $(".menu-icon-line-1").velocity({
                     rotateZ: "42deg",
-                    translateY: "8px",
+                    translateY: "2vw",
                     backgroundColor: "#FFF"
                 }, 300);
                 $(".menu-icon-line-2").velocity({
@@ -98,7 +98,7 @@ $(function() {
                 }, 300);
                 $(".menu-icon-line-3").velocity({
                     rotateZ: "-42deg",
-                    translateY: "-8px",
+                    translateY: "-2vw",
                     backgroundColor: "#FFF"
                 }, 300);
 

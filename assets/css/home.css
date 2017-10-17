@@ -4,20 +4,9 @@
 
 .section-1-center {
     position: absolute;
-    display: inline-block;
-    top: 50%;
-    left: 50%;
-
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 
 .section-1-logo {
-    width: 70px;
-    height: 37px;
     background-size: 100%;
     background-repeat: no-repeat;
     margin: 0 auto;
@@ -25,8 +14,6 @@
 }
 
 .section-1-ericwee {
-    font-size: 10pt;
-    margin-top: 5px;
     text-align: center;
     opacity: 0;
 }
@@ -40,10 +27,7 @@
 }
 
 .section-1-text {
-    font-size: 10pt;
     opacity: 0;
-    margin-top: 20px;
-    line-height: 20px;
     text-align: center;
 }
 
@@ -209,4 +193,70 @@
 
 .selected-works-right {
     right: 0;
+}
+
+@media all and (max-width: 1279px) {
+    .section-1-center {
+        display: block;
+        top: 80vw;
+        width: 100vw;
+        text-align: center;
+
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .section-1-logo {
+        width: 20vw;
+        height: 10vw;
+    }
+
+    .section-1-ericwee {
+        font-size: 4vw;
+        margin-top: 3vw;
+    }
+
+    .section-1-text {
+        font-size: 4vw;
+        margin-top: 5vw;
+        line-height: 6vw;
+        padding: 0 5vw;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media all and (min-width: 1280px) {
+    .section-1-center {
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .section-1-logo {
+        width: 70px;
+        height: 37px;
+    }
+
+    .section-1-ericwee {
+        font-size: 10pt;
+        margin-top: 5px;
+    }
+
+    .section-1-text {
+        font-size: 10pt;
+        margin-top: 20px;
+        line-height: 20px;
+    }
 }

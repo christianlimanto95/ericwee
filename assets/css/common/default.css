@@ -178,8 +178,6 @@ body {
 .menu-inside-menu {
   color: white;
   display: inline-block;
-  margin-right: 200px;
-  font-size: 12pt;
   cursor: pointer;
   text-decoration: none;
 }
@@ -286,16 +284,8 @@ body.menu-close .menu-inside {
 
 .loading-text {
   position: absolute;
-  display: inline-block;
-  top: 50%;
-  left: 50%;
   text-align: center;
-
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 50%;
 
   animation-name: loading-text-anim;
   animation-duration: 3s;
@@ -323,7 +313,6 @@ body.menu-close .menu-inside {
 
 .section {
   width: 100vw;
-  height: 100vh;
   background-color: #F1F1F1;
   overflow: hidden;
   color: #444;
@@ -349,6 +338,10 @@ body.menu-close .menu-inside {
   bottom: 50vh;
   width: 100vw;
 
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
   transform: translateY(50%);
 }
 
@@ -415,7 +408,7 @@ body.menu-close .menu-inside {
 
   .menu-text {
     font-size: 3.5vw;
-    margin-right: 3vw;
+    margin-right: 3.5vw;
     margin-top: -0.3vw;
   }
 
@@ -426,6 +419,28 @@ body.menu-close .menu-inside {
   .menu-icon-line {
     height: 2px;
     margin-bottom: 1.2vw;
+  }
+
+  .menu-inside-menu {
+    display: block;
+    font-size: 5vw;
+    margin-bottom: 10vw;
+  }
+
+  .loading-text {
+    display: block;
+    width: 100%;
+    font-size: 5vw;
+  
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .section {
+    height: 160vw;
   }
 }
 
@@ -468,5 +483,25 @@ body.menu-close .menu-inside {
   .menu-icon-line {
     height: 2px;
     margin-bottom: 5px;
+  }
+
+  .menu-inside-menu {
+    margin-right: 200px;
+    font-size: 12pt;
+  }
+
+  .loading-text {
+    display: inline-block;
+    left: 50%;
+  
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .section {
+    height: 100vh;
   }
 }
