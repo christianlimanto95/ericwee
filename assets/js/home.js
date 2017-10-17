@@ -12,7 +12,7 @@ $(function() {
     section3 = $(".section-3");
     vh100 =  parseInt(section1.css("height"));
     vh33 = vh100 / 3;
-    section3Threshold = vh100 + vh100 / 2;
+    section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
     $("body").on("allLoaded", function() {
         $(".section-1").addClass("show");
     });
