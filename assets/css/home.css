@@ -177,18 +177,18 @@
     }
 
     .selected-work-3 {
-        -webkit-transform: translateX(107.5vw) scale(1.4, 1.4);
-        -moz-transform: translateX(107.5vw) scale(1.4, 1.4);
-        -ms-transform: translateX(107.5vw) scale(1.4, 1.4);
-        -o-transform: translateX(107.5vw) scale(1.4, 1.4);
+        -webkit-transform: translateX(107.5vw);
+        -moz-transform: translateX(107.5vw);
+        -ms-transform: translateX(107.5vw);
+        -o-transform: translateX(107.5vw);
         transform: translateX(140vw);
     }
     
     .selected-work-4 {
-        -webkit-transform: translateX(calc(70vw + 100vw));
-        -moz-transform: translateX(calc(70vw + 100vw));
-        -ms-transform: translateX(calc(70vw + 100vw));
-        -o-transform: translateX(calc(70vw + 100vw));
+        -webkit-transform: translateX(210vw);
+        -moz-transform: translateX(210vw);
+        -ms-transform: translateX(210vw);
+        -o-transform: translateX(210vw);
         transform: translateX(210vw);
     }
     
