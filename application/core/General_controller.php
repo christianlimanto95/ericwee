@@ -49,7 +49,7 @@ class General_controller extends CI_Controller
         $data["page_name"] = $file;
         
         if ($data["opening_words"] == "") {
-            $data["opening_words"] = "welcome to ericwee";
+            $data["opening_words"] = "welcome to ericweephoto";
         }
 		
         $this->load->view('common/header', $data);

@@ -103,24 +103,18 @@ body {
   position: fixed;
   cursor: pointer;
   z-index: 1005;
-  top: 15px;
-  left: 15px;
   display: block;
   text-decoration: none;
 }
 
 .logo-image {
-  width: 30px;
-  height: 15px;
   background-size: 100%;
   background-repeat: no-repeat;
   display: inline-block;
-  margin-bottom: -4px;
 }
 
 .logo-text {
   display: inline-block;
-  font-size: 8pt;
   color: #444;
 }
 
@@ -335,8 +329,104 @@ body.menu-close .menu-inside {
   color: #444;
 }
 
-@media all and (max-width: 1279px) {
+.section-3 {
+  position: relative;
+  height: 270vh;
+  margin-top: -180vh;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #181818;
+  color: white;
+}
 
+.section-3.show {
+  visibility: visible;
+}
+
+.section-3-center {
+  position: absolute;
+  bottom: 50vh;
+  width: 100vw;
+
+  transform: translateY(50%);
+}
+
+.section-3-we-want {
+  font-size: 16pt;
+  text-align: center;
+}
+
+.social-media {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.social-media-item {
+  font-family: copperplate-light;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin-right: 50px;
+  font-size: 11pt;
+}
+
+.social-media-item:nth-child(3) {
+  margin-right: 0;
+}
+
+.social-media-item-icon {
+  width: 25px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-bottom: -12px;
+  margin-right: 10px;
+}
+
+.section-3-contact-me {
+  font-size: 11pt;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media all and (max-width: 1279px) {
+  .logo {
+    top: 4vw;
+    left: 3vw;
+  }
+
+  .logo-image {
+    width: 10vw;
+    height: 5vw;
+    margin-bottom: -1.3vw;
+  }
+
+  .logo-text {
+    font-size: 3vw;
+  }
+
+  .menu {
+    top: 5vw;
+    right: 5vw;
+  }
+
+  .menu-text {
+    font-size: 3.5vw;
+    margin-right: 3vw;
+    margin-top: -0.3vw;
+  }
+
+  .menu-icon {
+    width: 7vw;
+  }
+
+  .menu-icon-line {
+    height: 2px;
+    margin-bottom: 1.2vw;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
@@ -344,6 +434,21 @@ body.menu-close .menu-inside {
 }
 
 @media all and (min-width: 1280px) {
+  .logo {
+    top: 15px;
+    left: 15px;
+  }
+
+  .logo-image {
+    width: 30px;
+    height: 15px;
+    margin-bottom: -4px;
+  }
+
+  .logo-text {
+    font-size: 8pt;
+  }
+
   .menu {
     height: 35px;
     top: 20px;
