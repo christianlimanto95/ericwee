@@ -1,6 +1,6 @@
 var container, section1, section2, section3, section3Threshold;
 var checkScrollDown = true, checkScrollUp = false;
-var vh100 = 0, vh33 = 0;
+var vh100 = 0, vh40 = 0;
 var group1, group2, group3, group1Threshold, group2Threshold, group3Threshold;
 
 $(function() {
@@ -12,12 +12,12 @@ $(function() {
     group2 = $(".service-group-2");
     group3 = $(".service-group-3");
     vh100 =  parseInt(section1.css("height"));
-    vh33 = vh100 / 3;
+    vh40 = vh100 / 2.5;
     section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
 
-    group1Threshold = group1.offset().top - vh33 * 2;
-    group2Threshold = group2.offset().top - vh33 * 2;
-    group3Threshold = group3.offset().top - vh33 * 2;
+    group1Threshold = group1.offset().top - vh40 * 2;
+    group2Threshold = group2.offset().top - vh40 * 2;
+    group3Threshold = group3.offset().top - vh40 * 2;
 
     $("body").on("allLoaded", function() {
         $(".section-1").addClass("show");

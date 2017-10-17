@@ -191,10 +191,6 @@ body {
   transition: width 0.3s;
 }
 
-.menu-inside-menu:hover .menu-inside-menu-line {
-  width: 100%;
-}
-
 body.menu-open .menu-inside, body.menu-close .menu-inside {
   -webkit-animation-duration: 0.3s;
   -webkit-animation-fill-mode: forwards;
@@ -518,6 +514,10 @@ body.menu-close .menu-inside {
 
   .menu-inside-menu-3 {
     margin-right: 0;
+  }
+
+  .menu-inside-menu:hover .menu-inside-menu-line {
+    width: 100%;
   }
 
   .loading-text {
