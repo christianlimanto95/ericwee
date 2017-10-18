@@ -82,59 +82,29 @@
 }
 
 .section-2 {
-    padding: 50px 0;
-    height: 1550px;
     background-color: #F9F9F9;
 }
 
 .service-group {
-    width: 850px;
-    padding: 20px;
-    margin: 0 auto 100px;
     overflow: auto;
 }
 
 .service-group-title {
     text-align: center;
-    font-size: 16pt;
     opacity: 0;
 }
 
 .service-area {
     text-align: center;
-    font-size: 10pt;
-    margin-top: 5px;
     opacity: 0;
 }
 
 .service-package {
-    margin-top: 50px;
     opacity: 0;
-}
-
-.service-package-left {
-    float: left;
-}
-
-.service-package-right {
-    float: right;
-    min-width: 250px;
-}
-
-.service-package-title {
-    font-size: 12pt;
-    margin-bottom: 20px;
 }
 
 .service-name, .service-note {
     font-family: copperplate-light;
-    font-size: 8pt;
-    margin-bottom: 6px;
-}
-
-.service-price {
-    margin: 10px 0;
-    font-size: 10pt;
 }
 
 .service-package-horizontal-separator {
@@ -221,6 +191,46 @@
         height: 7vw;
         margin: 1vw auto 0;
     }
+
+    .section-2 {
+        height: 780vw;
+        padding-top: 15vw;
+    }
+
+    .service-group {
+        width: 100vw;
+        padding: 5vw;
+        margin: 0 auto 25vw;
+    }
+
+    .service-group-title {
+        font-size: 5.5vw;
+    }
+
+    .service-area {
+        font-size: 3.5vw;
+        margin-top: 2vw;
+    }
+
+    .service-package {
+        margin-top: 15vw;
+    }
+
+    .service-package-title {
+        font-size: 4vw;
+        margin-bottom: 5vw;
+    }
+
+    .service-name, .service-note {
+        font-size: 3vw;
+        margin-bottom: 1vw;
+        line-height: 6vw;
+    }
+
+    .service-price {
+        margin: 3vw 0;
+        font-size: 3.5vw;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
@@ -248,5 +258,53 @@
         width: 30px;
         height: 30px;
         margin: 5px auto 0;
+    }
+
+    .section-2 {
+        padding: 50px 0;
+        height: 1550px;
+    }
+
+    .service-group {
+        width: 850px;
+        padding: 20px;
+        margin: 0 auto 100px;
+    }
+
+    .service-group-title {
+        font-size: 16pt;
+    }
+
+    .service-area {
+        font-size: 10pt;
+        margin-top: 5px;
+    }
+
+    .service-package {
+        margin-top: 50px;
+    }
+
+    .service-package-left {
+        float: left;
+    }
+    
+    .service-package-right {
+        float: right;
+        min-width: 250px;
+    }
+
+    .service-package-title {
+        font-size: 12pt;
+        margin-bottom: 20px;
+    }
+
+    .service-name, .service-note {
+        font-size: 8pt;
+        margin-bottom: 6px;
+    }
+
+    .service-price {
+        margin: 10px 0;
+        font-size: 10pt;
     }
 }
