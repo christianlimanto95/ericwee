@@ -84,16 +84,20 @@ input:focus, textarea:focus {
 }
 
 @media all and (max-width: 1279px) {
+    .section {
+        height: 180vw;
+    }
+
     .section-1-center {
         display: block;
-        top: 15vw;
+        top: 20vw;
         width: 100vw;
         padding: 5vw;
         text-align: center;
     }
 
     .section-1-title {
-        margin-bottom: 12vw;
+        margin-bottom: 15vw;
         font-size: 4.5vw;
     }
 
@@ -146,7 +150,7 @@ input:focus, textarea:focus {
     }
 
     .section-footer {
-        bottom: 20vw;
+        top: 120vw;
     }
 
     .social-media {
