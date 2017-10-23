@@ -22,6 +22,9 @@ class Works extends General_controller {
 			"title" => "Works",
 			"opening_words" => $opening_words
 		);
+
+		$data["works"] = $this->Works_model->get_works();
+		$data["archived_works"] = $this->Works_model->get_archived_works();
 		
 		parent::view("works", $data);
 	}

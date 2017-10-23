@@ -30,7 +30,6 @@ $(function() {
     container.on("scroll", selectedWorksShow);
     container.on("scroll", archivedWorksShow);
 
-    var selectedWorksLength = 9;
     for (var i = 0; i < selectedWorksLength; i+=3) {
         var selectedWorksItem = $(".selected-works-item[data-no='" + i + "']");
         var itemThreshold = selectedWorksItem.offset().top - vh33 * 2;
@@ -57,7 +56,6 @@ $(function() {
         })(selectedWorksItem, itemThreshold, doneFunction);
     }
 
-    var archivedWorksLength = 8;
     for (var i = 0; i < archivedWorksLength; i+=2) {
         var archivedWorksItem = $(".archived-works-item[data-no='" + i + "']");
         var itemThreshold = archivedWorksItem.offset().top - vh33 * 2;

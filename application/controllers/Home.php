@@ -17,6 +17,8 @@ class Home extends General_controller {
 			"title" => "Home",
 			"opening_words" => ""
 		);
+
+		$data["front_works"] = $this->Home_model->get_front_works();
 		
 		parent::view("home", $data);
 	}

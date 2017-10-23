@@ -11,26 +11,19 @@
     <div class="section section-2">
         <div class="selected-works-title" data-anim="fade-anim"><div data-content-type="text">SELECTED WORKS</div></div>
         <div class="selected-works-container">
-            <div class="selected-works-item" data-no="0" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="selected-works-item" data-no="1" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="selected-works-item" data-no="2" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
-            <div class="selected-works-item" data-no="3" data-anim="fade-anim" style="background-image: url(assets/images/4.jpg);"></div>
-            <div class="selected-works-item" data-no="4" data-anim="fade-anim" style="background-image: url(assets/images/5.jpg);"></div>
-            <div class="selected-works-item" data-no="5" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="selected-works-item" data-no="6" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="selected-works-item" data-no="7" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
-            <div class="selected-works-item" data-no="8" data-anim="fade-anim" style="background-image: url(assets/images/4.jpg);"></div>
+            <?php
+                for ($i = 0; $i < sizeof($works); $i++) {
+                    echo "<div class='selected-works-item' data-no='" . $i . "' data-anim='fade-anim' style='background-image: url(assets/images/works/" . $works[$i]->works_id . "." . $works[$i]->works_extension . ");'></div>";
+                }
+            ?>
         </div>
         <div class="archived-works-title" data-anim="fade-anim"><div data-content-type="text">ARCHIVED WORKS</div></div>
         <div class="archived-works-container">
-            <div class="archived-works-item" data-no="0" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="archived-works-item" data-no="1" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="archived-works-item" data-no="2" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
-            <div class="archived-works-item" data-no="3" data-anim="fade-anim" style="background-image: url(assets/images/4.jpg);"></div>
-            <div class="archived-works-item" data-no="4" data-anim="fade-anim" style="background-image: url(assets/images/5.jpg);"></div>
-            <div class="archived-works-item" data-no="5" data-anim="fade-anim" style="background-image: url(assets/images/1.jpg);"></div>
-            <div class="archived-works-item" data-no="6" data-anim="fade-anim" style="background-image: url(assets/images/2.jpg);"></div>
-            <div class="archived-works-item" data-no="7" data-anim="fade-anim" style="background-image: url(assets/images/3.jpg);"></div>
+            <?php
+                for ($i = 0; $i < sizeof($archived_works); $i++) {
+                    echo "<div class='archived-works-item' data-no='" . $i . "' data-anim='fade-anim' style='background-image: url(assets/images/archived_works/" . $archived_works[$i]->archived_works_id . "." . $archived_works[$i]->archived_works_extension . ");'></div>";
+                }
+            ?>
         </div>
     </div>
     <div class="section section-3">
@@ -45,3 +38,7 @@
         </div>
     </div>
 </div>
+<script>
+var selectedWorksLength = <?php echo sizeof($works); ?>;
+var archivedWorksLength = <?php echo sizeof($archived_works); ?>;
+</script>
