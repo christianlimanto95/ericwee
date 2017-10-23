@@ -1,0 +1,86 @@
+.header {
+	padding: 20px;
+}
+
+.header-menu, .header-menu-left {
+	display: block;
+	text-decoration: none;
+	color: #191919;
+	padding: 5px;
+}
+
+.header-menu {
+	float: right;
+	margin-right: 50px;
+}
+
+.header-menu-left {
+	float: left;
+	margin-left: 50px;
+}
+
+.header-menu-left.active {
+	background-color: #191919;
+	color: white;
+}
+
+.content {
+	clear: both;
+	padding: 50px 100px;
+}
+
+.content-title {
+	font-size: 28pt;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.edit-item {
+	display: block;
+	margin-bottom: 50px;
+	overflow: auto;
+}
+
+.no {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 24pt;
+	margin-top: -200px;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.image {
+	display: inline-block;
+	overflow: auto;
+}
+
+img {
+	display: block;
+	margin-top: 10px;
+}
+
+.input-name {
+	display: inline-block;
+	font-size: 14pt;
+	vertical-align: middle;
+	margin-top: -200px;
+	margin-left: 50px;
+}
+
+.btn-save {
+	padding: 10px 15px;
+	font-size: 14pt;
+	background-color: transparent;
+	border: 1px solid #191919;
+	cursor: pointer;
+	margin-top: -200px;
+	margin-left: 50px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn-save:hover {
+	background-color: #191919;
+	color: white;
+}

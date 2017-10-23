@@ -57,9 +57,38 @@ class General_controller extends CI_Controller
         $this->load->view('common/footer', $data);
     }
 
-	public function cek_login() {
+    public function backview($file, $data){
+		$data["additional_css"] = $this->additional_css;
+        $data["additional_js"] = $this->additional_js;
+        $data["page_name"] = $file;
+        
+        $this->load->view('common/backheader', $data);
+        $this->load->view($file, $data);
+        $this->load->view('common/backfooter', $data);
+    }
+
+	public function redirect_if_not_logged_in() {
         if ($this->session->userdata('isLoggedIn') != 1) {
-            redirect(base_url());
+            redirect(base_url("login"));
         }
+    }
+
+    public function cek_login() {
+        return ($this->session->userdata('isLoggedIn') == 1);
+    }
+
+    public function upload_file_settings($path = '', $max_size = '', $file_name = "") {
+        $config['upload_path'] = $path;
+        $config['allowed_types'] = '*';
+        $config['max_size'] = $max_size;
+        $config['remove_spaces'] = true;
+        $config['overwrite'] = true;
+        $config['encrypt_name'] = false;
+        $config['max_width'] = '';
+        $config['max_height'] = '';
+        if ($file_name != "") {
+            $config["file_name"] = $file_name;
+        }
+        $this->load->library('upload', $config);
     }
 }
