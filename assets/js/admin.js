@@ -6,5 +6,5 @@ $(function() {
 			previewElement.attr("src", e.target.result);
 		};
 		reader.readAsDataURL($(this)[0].files[0]);
-	});
+    });
 });
