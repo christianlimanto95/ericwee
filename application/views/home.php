@@ -12,7 +12,7 @@
         <div class="selected-works-container" data-anim="fade-anim">
             <?php
                 for ($i = 0; $i < sizeof($front_works); $i++) {
-                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "' style='background-image: url(assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . ");'></div>";
+                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "' style='background-image: url(assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date) . ");'></div>";
                 }
             ?>
             <div class="selected-works-left"></div>

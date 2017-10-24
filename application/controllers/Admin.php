@@ -23,14 +23,21 @@ class Admin extends General_controller {
 	public function front_submit() {
 		
 		if (!empty($_FILES["input-image"]["name"])) {
+			$id = $this->input->post("id", true);
 			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
-			$file_name = $this->input->post("id") . "." . $extension;
+			$file_name = $id . "." . $extension;
 			parent::upload_file_settings('assets/images/front_works/', '5000000', $file_name);
 			if (!$this->upload->do_upload('input-image')) {
 				$error_upload = true;
 			} else {
-				
+				$uploadData = array(
+					"id" => $id,
+					"front_works_extension" => $extension
+				);
+				$this->Admin_model->updateFrontWorks($uploadData);
 			}
+
+			redirect(base_url("admin"));
 		}
 	}
 }
