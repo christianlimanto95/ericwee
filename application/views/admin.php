@@ -1,8 +1,8 @@
 <div class="header">
-    <a href="<?php echo base_url(); ?>" class="header-menu-left active" >front works</a>
-    <a href="selected" class="header-menu-left" >selected works</a>
-    <a href="archived" class="header-menu-left" >archived works</a>
-    <a href="change_password" class="header-menu">Ganti Password</a>
+    <a href="<?php echo base_url("admin"); ?>" class="header-menu-left active" >front works</a>
+    <a href="<?php echo base_url("admin/selected"); ?>" class="header-menu-left" >selected works</a>
+    <a href="<?php echo base_url("admin/archived"); ?>" class="header-menu-left" >archived works</a>
+    <a href="<?php echo base_url("admin/change_password"); ?>" class="header-menu">Ganti Password</a>
     <a href="logout" class="header-menu">Logout</a>
 </div>
 <div class="content">
@@ -14,8 +14,7 @@
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
             <img src="<?php echo base_url("assets/images/front_works/" . $front_works[0]->front_works_id . "." . $front_works[0]->front_works_extension) . "?" . strtotime($front_works[0]->modified_date); ?>" width="400px" />
         </div>
-        <input type="text" value="<?php echo $front_works[0]->front_works_name; ?>" class="input-name input-name-1" name="input-name-1" />
-        <button type="submit" class="btn-save">Save</button>
+        <button type="submit" class="btn-save" disabled>Save</button>
     </form>
     <form class="edit-item" method="post" action="admin/front_submit" enctype="multipart/form-data">
         <input type="hidden" name="id" value="2" />
@@ -24,8 +23,7 @@
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
             <img src="<?php echo base_url("assets/images/front_works/" . $front_works[1]->front_works_id . "." . $front_works[1]->front_works_extension) . "?" . strtotime($front_works[1]->modified_date); ?>" width="400px" />
         </div>
-        <input type="text" value="<?php echo $front_works[1]->front_works_name; ?>" class="input-name input-name-2" name="input-name-2" />
-        <button type="submit" class="btn-save">Save</button>
+        <button type="submit" class="btn-save" disabled>Save</button>
     </form>
     <form class="edit-item" method="post" action="admin/front_submit" enctype="multipart/form-data">
         <input type="hidden" name="id" value="3" />
@@ -34,8 +32,7 @@
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
             <img src="<?php echo base_url("assets/images/front_works/" . $front_works[2]->front_works_id . "." . $front_works[2]->front_works_extension) . "?" . strtotime($front_works[2]->modified_date); ?>" width="400px" />
         </div>
-        <input type="text" value="<?php echo $front_works[2]->front_works_name; ?>" class="input-name input-name-3" name="input-name-3" />
-        <button type="submit" class="btn-save">Save</button>
+        <button type="submit" class="btn-save" disabled>Save</button>
     </form>
     <form class="edit-item" method="post" action="admin/front_submit" enctype="multipart/form-data">
         <input type="hidden" name="id" value="4" />
@@ -44,8 +41,7 @@
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
             <img src="<?php echo base_url("assets/images/front_works/" . $front_works[3]->front_works_id . "." . $front_works[3]->front_works_extension) . "?" . strtotime($front_works[3]->modified_date); ?>" width="400px" />
         </div>
-        <input type="text" value="<?php echo $front_works[3]->front_works_name; ?>" class="input-name input-name-4" name="input-name-4" />
-        <button type="submit" class="btn-save">Save</button>
+        <button type="submit" class="btn-save" disabled>Save</button>
     </form>
     <form class="edit-item" method="post" action="admin/front_submit" enctype="multipart/form-data">
         <input type="hidden" name="id" value="5" />
@@ -54,7 +50,6 @@
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
             <img src="<?php echo base_url("assets/images/front_works/" . $front_works[4]->front_works_id . "." . $front_works[4]->front_works_extension) . "?" . strtotime($front_works[4]->modified_date); ?>" width="400px" />
         </div>
-        <input type="text" value="<?php echo $front_works[4]->front_works_name; ?>" class="input-name input-name-5" name="input-name-5" />
-        <button type="submit" class="btn-save">Save</button>
+        <button type="submit" class="btn-save" disabled>Save</button>
     </form>
 </div>

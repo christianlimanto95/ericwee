@@ -40,4 +40,20 @@ class Admin extends General_controller {
 			redirect(base_url("admin"));
 		}
 	}
+
+	public function selected() {
+		$data = array(
+			"title" => "Admin - selected works"
+		);
+		$data["selected_works"] = $this->Admin_model->get_selected_works();
+		parent::backview("admin_selected_works", $data);
+	}
+
+	public function archived() {
+		$data = array(
+			"title" => "Admin - archived works"
+		);
+		$data["archived_works"] = $this->Admin_model->get_archived_works();
+		parent::backview("admin_archived_works", $data);
+	}
 }

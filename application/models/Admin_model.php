@@ -17,4 +17,12 @@ class Admin_model extends CI_Model
         $this->db->set("modified_date", "NOW()", false);
         $this->db->update("front_works");
     }
+
+    function get_selected_works() {
+        return $this->db->get("works")->result();
+    }
+
+    function get_archived_works() {
+        return $this->db->get("archived_works")->result();
+    }
 }
