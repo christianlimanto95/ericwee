@@ -463,7 +463,22 @@ body.menu-close .menu-inside {
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
+  .loading-text {
+    font-size: 4.5vw;
+  }
 
+  .section {
+    height: 130vw;
+  }
+
+  .section-3 {
+    height: 351vw;
+    margin-top: -207vw;
+  }
+
+  .section-3-center {
+    bottom: 73.1vw;
+  }
 }
 
 @media all and (min-width: 1280px) {

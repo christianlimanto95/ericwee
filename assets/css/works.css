@@ -185,7 +185,30 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1279px) {
+    .selected-works-container {
+        text-align: center;
+    }
 
+    .selected-works-item, .archived-works-item {
+        display: inline-block;
+        width: 28vw;
+        height: 16vw;
+        margin-right: 3vw;
+        margin-bottom: 10vw;
+    }
+
+    .selected-works-item:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .archived-works-container {
+        width: 59vw;
+        margin: 0 auto;
+    }
+
+    .archived-works-item:nth-child(2n) {
+        margin-right: 0;
+    }
 }
 
 @media all and (min-width: 1280px) {
