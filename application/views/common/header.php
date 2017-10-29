@@ -25,7 +25,7 @@
 <div class="white-background">
 </div>
 <a class="logo" href="<?php echo base_url(); ?>">
-	<div class="logo-image" style="background-image: url('assets/icons/logo.svg');"></div>
+	<div class="logo-image" style="background-image: url('assets/icons/logo.png');"></div>
 	<div class="logo-text" data-content-type="text">ERICWEEPHOTO</div>
 </a>
 <div class="menu" id="menu">

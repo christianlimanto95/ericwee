@@ -1,7 +1,7 @@
 <div class="content">
     <div class="section section-1">
         <div class="section-1-center">
-            <div class="section-1-logo" data-anim="fade-anim" style="background-image: url('assets/icons/logo.svg');"></div>
+            <div class="section-1-logo" data-anim="fade-anim" style="background-image: url('assets/icons/logo.png');"></div>
             <div class="section-1-ericwee" data-anim="fade-anim" ><span data-content-type="text">ERICWEEPHOTO</span></div>
             <div class="section-1-text" data-anim="fade-anim"><span data-content-type="text">WE ARE SPECIALIZED IN PREWEDDING PHOTOGRAPHY.<br>BASED IN SURABAYA.</span></div>
         </div>
