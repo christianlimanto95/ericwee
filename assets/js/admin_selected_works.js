@@ -16,4 +16,11 @@ $(function() {
 			e.preventDefault();
 		}
 	});
+
+	$(".form-delete").on("submit", function(e) {
+		var result = confirm("are you sure?");
+		if (!result) {
+			e.preventDefault();
+		}
+	});
 });

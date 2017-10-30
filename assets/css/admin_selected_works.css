@@ -35,8 +35,11 @@
 	margin-bottom: 50px;
 }
 
+form {
+	display: inline-block;
+}
+
 .edit-item {
-	display: block;
 	margin-bottom: 50px;
 	overflow: auto;
 }
@@ -68,7 +71,7 @@ img {
 	margin-left: 50px;
 }
 
-.btn-save {
+.btn {
 	padding: 10px 15px;
 	font-size: 14pt;
 	background-color: #191919;
@@ -81,7 +84,21 @@ img {
 	vertical-align: middle;
 }
 
-.btn-save:disabled {
+.btn-save {
+	background-color: #191919;
+	color: white;
+	border: 1px solid #191919;
+}
+
+.btn-delete {
+	vertical-align: middle;
+	margin-bottom: 100px;
+	background-color: #F44336;
+	color: white;
+	border: 1px solid #F44336;
+}
+
+.btn:disabled {
 	background-color: #DDD;
 	color: #777;
 	border: 1px solid #DDD;

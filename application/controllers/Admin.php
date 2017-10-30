@@ -45,7 +45,7 @@ class Admin extends General_controller {
 		$data = array(
 			"title" => "Admin - selected works"
 		);
-		$data["selected_works"] = $this->Admin_model->get_selected_works();
+		$data["works"] = $this->Admin_model->get_selected_works();
 		parent::backview("admin_selected_works", $data);
 	}
 
