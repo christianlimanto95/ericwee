@@ -6,15 +6,15 @@ var container;
 var sectionFooter = false;
 
 var timeout = setTimeout(function() {
-    $(".loading-container").velocity({
-        opacity: 0
-    }, 1000, function() {
-        timeoutDone = true;
-        if (windowLoad) {
+    timeoutDone = true;
+    if (windowLoad) {
+        $(".loading-container").velocity({
+            opacity: 0
+        }, 1000, function() {
             $(".loading-container").addClass("hidden");
             $("body").trigger("allLoaded");
-        }
-    });
+        });
+    }
 }, 1000);
 
 $(function() {
@@ -135,8 +135,12 @@ $(function() {
 $(window).on("load", function() {
     windowLoad = true;
     if (timeoutDone) {
-        $(".loading-container").addClass("hidden");
-        $("body").trigger("allLoaded");
+        $(".loading-container").velocity({
+            opacity: 0
+        }, 1000, function() {
+            $(".loading-container").addClass("hidden");
+            $("body").trigger("allLoaded");
+        });
     }
 });
 
