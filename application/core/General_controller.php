@@ -91,4 +91,14 @@ class General_controller extends CI_Controller
         }
         $this->load->library('upload', $config);
     }
+
+    public function get_default_email_config() {
+        $config["protocol"] = "smtp";
+		$config["smtp_host"] = "mail.ericweephoto.com";
+		$config["smtp_user"] = "admin@ericweephoto.com";
+		$config["smtp_pass"] = "ericwee";
+		$config["smtp_port"] = 587;
+        $config["smtp_crypto"] = "tls";
+        return $config;
+    }
 }
