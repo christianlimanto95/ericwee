@@ -31,7 +31,7 @@ $(function() {
     container.on("scroll", archivedWorksShow);
 
     for (var i = 0; i < selectedWorksLength; i+=3) {
-        var selectedWorksItem = $(".selected-works-item[data-no='" + i + "']");
+        var selectedWorksItem = $(".selected-works-item-container[data-no='" + i + "']");
         var itemThreshold = selectedWorksItem.offset().top - vh33 * 2;
         var doneFunction = false;
         (function(item, threshold, done) {
@@ -57,7 +57,7 @@ $(function() {
     }
 
     for (var i = 0; i < archivedWorksLength; i+=2) {
-        var archivedWorksItem = $(".archived-works-item[data-no='" + i + "']");
+        var archivedWorksItem = $(".archived-works-item-container[data-no='" + i + "']");
         var itemThreshold = archivedWorksItem.offset().top - vh33 * 2;
         var doneFunction = false;
         (function(item, threshold, done) {

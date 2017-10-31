@@ -1,4 +1,3 @@
-var isMobile = false;
 var windowLoad = false, timeoutDone = false;
 var menuCanClick = true, menuLineTranslateY = {open: "8px", close: "0px"};
 var checkScrollDownHeader = true, checkScrollUpHeader = false;
@@ -18,7 +17,6 @@ var timeout = setTimeout(function() {
 }, 1000);
 
 $(function() {
-    isMobile = $(".div-mobile").css("display") == "block" ? true : false;
     if (isMobile) {
         menuLineTranslateY.open = "2vw";
         menuLineTranslateY.close = "0vw";
@@ -129,6 +127,11 @@ $(function() {
         }, 500, function() {
             location.href = href;
         });
+    });
+
+    $(window).resize(function() {
+        vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     });
 });
 

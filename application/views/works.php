@@ -13,7 +13,7 @@
         <div class="selected-works-container">
             <?php
                 for ($i = 0; $i < sizeof($works); $i++) {
-                    echo "<div class='selected-works-item' data-no='" . $i . "' data-anim='fade-anim' style='background-image: url(assets/images/works/" . $works[$i]->works_id . "." . $works[$i]->works_extension . ");'></div>";
+                    echo "<div class='selected-works-item-container' data-no='" . $i . "' data-anim='fade-anim'><img class='selected-works-item' data-no='" . $i . "' src='" . base_url("assets/images/works/" . $works[$i]->works_id . "." . $works[$i]->works_extension) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div>";
                 }
             ?>
         </div>
@@ -21,7 +21,7 @@
         <div class="archived-works-container">
             <?php
                 for ($i = 0; $i < sizeof($archived_works); $i++) {
-                    echo "<div class='archived-works-item' data-no='" . $i . "' data-anim='fade-anim' style='background-image: url(assets/images/archived_works/" . $archived_works[$i]->archived_works_id . "." . $archived_works[$i]->archived_works_extension . ");'></div>";
+                    echo "<div class='archived-works-item-container' data-no='" . $i . "' data-anim='fade-anim'><img class='archived-works-item' data-no='" . $i . "' src='" . base_url("assets/images/archived_works/" . $archived_works[$i]->archived_works_id . "." . $archived_works[$i]->archived_works_extension) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div>";
                 }
             ?>
         </div>
@@ -41,4 +41,12 @@
 <script>
 var selectedWorksLength = <?php echo sizeof($works); ?>;
 var archivedWorksLength = <?php echo sizeof($archived_works); ?>;
+var imageSize = (isMobile) ? (isTablet) ? (28 * vw / 100 - 10) + "px" : (80 * vw / 100 - 10) + "px" : "290px";
+function imgOnload(element) {
+    if (element.naturalWidth > element.naturalHeight) {
+        element.setAttribute("width", imageSize);
+    } else {
+        element.setAttribute("height", imageSize);
+    }
+}
 </script>

@@ -163,7 +163,7 @@
     animation-delay: 0.8s;
 }
 
-@media all and (max-width: 1279px) {
+@media all and (max-width: 1024px) {
     .section-1-center {
         display: block;
         top: 80vw;
@@ -233,7 +233,7 @@
     }
 }
 
-@media all and (min-width: 768px) and (max-width: 1279px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
     .section-1-title {
         font-size: 4vw;
         width: 60vw;
@@ -246,7 +246,7 @@
     }
 }
 
-@media all and (min-width: 1280px) {
+@media all and (min-width: 1025px) {
     .section-1-center {
         top: 50%;
         left: 50%;
