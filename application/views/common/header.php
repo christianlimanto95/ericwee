@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>ericwee - <?php echo $title; ?></title>
+	<title>ericweephoto - <?php echo $title; ?></title>
 	<style>
 		@font-face {
 			font-family: copperplate-bold;
@@ -13,6 +13,7 @@
 			src: url(<?php echo base_url("assets/fonts/Copperplate_Gothic_Light_Regular.ttf"); ?>);
 		}
 	</style>
+	<link rel="shortcut icon" href="<?php echo base_url("assets/icons/favicon.png"); ?>" />
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/common/default.css"); ?>" />
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/" . $page_name . ".css"); ?>" />
 	<?php echo $additional_css; ?>
@@ -25,7 +26,10 @@
 <div class="white-background">
 </div>
 <a class="logo" href="<?php echo base_url(); ?>">
-	<div class="logo-image" style="background-image: url('assets/icons/logo.png');"></div>
+	<div class="logo-image-container">
+		<div class="logo-image logo-image-black" style="background-image: url('assets/icons/logo.png');"></div>
+		<div class="logo-image logo-image-white" style="background-image: url('assets/icons/logo_white.png');"></div>
+	</div>
 	<div class="logo-text" data-content-type="text">ERICWEEPHOTO</div>
 </a>
 <div class="menu" id="menu">

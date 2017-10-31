@@ -185,6 +185,12 @@ function checkSection2ScrollDown() {
             $(".menu-icon-line").velocity({
                 backgroundColor: "#FFFFFF"
             }, 200);
+            $(".logo-image-black").velocity({
+                opacity: 0
+            }, 300);
+            $(".logo-image-white").velocity({
+                opacity: 1
+            }, 300);
             container.off("scroll", checkSection2ScrollDown);
             container.on("scroll", checkSection2ScrollUp);
         }
@@ -203,6 +209,13 @@ function checkSection2ScrollUp() {
             }, 200, function() {
                 section3.removeClass("show");
             });
+
+            $(".logo-image-black").velocity({
+                opacity: 1
+            }, 300);
+            $(".logo-image-white").velocity({
+                opacity: 0
+            }, 300);
             $(".menu-icon-line").velocity({
                 backgroundColor: "#000000"
             }, 200, function() {

@@ -45,6 +45,13 @@ $(function() {
                     $(".logo-text").velocity({
                         color: "#444"
                     }, 300);
+
+                    $(".logo-image-black").velocity({
+                        opacity: 1
+                    }, 300);
+                    $(".logo-image-white").velocity({
+                        opacity: 0
+                    }, 300);
                 }
 
                 $(".menu-text-close").velocity({
@@ -89,8 +96,12 @@ $(function() {
                     }, 300);
                 }
 
-                $(".menu-text-close").velocity({
+                $(".menu-text-close, .logo-image-white").velocity({
                     opacity: 1
+                }, 300);
+
+                $(".logo-image-black").velocity({
+                    opacity: 0
                 }, 300);
 
                 $(".menu-icon-line-1").velocity({
