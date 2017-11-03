@@ -234,6 +234,10 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+    .section-1-center {
+        top: 65vw;
+    }
+    
     .section-1-title {
         font-size: 4vw;
         width: 60vw;

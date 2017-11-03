@@ -1,6 +1,7 @@
 var windowLoad = false, timeoutDone = false;
 var menuCanClick = true, menuLineTranslateY = {open: "8px", close: "0px"};
 var checkScrollDownHeader = true, checkScrollUpHeader = false;
+var isLogoBlack = true;
 var container;
 var sectionFooter = false;
 
@@ -45,7 +46,9 @@ $(function() {
                     $(".logo-text").velocity({
                         color: "#444"
                     }, 300);
+                }
 
+                if (isLogoBlack) {
                     $(".logo-image-black").velocity({
                         opacity: 1
                     }, 300);
@@ -143,6 +146,21 @@ $(function() {
     $(window).resize(function() {
         vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+        if (vw < 1025) {
+            isMobile = true;
+            if (vw >= 768) {
+                isTablet = true;
+            }
+        }
+
+        if (isMobile) {
+            menuLineTranslateY.open = "2vw";
+            menuLineTranslateY.close = "0vw";
+        } else {
+            menuLineTranslateY.open = "8px";
+            menuLineTranslateY.close = "0px";
+        }
     });
 });
 

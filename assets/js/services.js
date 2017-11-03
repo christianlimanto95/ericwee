@@ -11,13 +11,8 @@ $(function() {
     group1 = $(".service-group-1");
     group2 = $(".service-group-2");
     group3 = $(".service-group-3");
-    vh100 =  parseInt(section1.css("height"));
-    vh40 = vh100 / 2.5;
-    section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
-
-    group1Threshold = group1.offset().top - vh40 * 2;
-    group2Threshold = group2.offset().top - vh40 * 2;
-    group3Threshold = group3.offset().top - vh40 * 2;
+    setVH();
+    setThreshold();
 
     $("body").on("allLoaded", function() {
         $(".section-1").addClass("show");
@@ -34,7 +29,24 @@ $(function() {
     container.on("scroll", serviceGroup1Show);
     container.on("scroll", serviceGroup2Show);
     container.on("scroll", serviceGroup3Show);
+
+    $(window).on("resize", function() {
+        setVH();
+        setThreshold();
+    });
 });
+
+function setVH() {
+    vh100 =  parseInt(section1.css("height"));
+    vh40 = vh100 / 2.5;
+}
+
+function setThreshold() {
+    section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
+    group1Threshold = group1.offset().top - vh40 * 2;
+    group2Threshold = group2.offset().top - vh40 * 2;
+    group3Threshold = group3.offset().top - vh40 * 2;
+}
 
 function serviceGroup1Show() {
     if (container.scrollTop() >= group1Threshold) {
@@ -60,6 +72,7 @@ function serviceGroup3Show() {
 function checkSection2ScrollDown() {
     if (checkScrollDown) {
         if (container.scrollTop() >= section3Threshold) {
+            isLogoBlack = false;
             sectionFooter = true;
             checkScrollDown = false;
             checkScrollUp = true;
@@ -71,6 +84,12 @@ function checkSection2ScrollDown() {
             $(".menu-icon-line").velocity({
                 backgroundColor: "#FFFFFF"
             }, 200);
+            $(".logo-image-black").velocity({
+                opacity: 0
+            }, 200);
+            $(".logo-image-white").velocity({
+                opacity: 1
+            }, 200);
             container.off("scroll", checkSection2ScrollDown);
             container.on("scroll", checkSection2ScrollUp);
         }
@@ -80,6 +99,7 @@ function checkSection2ScrollDown() {
 function checkSection2ScrollUp() {
     if (checkScrollUp) {
         if (container.scrollTop() < section3Threshold) {
+            isLogoBlack = true;
             sectionFooter = false;
             checkScrollUp = false;
             checkScrollDown = true;
@@ -88,6 +108,13 @@ function checkSection2ScrollUp() {
             }, 200, function() {
                 section3.removeClass("show");
             });
+
+            $(".logo-image-black").velocity({
+                opacity: 1
+            }, 200);
+            $(".logo-image-white").velocity({
+                opacity: 0
+            }, 200);
             $(".menu-icon-line").velocity({
                 backgroundColor: "#000000"
             }, 200, function() {

@@ -12,7 +12,7 @@
         <div class="selected-works-container" data-anim="fade-anim">
             <?php
                 for ($i = 0; $i < sizeof($front_works); $i++) {
-                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "' style='background-image: url(assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date) . ");'></div>";
+                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "'><div class='selected-work-image-container'><img class='selected-work-image' src='" . base_url("assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date)) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div></div>";
                 }
             ?>
             <div class="selected-works-left"></div>
@@ -33,3 +33,13 @@
         </div>
     </div>
 </div>
+<script>
+var imageSize = (isMobile) ? (isTablet) ? (59 * vw / 100 - 10) + "px" : (59 * vw / 100 - 10) + "px" : "380px";
+function imgOnload(element) {
+    if (element.naturalWidth > element.naturalHeight) {
+        element.setAttribute("width", imageSize);
+    } else {
+        element.setAttribute("height", imageSize);
+    }
+}
+</script>

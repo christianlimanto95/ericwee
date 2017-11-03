@@ -10,13 +10,9 @@ $(function() {
     section1 = $(".section-1");
     section2 = $(".section-2");
     section3 = $(".section-3");
-    vh100 =  parseInt(section1.css("height"));
-    vh33 = vh100 / 3;
-    if (!isMobile) {
-        section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
-    } else {
-        section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 * 2 / 3;
-    }
+    setVH();
+    setSection3Threshold();
+
     $("body").on("allLoaded", function() {
         $(".section-1").addClass("show");
     });
@@ -148,7 +144,26 @@ $(function() {
             location.href = href;
         });
     });
+
+    $(window).on("resize", function() {
+        setVH();
+        setSection3Threshold();
+        getSection2Transform();
+    });
 });
+
+function setVH() {
+    vh100 =  parseInt(section1.css("height"));
+    vh33 = vh100 / 3;
+}
+
+function setSection3Threshold() {
+    if (!isMobile) {
+        section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
+    } else {
+        section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 * 2 / 3;
+    }
+}
 
 function getSection2Transform() {
     matrix1 = $(".selected-work[data-no='1']").css("transform");
@@ -173,6 +188,7 @@ function section2Show() {
 function checkSection2ScrollDown() {
     if (checkScrollDown) {
         if (container.scrollTop() >= section3Threshold) {
+            isLogoBlack = false;
             sectionFooter = true;
             checkScrollDown = false;
             checkScrollUp = true;
@@ -187,10 +203,10 @@ function checkSection2ScrollDown() {
             }, 200);
             $(".logo-image-black").velocity({
                 opacity: 0
-            }, 300);
+            }, 200);
             $(".logo-image-white").velocity({
                 opacity: 1
-            }, 300);
+            }, 200);
             container.off("scroll", checkSection2ScrollDown);
             container.on("scroll", checkSection2ScrollUp);
         }
@@ -200,6 +216,7 @@ function checkSection2ScrollDown() {
 function checkSection2ScrollUp() {
     if (checkScrollUp) {
         if (container.scrollTop() < section3Threshold) {
+            isLogoBlack = true;
             sectionFooter = false;
             checkScrollUp = false;
             checkScrollDown = true;
@@ -212,10 +229,10 @@ function checkSection2ScrollUp() {
 
             $(".logo-image-black").velocity({
                 opacity: 1
-            }, 300);
+            }, 200);
             $(".logo-image-white").velocity({
                 opacity: 0
-            }, 300);
+            }, 200);
             $(".menu-icon-line").velocity({
                 backgroundColor: "#000000"
             }, 200, function() {

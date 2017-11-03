@@ -30,7 +30,6 @@ class Contact extends General_controller {
 		$name = $this->input->post("name", true);
 		$phone = $this->input->post("phone", true);
 		$message = $this->input->post("message", true);
-		echo $name . "<br>" . $phone . "<br>" . $message;
 
 		$this->load->library("email", parent::get_default_email_config());
 
@@ -38,9 +37,12 @@ class Contact extends General_controller {
 		$this->email->from("admin@ericweephoto.com", "Ericweephoto");
 		$this->email->to("christianlimanto95@gmail.com");
 		$this->email->subject("ericweephoto message");
-		$this->email->message("Nama : " . $name . "\\nTelepon : " . $phone . "\\nPesan : " . $message);
-		$this->email->send();
-
-		redirect(base_url("contact"));
+		$this->email->message("Nama : " . $name . "\r\nTelepon : " . $phone . "\r\nPesan : " . $message);
+		if (!$this->email->send()) {
+			$this->email->print_debugger();
+			echo "error";
+		} else {
+			echo "success";
+		}
 	}
 }
