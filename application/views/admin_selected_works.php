@@ -13,7 +13,7 @@
             <div class="no"><?php echo ($i + 1); ?></div>
             <div class="image">
                 <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
-                <img src="<?php echo base_url("assets/images/works/" . $works[$i]->works_id . "." . $works[$i]->works_extension) . "?" . strtotime($works[$i]->modified_date); ?>" width="400px" />
+                <img src="<?php echo base_url("assets/images/works/" . $works[$i]->works_id . "." . $works[$i]->works_extension) . "?" . strtotime($works[$i]->modified_date); ?>"/>
             </div>
             <button type="submit" class="btn btn-save" disabled>Update</button>
         </form>
@@ -21,6 +21,7 @@
             <input type="hidden" name="id" value="<?php echo $works[$i]->works_id; ?>" />
             <button type="submit" class="btn btn-delete">Delete</button>
         </form>
+        <div></div>
     <?php } ?>
 </div>
 <button class="btn-add">+</button>

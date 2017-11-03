@@ -12,7 +12,7 @@
         <div class="no">1</div>
         <div class="image">
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
-            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[0]->front_works_id . "." . $front_works[0]->front_works_extension) . "?" . strtotime($front_works[0]->modified_date); ?>" width="400px" />
+            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[0]->front_works_id . "." . $front_works[0]->front_works_extension) . "?" . strtotime($front_works[0]->modified_date); ?>" />
         </div>
         <button type="submit" class="btn-save" disabled>Update</button>
     </form>
@@ -21,7 +21,7 @@
         <div class="no">2</div>
         <div class="image">
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
-            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[1]->front_works_id . "." . $front_works[1]->front_works_extension) . "?" . strtotime($front_works[1]->modified_date); ?>" width="400px" />
+            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[1]->front_works_id . "." . $front_works[1]->front_works_extension) . "?" . strtotime($front_works[1]->modified_date); ?>" />
         </div>
         <button type="submit" class="btn-save" disabled>Update</button>
     </form>
@@ -30,7 +30,7 @@
         <div class="no">3</div>
         <div class="image">
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
-            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[2]->front_works_id . "." . $front_works[2]->front_works_extension) . "?" . strtotime($front_works[2]->modified_date); ?>" width="400px" />
+            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[2]->front_works_id . "." . $front_works[2]->front_works_extension) . "?" . strtotime($front_works[2]->modified_date); ?>" />
         </div>
         <button type="submit" class="btn-save" disabled>Update</button>
     </form>
@@ -39,7 +39,7 @@
         <div class="no">4</div>
         <div class="image">
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
-            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[3]->front_works_id . "." . $front_works[3]->front_works_extension) . "?" . strtotime($front_works[3]->modified_date); ?>" width="400px" />
+            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[3]->front_works_id . "." . $front_works[3]->front_works_extension) . "?" . strtotime($front_works[3]->modified_date); ?>" />
         </div>
         <button type="submit" class="btn-save" disabled>Update</button>
     </form>
@@ -48,7 +48,7 @@
         <div class="no">5</div>
         <div class="image">
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
-            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[4]->front_works_id . "." . $front_works[4]->front_works_extension) . "?" . strtotime($front_works[4]->modified_date); ?>" width="400px" />
+            <img src="<?php echo base_url("assets/images/front_works/" . $front_works[4]->front_works_id . "." . $front_works[4]->front_works_extension) . "?" . strtotime($front_works[4]->modified_date); ?>" />
         </div>
         <button type="submit" class="btn-save" disabled>Update</button>
     </form>

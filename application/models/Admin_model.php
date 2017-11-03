@@ -57,8 +57,42 @@ class Admin_model extends CI_Model
         $this->db->delete("works");
     }
 
-    function get_archived_works() {
-        $this->db->order_by("archived_works_number", "asc");
+    function get_archived_works($order_by = "works_number", $order = "asc") {
+        $this->db->order_by($order_by, $order);
         return $this->db->get("archived_works")->result();
+    }
+
+    function getArchivedWorksById($id) {
+        $this->db->where("archived_works_id", $id);
+        $this->db->limit(1);
+        return $this->db->get("archived_works")->result();
+    }
+
+    function insertArchivedWorks($data) {
+        $insertData = array(
+            "archived_works_extension" => $data["archived_works_extension"],
+            "archived_works_number" => $data["archived_works_number"]
+        );
+        $this->db->insert("archived_works", $insertData);
+        return $this->db->insert_id();
+    }
+
+    function updateArchivedWorks($data) {
+        $this->db->where("archived_works_id", $data["id"]);
+        $this->db->set("archived_works_extension", $data["archived_works_extension"], true);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("archived_works");
+    }
+
+    function updateArchivedWorksNumber($currentNumber, $number) {
+        $this->db->where("archived_works_number", $currentNumber);
+        $this->db->set("archived_works_number", $number);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("archived_works");
+    }
+
+    function deleteArchivedWorks($id) {
+        $this->db->where("archived_works_id", $id);
+        $this->db->delete("archived_works");
     }
 }

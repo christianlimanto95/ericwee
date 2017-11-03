@@ -140,4 +140,89 @@ class Admin extends General_controller {
 		$data["archived_works"] = $this->Admin_model->get_archived_works();
 		parent::backview("admin_archived_works", $data);
 	}
+
+	public function archived_works_update() {
+		if (!empty($_FILES["input-image"]["name"])) {
+			$id = $this->input->post("id", true);
+			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
+			$file_name = $id . "." . $extension;
+			parent::upload_file_settings('assets/images/archived_works/', '5000000', $file_name);
+			if (!$this->upload->do_upload('input-image')) {
+				$error_upload = true;
+			} else {
+				$uploadData = array(
+					"id" => $id,
+					"archived_works_extension" => $extension
+				);
+				$this->Admin_model->updateArchivedWorks($uploadData);
+			}
+		}
+		redirect(base_url("admin/archived"));
+	}
+
+	public function archived_works_insert() {
+		if (!empty($_FILES["input-image"]["name"])) {
+			$input_at = $this->input->post("input-at");
+			$input_index = intval($this->input->post("input-index"));
+
+			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
+			$works = $this->Admin_model->get_archived_works();
+
+			if ($input_at == "1") {
+				$iLength = sizeof($works);
+				for ($i = $iLength - 1; $i >= 0; $i--) {
+					$currentNumber = $works[$i]->archived_works_number;
+					$this->Admin_model->updateArchivedWorksNumber($currentNumber, $currentNumber + 1);
+				}
+			} else if ($input_at == "3") {
+				$iLength = sizeof($works);
+				for ($i = $iLength - 1; $i >= $input_index - 1; $i--) {
+					$currentNumber = $works[$i]->archived_works_number;
+					$this->Admin_model->updateArchivedWorksNumber($currentNumber, $currentNumber + 1);
+				}
+			}
+
+			$works_number = 1;
+			if ($input_at == "2") {
+				$works_number = $works[sizeof($works) - 1]->archived_works_number;
+				$works_number++;
+			} else if ($input_at == "3") {
+				$works_number = $input_index;
+			}
+
+			$insertData = array(
+				"archived_works_extension" => $extension,
+				"archived_works_number" => $works_number
+			);
+			$insert_id = $this->Admin_model->insertArchivedWorks($insertData);
+			$file_name = $insert_id . "." . $extension;
+			parent::upload_file_settings('assets/images/archived_works/', '5000000', $file_name);
+			if (!$this->upload->do_upload('input-image')) {
+				$error_upload = true;
+			}
+		}
+		redirect(base_url("admin/archived"));
+	}
+
+	public function archived_works_delete() {
+		$id = intval($this->input->post("id"));
+		$works = $this->Admin_model->get_archived_works();
+		$deletedIndex = -1;
+		for ($i = 0; $i < sizeof($works); $i++) {
+			if ($works[$i]->archived_works_id == $id) {
+				$deletedIndex = $i;
+				break;
+			}
+		}
+
+		for ($i = $deletedIndex + 1; $i < sizeof($works); $i++) {
+			$currentNumber = $works[$i]->archived_works_number;
+			$this->Admin_model->updateArchivedWorksNumber($currentNumber, $currentNumber - 1);
+		}
+
+		$this->Admin_model->deleteArchivedWorks($id);
+		unlink(realpath("assets/images/archived_works/" . $id . "." . $works[$deletedIndex]->archivedworks_extension));
+		
+		redirect(base_url("admin/archived"));
+	}
 }
