@@ -70,6 +70,7 @@ class Admin extends General_controller {
 	public function selected_works_insert() {
 		if (!empty($_FILES["input-image"]["name"])) {
 			$input_at = $this->input->post("input-at");
+			$input_index = intval($this->input->post("input-index"));
 
 			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
 			$works = $this->Admin_model->get_selected_works();
@@ -81,15 +82,19 @@ class Admin extends General_controller {
 					$this->Admin_model->updateSelectedWorksNumber($currentNumber, $currentNumber + 1);
 				}
 			} else if ($input_at == "3") {
-				$input_index = $this->input->post("input-index");
+				$iLength = sizeof($works);
+				for ($i = $iLength - 1; $i >= $input_index - 1; $i--) {
+					$currentNumber = $works[$i]->works_number;
+					$this->Admin_model->updateSelectedWorksNumber($currentNumber, $currentNumber + 1);
+				}
 			}
 
 			$works_number = 1;
-			
 			if ($input_at == "2") {
-				
+				$works_number = $works[sizeof($works) - 1]->works_number;
+				$works_number++;
 			} else if ($input_at == "3") {
-				$input_index = $this->input->post("input-index");
+				$works_number = $input_index;
 			}
 
 			$insertData = array(
