@@ -1,3 +1,15 @@
+<script>
+var selectedWorksLength = <?php echo sizeof($works); ?>;
+var archivedWorksLength = <?php echo sizeof($archived_works); ?>;
+var imageSize = (isMobile) ? (isTablet) ? (28 * vw / 100 - 10) + "px" : (80 * vw / 100 - 10) + "px" : "290px";
+function imgOnload(element) {
+    if (element.naturalWidth > element.naturalHeight) {
+        element.setAttribute("width", imageSize);
+    } else {
+        element.setAttribute("height", imageSize);
+    }
+}
+</script>
 <div class="content">
     <div class="section section-1">
         <div class="section-1-center">
@@ -38,15 +50,3 @@
         </div>
     </div>
 </div>
-<script>
-var selectedWorksLength = <?php echo sizeof($works); ?>;
-var archivedWorksLength = <?php echo sizeof($archived_works); ?>;
-var imageSize = (isMobile) ? (isTablet) ? (28 * vw / 100 - 10) + "px" : (80 * vw / 100 - 10) + "px" : "290px";
-function imgOnload(element) {
-    if (element.naturalWidth > element.naturalHeight) {
-        element.setAttribute("width", imageSize);
-    } else {
-        element.setAttribute("height", imageSize);
-    }
-}
-</script>

@@ -23,9 +23,25 @@ class Admin_model extends CI_Model
         return $this->db->get("works")->result();
     }
 
+    function insertSelectedWorks($data) {
+        $insertData = array(
+            "works_extension" => $data["works_extension"],
+            "works_number" => $data["works_number"]
+        );
+        $this->db->insert("works", $insertData);
+        return $this->db->insert_id();
+    }
+
     function updateSelectedWorks($data) {
         $this->db->where("works_id", $data["id"]);
         $this->db->set("works_extension", $data["works_extension"], true);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("works");
+    }
+
+    function updateSelectedWorksNumber($currentNumber, $number) {
+        $this->db->where("works_number", $currentNumber);
+        $this->db->set("works_number", $number);
         $this->db->set("modified_date", "NOW()", false);
         $this->db->update("works");
     }

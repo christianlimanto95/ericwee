@@ -70,30 +70,40 @@ class Admin extends General_controller {
 	public function selected_works_insert() {
 		if (!empty($_FILES["input-image"]["name"])) {
 			$input_at = $this->input->post("input-at");
-			$works = $this->Admin_model->get_selected_works("works_id");
-			$count = sizeof($works);
-			
-			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
-			$last_id = $works[$count - 1]->works_id;
-			$last_id++;
-			$file_name = $last_id . $extension;
 
+			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
+			$works = $this->Admin_model->get_selected_works();
+
+			if ($input_at == "1") {
+				$iLength = sizeof($works);
+				for ($i = $iLength - 1; $i >= 0; $i--) {
+					$currentNumber = $works[$i]->works_number;
+					$this->Admin_model->updateSelectedWorksNumber($currentNumber, $currentNumber + 1);
+				}
+			} else if ($input_at == "3") {
+				$input_index = $this->input->post("input-index");
+			}
+
+			$works_number = 1;
+			
+			if ($input_at == "2") {
+				
+			} else if ($input_at == "3") {
+				$input_index = $this->input->post("input-index");
+			}
+
+			$insertData = array(
+				"works_extension" => $extension,
+				"works_number" => $works_number
+			);
+			$insert_id = $this->Admin_model->insertSelectedWorks($insertData);
+			$file_name = $insert_id . "." . $extension;
 			parent::upload_file_settings('assets/images/works/', '5000000', $file_name);
 			if (!$this->upload->do_upload('input-image')) {
 				$error_upload = true;
-			} else {
-				$works_number = 1;
-				
-				if ($input_at == "1") {
-	
-				} else if ($input_at == "2") {
-					
-				} else if ($input_at == "3") {
-					$input_index = $this->input->post("input-index");
-				}
 			}
 		}
-		//redirect(base_url("admin/selected"));
+		redirect(base_url("admin/selected"));
 	}
 
 	public function archived() {
