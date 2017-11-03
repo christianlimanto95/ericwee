@@ -104,3 +104,104 @@ img {
 	border: 1px solid #DDD;
 	cursor: default;
 }
+
+.btn-add {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	background-color: #1e88e5;
+	border: 0;
+	border-radius: 100%;
+	color: white;
+	font-size: 28pt;
+	cursor: pointer;
+	box-shadow: 0 0 10px #555;
+}
+
+.dialog {
+	display: block;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 500px;
+	min-height: 280px;
+	box-shadow: 0 0 20px #777;
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.dialog.hidden {
+	display: none;
+}
+
+.dialog-btn-close {
+	float: right;
+	font-weight: bold;
+	font-size: 16pt;
+	cursor: pointer;
+}
+
+.dialog-title {
+	font-size: 18pt;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.form-item {
+	margin-bottom: 20px;
+	font-size: 14pt;
+}
+
+.form-label {
+	display: inline-block;
+	width: 50px;
+}
+
+.form-input {
+	font-size: 14pt;
+}
+
+.form-input-at {
+	width: 100px;
+}
+
+.form-input-index {
+	width: 50px;
+	text-align: center;
+}
+
+input.hidden {
+	visibility: hidden;
+}
+
+.form-input-image-preview {
+	max-width: 300px;
+	max-height: 250px;
+}
+
+.btn-submit, .btn-cancel {
+	border: 0;
+	background-color: #1E88E5;
+	color: white;
+	width: 100px;
+	height: 40px;
+	font-size: 14pt;	
+	cursor: pointer;
+	float: right;
+	margin-top: 20px;
+	box-shadow: 0 0 5px #555;
+	border-radius: 2px;
+}
+
+.btn-cancel {
+	background-color: #757575;
+	margin-right: 20px;
+}

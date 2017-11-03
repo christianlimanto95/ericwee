@@ -4,7 +4,7 @@
         <div class="error"><?php echo $this->session->flashdata("error_message"); ?></div>
         <div class="form-item">
             <div class="form-label">Username</div>
-            <input type="text" name="username" class="username" maxlength="50" />
+            <input type="text" name="username" class="username" maxlength="50" autofocus="autofocus" />
         </div>
         <div class="form-item">
             <div class="form-label">Password</div>
