@@ -18,7 +18,8 @@ class Admin_model extends CI_Model
         $this->db->update("front_works");
     }
 
-    function get_selected_works() {
+    function get_selected_works($order_by = "works_number", $order = "asc") {
+        $this->db->order_by($order_by, $order);
         return $this->db->get("works")->result();
     }
 
@@ -30,6 +31,7 @@ class Admin_model extends CI_Model
     }
 
     function get_archived_works() {
+        $this->db->order_by("archived_works_number", "asc");
         return $this->db->get("archived_works")->result();
     }
 }

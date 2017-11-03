@@ -24,7 +24,7 @@
     <?php } ?>
 </div>
 <button class="btn-add">+</button>
-<form class="dialog hidden">
+<form class="dialog hidden" method="post" action="<?php echo base_url("admin/selected_works_insert"); ?>" enctype="multipart/form-data">
     <div class="dialog-btn-close">X</div>
     <div class="dialog-title">Add Photo</div>
     <div class="form-item">

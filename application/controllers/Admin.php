@@ -36,9 +36,8 @@ class Admin extends General_controller {
 				);
 				$this->Admin_model->updateFrontWorks($uploadData);
 			}
-
-			redirect(base_url("admin"));
 		}
+		redirect(base_url("admin"));
 	}
 
 	public function selected() {
@@ -64,9 +63,37 @@ class Admin extends General_controller {
 				);
 				$this->Admin_model->updateSelectedWorks($uploadData);
 			}
-
-			redirect(base_url("admin"));
 		}
+		redirect(base_url("admin/selected"));
+	}
+
+	public function selected_works_insert() {
+		if (!empty($_FILES["input-image"]["name"])) {
+			$input_at = $this->input->post("input-at");
+			$works = $this->Admin_model->get_selected_works("works_id");
+			$count = sizeof($works);
+			
+			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
+			$last_id = $works[$count - 1]->works_id;
+			$last_id++;
+			$file_name = $last_id . $extension;
+
+			parent::upload_file_settings('assets/images/works/', '5000000', $file_name);
+			if (!$this->upload->do_upload('input-image')) {
+				$error_upload = true;
+			} else {
+				$works_number = 1;
+				
+				if ($input_at == "1") {
+	
+				} else if ($input_at == "2") {
+					
+				} else if ($input_at == "3") {
+					$input_index = $this->input->post("input-index");
+				}
+			}
+		}
+		//redirect(base_url("admin/selected"));
 	}
 
 	public function archived() {

@@ -45,7 +45,7 @@ $(function() {
 		}
 	});
 
-	$(".form-input-image").on("change", function() {
+	$(document).on("change", ".form-input-image", function() {
 		
 		var previewElement = $(".form-input-image-preview");
 		var reader = new FileReader();
@@ -63,5 +63,17 @@ $(function() {
 
 	$(".dialog-btn-close, .btn-cancel").on("click", function() {
 		$(".dialog").addClass("hidden");
+		clearFileInput($(".form-input-image")[0]);
 	});
 });
+
+function clearFileInput(ctrl) {
+	try {
+		ctrl.value = null;
+	} catch(ex) { }
+		if (ctrl.value) {
+		ctrl.parentNode.replaceChild(ctrl.cloneNode(true), ctrl);
+	}
+
+	$(".form-input-image-preview").removeAttr("src");
+}
