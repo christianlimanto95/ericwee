@@ -57,7 +57,7 @@ class Admin_model extends CI_Model
         $this->db->delete("works");
     }
 
-    function get_archived_works($order_by = "works_number", $order = "asc") {
+    function get_archived_works($order_by = "archived_works_number", $order = "asc") {
         $this->db->order_by($order_by, $order);
         return $this->db->get("archived_works")->result();
     }

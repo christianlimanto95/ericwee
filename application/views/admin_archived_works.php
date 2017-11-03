@@ -13,7 +13,7 @@
         <div class="no"><?php echo ($i + 1); ?></div>
         <div class="image">
             <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
-            <img src="<?php echo base_url("assets/images/works/" . $works[$i]->archived_works_id . "." . $works[$i]->archived_works_extension) . "?" . strtotime($works[$i]->archived_modified_date); ?>"/>
+            <img src="<?php echo base_url("assets/images/archived_works/" . $works[$i]->archived_works_id . "." . $works[$i]->archived_works_extension) . "?" . strtotime($works[$i]->modified_date); ?>"/>
         </div>
         <button type="submit" class="btn btn-save" disabled>Update</button>
     </form>

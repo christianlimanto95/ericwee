@@ -137,7 +137,7 @@ class Admin extends General_controller {
 		$data = array(
 			"title" => "Admin - archived works"
 		);
-		$data["archived_works"] = $this->Admin_model->get_archived_works();
+		$data["works"] = $this->Admin_model->get_archived_works();
 		parent::backview("admin_archived_works", $data);
 	}
 
@@ -221,7 +221,7 @@ class Admin extends General_controller {
 		}
 
 		$this->Admin_model->deleteArchivedWorks($id);
-		unlink(realpath("assets/images/archived_works/" . $id . "." . $works[$deletedIndex]->archivedworks_extension));
+		unlink(realpath("assets/images/archived_works/" . $id . "." . $works[$deletedIndex]->archived_works_extension));
 		
 		redirect(base_url("admin/archived"));
 	}
