@@ -23,6 +23,12 @@ class Admin_model extends CI_Model
         return $this->db->get("works")->result();
     }
 
+    function getSelectedWorksById($id) {
+        $this->db->where("works_id", $id);
+        $this->db->limit(1);
+        return $this->db->get("works")->result();
+    }
+
     function insertSelectedWorks($data) {
         $insertData = array(
             "works_extension" => $data["works_extension"],
@@ -44,6 +50,11 @@ class Admin_model extends CI_Model
         $this->db->set("works_number", $number);
         $this->db->set("modified_date", "NOW()", false);
         $this->db->update("works");
+    }
+
+    function deleteSelectedWorks($id) {
+        $this->db->where("works_id", $id);
+        $this->db->delete("works");
     }
 
     function get_archived_works() {

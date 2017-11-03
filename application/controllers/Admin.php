@@ -111,6 +111,28 @@ class Admin extends General_controller {
 		redirect(base_url("admin/selected"));
 	}
 
+	public function selected_works_delete() {
+		$id = intval($this->input->post("id"));
+		$works = $this->Admin_model->get_selected_works();
+		$deletedIndex = -1;
+		for ($i = 0; $i < sizeof($works); $i++) {
+			if ($works[$i]->works_id == $id) {
+				$deletedIndex = $i;
+				break;
+			}
+		}
+
+		for ($i = $deletedIndex + 1; $i < sizeof($works); $i++) {
+			$currentNumber = $works[$i]->works_number;
+			$this->Admin_model->updateSelectedWorksNumber($currentNumber, $currentNumber - 1);
+		}
+
+		$this->Admin_model->deleteSelectedWorks($id);
+		unlink(realpath("assets/images/works/" . $id . "." . $works[$deletedIndex]->works_extension));
+		
+		redirect(base_url("admin/selected"));
+	}
+
 	public function archived() {
 		$data = array(
 			"title" => "Admin - archived works"
