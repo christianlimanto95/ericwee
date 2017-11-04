@@ -1,12 +1,22 @@
 <div class="header">
-    <a href="<?php echo base_url("admin"); ?>" class="header-menu-left active" >front works</a>
+    <a href="<?php echo base_url("admin"); ?>" class="header-menu-left active" >Home</a>
     <a href="<?php echo base_url("admin/selected"); ?>" class="header-menu-left" >selected works</a>
     <a href="<?php echo base_url("admin/archived"); ?>" class="header-menu-left" >archived works</a>
     <a href="<?php echo base_url("admin/change_password"); ?>" class="header-menu">Ganti Password</a>
     <a href="logout" class="header-menu">Logout</a>
 </div>
 <div class="content">
-    <div class="content-title">Front Selected Works</div>
+    <div class="content-title">Home Photo</div>
+    <form class="edit-item" method="post" action="admin/front_home" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="1" />
+        <div class="no">1</div>
+        <div class="image">
+            <input type="file" class="input-image" name="input-image" accept="image/jpeg, image/png" />
+            <img src="<?php echo base_url("assets/images/front_home/" . $front_home->id . "." . $front_home->extension) . "?" . strtotime($front_home->modified_date); ?>" />
+        </div>
+        <button type="submit" class="btn-save" disabled>Update</button>
+    </form>
+    <div class="content-title content-title-selected">Home Selected Works</div>
     <form class="edit-item" method="post" action="admin/front_submit" enctype="multipart/form-data">
         <input type="hidden" name="id" value="1" />
         <div class="no">1</div>

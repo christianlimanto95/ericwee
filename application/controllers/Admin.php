@@ -17,7 +17,28 @@ class Admin extends General_controller {
 			"title" => "Admin"
 		);
 		$data["front_works"] = $this->Admin_model->get_front_works();
+		$data["front_home"] = $this->Admin_model->get_front_home()[0];
 		parent::backview("admin", $data);
+	}
+
+	public function front_home() {
+		
+		if (!empty($_FILES["input-image"]["name"])) {
+			$id = $this->input->post("id", true);
+			$extension = pathinfo($_FILES["input-image"]["name"], PATHINFO_EXTENSION);
+			$file_name = $id . "." . $extension;
+			parent::upload_file_settings('assets/images/front_home/', '5000000', $file_name);
+			if (!$this->upload->do_upload('input-image')) {
+				$error_upload = true;
+			} else {
+				$uploadData = array(
+					"id" => $id,
+					"extension" => $extension
+				);
+				$this->Admin_model->updateFrontHome($uploadData);
+			}
+		}
+		redirect(base_url("admin"));
 	}
 
 	public function front_submit() {

@@ -7,8 +7,19 @@ class Admin_model extends CI_Model
         parent::__construct();
     }
 
+    function get_front_home() {
+        return $this->db->get("home")->result();
+    }
+
     function get_front_works() {
         return $this->db->get("front_works")->result();
+    }
+
+    function updateFrontHome($data) {
+        $this->db->where("id", $data["id"]);
+        $this->db->set("extension", $data["extension"], true);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("home");
     }
 
     function updateFrontWorks($data) {

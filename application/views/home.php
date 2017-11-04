@@ -23,7 +23,7 @@ function frontImageOnload(element) {
 <div class="content">
     <div class="section section-1">
         <div class="section-1-image-container">
-            <img class="section-1-image" src="<?php echo base_url("assets/images/front_home/1.jpg?d=" . strtotime($front_home->modified_date)); ?>" onload="frontImageOnload(this);" />
+            <img class="section-1-image" src="<?php echo base_url("assets/images/front_home/" . $front_home->id . "." . $front_home->extension . "?d=" . strtotime($front_home->modified_date)); ?>" onload="frontImageOnload(this);" />
         </div>
         <div class="section-1-center">
             <div class="section-1-logo" data-anim="fade-anim" style="background-image: url('assets/icons/logo.png');"></div>
