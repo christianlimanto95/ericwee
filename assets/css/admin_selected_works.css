@@ -187,6 +187,7 @@ input.hidden {
 .form-input-image-preview {
 	max-width: 300px;
 	max-height: 250px;
+	display: block;
 }
 
 .btn-submit, .btn-cancel {
@@ -201,6 +202,12 @@ input.hidden {
 	margin-top: 20px;
 	box-shadow: 0 0 5px #555;
 	border-radius: 2px;
+}
+
+.btn-submit:disabled {
+	background-color: #E0E0E0;
+	color: #757575;
+	cursor: default;
 }
 
 .btn-cancel {

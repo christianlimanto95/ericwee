@@ -61,9 +61,18 @@ $(function() {
 		reader.readAsDataURL($(this)[0].files[0]);
 	});
 
+	if ($(".edit-item").length == 0) {
+		$(".form-input-at").attr("disabled", true);
+	}
+
+	$(".form-input-image").on("change", function() {
+		$(".btn-submit").removeAttr("disabled");
+	});
+
 	$(".dialog-btn-close, .btn-cancel").on("click", function() {
 		$(".dialog").addClass("hidden");
 		clearFileInput($(".form-input-image")[0]);
+		$(".btn-submit").attr("disabled", true);
 	});
 });
 

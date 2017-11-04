@@ -35,13 +35,13 @@
         <option value="2">Last</option>
         <option value="3">Index</option>
     </select>
-    <input type="number" class="form-input form-input-index hidden" name="input-index" value="1" min="1" max="<?php echo sizeof($works); ?>" />
+    <input type="number" class="form-input form-input-index hidden" name="input-index" value="1" min="1" max="<?php echo (sizeof($works) > 0) ? sizeof($works) : 1; ?>" />
 </div>
 <div class="form-item">
     <div class="form-label">Photo</div>
     <input type="file" class="form-input form-input-image" name="input-image" accept="image/jpeg, image/png" />
 </div>
 <img class="form-input-image-preview" />
-<button type="submit" class="btn-submit">Submit</button>
+<button type="submit" class="btn-submit" disabled>Submit</button>
 <button type="button" class="btn-cancel">Cancel</button>
 </form>
