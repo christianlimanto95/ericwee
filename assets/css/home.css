@@ -226,12 +226,7 @@
         height: 40vw;
         margin-top: 100px;
     }
-
-    .selected-work-image {
-        max-width: calc(59vw - 10px);
-        max-height: calc(59vw - 10px);
-    }
-
+    
     .selected-work {
         width: 60vw;
         height: 60vw;
@@ -343,11 +338,6 @@
     .selected-works-container {
         height: 475px;
         margin-top: 100px;
-    }
-
-    .selected-work-image {
-        max-width: 380px;
-        max-height: 380px;
     }
 
     .selected-work {

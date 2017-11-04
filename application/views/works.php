@@ -1,6 +1,14 @@
 <script>
 var selectedWorksLength = <?php echo sizeof($works); ?>;
 var archivedWorksLength = <?php echo sizeof($archived_works); ?>;
+var imageSize = (isMobile) ? (isTablet) ? (28 * vw / 100 - 10) + "px" : (80 * vw / 100 - 10) + "px" : "290px";
+function imgOnload(element) {
+    if (element.naturalWidth > element.naturalHeight) {
+        element.setAttribute("width", imageSize);
+    } else {
+        element.setAttribute("height", imageSize);
+    }
+}
 </script>
 <div class="content">
     <div class="section section-1">
@@ -17,7 +25,7 @@ var archivedWorksLength = <?php echo sizeof($archived_works); ?>;
         <div class="selected-works-container">
             <?php
                 for ($i = 0; $i < sizeof($works); $i++) {
-                    echo "<div class='selected-works-item-container' data-no='" . $i . "' data-anim='fade-anim'><img class='selected-works-item' data-no='" . $i . "' src='" . base_url("assets/images/works/" . $works[$i]->works_id . "." . $works[$i]->works_extension) . "?d=" . strtotime($works[$i]->modified_date) . "' /><div class='image-wrapper'></div></div>";
+                    echo "<div class='selected-works-item-container' data-no='" . $i . "' data-anim='fade-anim'><img class='selected-works-item' data-no='" . $i . "' src='" . base_url("assets/images/works/" . $works[$i]->works_id . "." . $works[$i]->works_extension) . "?d=" . strtotime($works[$i]->modified_date) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div>";
                 }
             ?>
         </div>
@@ -25,7 +33,7 @@ var archivedWorksLength = <?php echo sizeof($archived_works); ?>;
         <div class="archived-works-container">
             <?php
                 for ($j = 0; $j < sizeof($archived_works); $j++) {
-                    echo "<div class='archived-works-item-container' data-no='" . $j . "' data-anim='fade-anim'><img class='archived-works-item' data-no='" . $j . "' src='" . base_url("assets/images/archived_works/" . $archived_works[$j]->archived_works_id . "." . $archived_works[$j]->archived_works_extension) . "?d=" . strtotime($archived_works[$j]->modified_date) . "' /><div class='image-wrapper'></div></div>";
+                    echo "<div class='archived-works-item-container' data-no='" . $j . "' data-anim='fade-anim'><img class='archived-works-item' data-no='" . $j . "' src='" . base_url("assets/images/archived_works/" . $archived_works[$j]->archived_works_id . "." . $archived_works[$j]->archived_works_extension) . "?d=" . strtotime($archived_works[$j]->modified_date) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div>";
                 }
             ?>
         </div>
