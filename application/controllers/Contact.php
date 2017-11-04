@@ -34,7 +34,7 @@ class Contact extends General_controller {
 		$this->load->library("email", parent::get_default_email_config());
 
 		$this->email->from("admin@ericweephoto.com", "Ericweephoto");
-		$this->email->to("christianlimanto95@gmail.com");
+		$this->email->to("ericweephoto@gmail.com");
 		$this->email->subject("ericweephoto message");
 		$this->email->message("Nama : " . $name . "<br />Telepon : " . $phone . "<br />Pesan : " . $message);
 		$this->email->send();
