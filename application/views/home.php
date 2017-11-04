@@ -1,8 +1,8 @@
 <script>
 function frontImageOnload(element) {
+    var naturalWidth = element.naturalWidth;
+    var naturalHeight = element.naturalHeight;
     if (isMobile) {
-        var naturalWidth = element.naturalWidth;
-        var naturalHeight = element.naturalHeight;
         var size = 0;
         if (!isTablet) {
             size = 160 * vw / 100;
@@ -15,6 +15,8 @@ function frontImageOnload(element) {
         element.style.marginLeft = "-" + marginLeft + "px";
     } else {
         element.setAttribute("width", vw + "px");
+        var marginTop = (vw / naturalWidth * naturalHeight - vh) / 2;
+        element.style.marginTop = "-" + marginTop + "px";
     }
 }
 </script>
