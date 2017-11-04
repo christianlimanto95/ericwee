@@ -106,4 +106,15 @@ class Admin_model extends CI_Model
         $this->db->where("archived_works_id", $id);
         $this->db->delete("archived_works");
     }
+
+    public function get_password() {
+        $this->db->select("user_password");
+        return $this->db->get("user")->result()[0];
+    }
+
+    public function update_password($password) {
+        $this->db->set("user_password", $password);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("user");
+    }
 }

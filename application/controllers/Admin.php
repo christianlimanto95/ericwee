@@ -246,4 +246,27 @@ class Admin extends General_controller {
 		
 		redirect(base_url("admin/archived"));
 	}
+
+	public function change_password() {
+		$data = array(
+			"title" => "Admin - change password"
+		);
+		parent::backview("change_password", $data);
+	}
+
+	public function do_change_password() {
+		$oldPassword = $this->input->post("old-password", true);
+		$newPassword = $this->input->post("new-password", true);
+
+		$stored_password = $this->Admin_model->get_password()->user_password;
+		if (password_verify($oldPassword, $stored_password)) {
+			$newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+			$this->Admin_model->update_password($newPassword);
+			$this->session->set_flashdata("message", "Sukses update password");
+			redirect(base_url("admin/change_password"));
+		} else {
+			$this->session->set_flashdata("error_message", "Password lama salah");
+			redirect(base_url("admin/change_password"));
+		}
+	}
 }
