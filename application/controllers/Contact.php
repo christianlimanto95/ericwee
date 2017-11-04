@@ -33,16 +33,12 @@ class Contact extends General_controller {
 
 		$this->load->library("email", parent::get_default_email_config());
 
-		$this->email->set_newline("\r\n");
 		$this->email->from("admin@ericweephoto.com", "Ericweephoto");
 		$this->email->to("christianlimanto95@gmail.com");
 		$this->email->subject("ericweephoto message");
-		$this->email->message("Nama : " . $name . "\r\nTelepon : " . $phone . "\r\nPesan : " . $message);
-		if (!$this->email->send()) {
-			$this->email->print_debugger();
-			echo "error";
-		} else {
-			echo "success";
-		}
+		$this->email->message("Nama : " . $name . "<br />Telepon : " . $phone . "<br />Pesan : " . $message);
+		$this->email->send();
+		$this->session->set_flashdata("message", "thank you. we will contact you soon");
+		redirect(base_url("contact"));
 	}
 }

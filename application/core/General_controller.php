@@ -99,6 +99,7 @@ class General_controller extends CI_Controller
 		$config["smtp_pass"] = "ericwee";
 		$config["smtp_port"] = 587;
         $config["smtp_crypto"] = "tls";
+        $config["mailtype"] = "html";
         return $config;
     }
 }
