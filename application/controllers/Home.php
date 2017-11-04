@@ -19,6 +19,7 @@ class Home extends General_controller {
 		);
 
 		$data["front_works"] = $this->Home_model->get_front_works();
+		$data["front_home"] = $this->Home_model->get_home_image()[0];
 		
 		parent::view("home", $data);
 	}

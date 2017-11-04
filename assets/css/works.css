@@ -205,6 +205,11 @@
     .archived-works-container {
         width: 100vw;
     }
+
+    .selected-works-item, .archived-works-item {
+        max-width: calc(28vw - 10px);
+        max-height: calc(28vw - 10px);
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -241,6 +246,11 @@
 
     .archived-works-item-container:nth-child(2n) {
         margin-right: 0;
+    }
+
+    .selected-works-item, .archived-works-item {
+        max-width: calc(80vw - 10px);
+        max-height: calc(80vw - 10px);
     }
 }
 
@@ -298,5 +308,10 @@
 
     .archived-works-item-container:nth-child(2n) {
         margin-right: 0;
+    }
+
+    .selected-works-item, .archived-works-item {
+        max-width: 290px;
+        max-height: 290px;
     }
 }

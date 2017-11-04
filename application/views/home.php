@@ -1,5 +1,28 @@
+<script>
+function frontImageOnload(element) {
+    if (isMobile) {
+        var naturalWidth = element.naturalWidth;
+        var naturalHeight = element.naturalHeight;
+        var size = 0;
+        if (!isTablet) {
+            size = 160 * vw / 100;
+            element.setAttribute("height", size + "px");
+        } else {
+            size = 130 * vw / 100;
+            element.setAttribute("height", size + "px");
+        }
+        var marginLeft = (size / naturalHeight * naturalWidth - vw) / 2;
+        element.style.marginLeft = "-" + marginLeft + "px";
+    } else {
+        element.setAttribute("width", vw + "px");
+    }
+}
+</script>
 <div class="content">
     <div class="section section-1">
+        <div class="section-1-image-container">
+            <img class="section-1-image" src="<?php echo base_url("assets/images/front_home/1.jpg?d=" . strtotime($front_home->modified_date)); ?>" onload="frontImageOnload(this);" />
+        </div>
         <div class="section-1-center">
             <div class="section-1-logo" data-anim="fade-anim" style="background-image: url('assets/icons/logo.png');"></div>
             <div class="section-1-ericwee" data-anim="fade-anim" ><span data-content-type="text">ERICWEEPHOTO</span></div>
@@ -12,7 +35,7 @@
         <div class="selected-works-container" data-anim="fade-anim">
             <?php
                 for ($i = 0; $i < sizeof($front_works); $i++) {
-                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "'><div class='selected-work-image-container'><img class='selected-work-image' src='" . base_url("assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date)) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div></div>";
+                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "'><div class='selected-work-image-container'><img class='selected-work-image' src='" . base_url("assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date)) . "' /><div class='image-wrapper'></div></div></div>";
                 }
             ?>
             <div class="selected-works-left"></div>
@@ -34,12 +57,4 @@
     </div>
 </div>
 <script>
-var imageSize = (isMobile) ? (isTablet) ? (59 * vw / 100 - 10) + "px" : (59 * vw / 100 - 10) + "px" : "380px";
-function imgOnload(element) {
-    if (element.naturalWidth > element.naturalHeight) {
-        element.setAttribute("width", imageSize);
-    } else {
-        element.setAttribute("height", imageSize);
-    }
-}
 </script>
