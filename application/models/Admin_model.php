@@ -59,7 +59,6 @@ class Admin_model extends CI_Model
     function updateSelectedWorksNumber($currentNumber, $number) {
         $this->db->where("works_number", $currentNumber);
         $this->db->set("works_number", $number);
-        $this->db->set("modified_date", "NOW()", false);
         $this->db->update("works");
     }
 
@@ -98,7 +97,6 @@ class Admin_model extends CI_Model
     function updateArchivedWorksNumber($currentNumber, $number) {
         $this->db->where("archived_works_number", $currentNumber);
         $this->db->set("archived_works_number", $number);
-        $this->db->set("modified_date", "NOW()", false);
         $this->db->update("archived_works");
     }
 
