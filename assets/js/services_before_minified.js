@@ -76,20 +76,22 @@ function checkSection2ScrollDown() {
             sectionFooter = true;
             checkScrollDown = false;
             checkScrollUp = true;
-            section3.addClass("show");
-            section3.velocity({
-                opacity: 1
-            }, 200);
+
+            section3.removeClass("shown").removeClass("hiding").addClass("showing");
+            section3.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                section3.addClass("shown").removeClass("showing");
+            });
 
             $(".menu-icon-line").velocity({
                 backgroundColor: "#FFFFFF"
-            }, 200);
+            }, 300);
             $(".logo-image-black").velocity({
                 opacity: 0
-            }, 200);
+            }, 300);
             $(".logo-image-white").velocity({
                 opacity: 1
-            }, 200);
+            }, 300);
+            
             container.off("scroll", checkSection2ScrollDown);
             container.on("scroll", checkSection2ScrollUp);
         }
@@ -103,21 +105,21 @@ function checkSection2ScrollUp() {
             sectionFooter = false;
             checkScrollUp = false;
             checkScrollDown = true;
-            section3.velocity({
-                opacity: 0
-            }, 200, function() {
-                section3.removeClass("show");
+
+            section3.addClass("shown").removeClass("showing").addClass("hiding");
+            section3.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                section3.removeClass("shown").removeClass("hiding");
             });
 
             $(".logo-image-black").velocity({
                 opacity: 1
-            }, 200);
+            }, 300);
             $(".logo-image-white").velocity({
                 opacity: 0
-            }, 200);
+            }, 300);
             $(".menu-icon-line").velocity({
                 backgroundColor: "#000000"
-            }, 200, function() {
+            }, 300, function() {
                 $(this).removeAttr("style");
             });
 

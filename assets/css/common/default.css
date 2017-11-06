@@ -334,8 +334,87 @@ body.menu-close .menu-inside {
   color: white;
 }
 
-.section-3.show {
+@-webkit-keyframes section-3-anim {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes section-3-anim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.section-3.showing {
   visibility: visible;
+
+  -webkit-animation-name: section-3-anim;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: section-3-anim;
+  -moz-animation-duration: 0.3s;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-name: section-3-anim;
+  -ms-animation-duration: 0.3s;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-name: section-3-anim;
+  -o-animation-duration: 0.3s;
+  -o-animation-fill-mode: forwards;
+  animation-name: section-3-anim;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.section-3.shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+@-webkit-keyframes section-3-anim-reversed {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes section-3-anim-reversed {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.section-3.hiding {
+  -webkit-animation-name: section-3-anim-reversed;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: section-3-anim-reversed;
+  -moz-animation-duration: 0.3s;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-name: section-3-anim-reversed;
+  -ms-animation-duration: 0.3s;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-name: section-3-anim-reversed;
+  -o-animation-duration: 0.3s;
+  -o-animation-fill-mode: forwards;
+  animation-name: section-3-anim-reversed;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 
 .section-3-center {
