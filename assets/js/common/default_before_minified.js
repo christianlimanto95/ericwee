@@ -146,12 +146,15 @@ $(function() {
     $(window).resize(function() {
         vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
         if (vw < 1025) {
             isMobile = true;
             if (vw >= 768) {
                 isTablet = true;
+            } else {
+                isTablet = false;
             }
+        } else {
+            isMobile = false;
         }
 
         if (isMobile) {

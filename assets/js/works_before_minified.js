@@ -73,6 +73,16 @@ $(function() {
             });
         })(archivedWorksItem, itemThreshold, doneFunction);
     }
+
+    $(window).on("resize", function() {
+        setVH();
+        setThreshold();
+        container.scroll();
+        imageSize = (isMobile) ? (isTablet) ? (28 * vw / 100 - 10) + "px" : (80 * vw / 100 - 10) + "px" : "290px";
+        $(".section-2 img").each(function() {
+            imgOnload(this);
+        });
+    });
 });
 
 function setVH() {
@@ -81,7 +91,7 @@ function setVH() {
 }
 
 function setThreshold() {
-    section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
+    section3Threshold = section2.offset().top + container.scrollTop() + parseInt(section2.css("height")) - vh100 / 2;
     selectedWorksThreshold = $(".selected-works-title").offset().top - vh33 * 2;
     archivedWorksThreshold = $(".archived-works-title").offset().top - vh33 * 2;
 }

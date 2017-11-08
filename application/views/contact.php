@@ -1,3 +1,8 @@
+<?php
+    if (isset($_SESSION["message"])) {
+        echo '<div class="message">Thank you. We will contact you soon :)</div>';
+    }
+?>
 <div class="content">
     <div class="section section-1">
         <form class="section-1-center" method="post" action="<?php echo base_url("contact/send_message"); ?>">
@@ -25,9 +30,9 @@
         </form>
         <div class="section-footer">
             <div class="social-media">
-                <a href="https://www.instagram.com/ericweephoto/" target="_blank" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/instagram-black.png');"></div>@ericweephoto</a>
-                <div class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/line-black.png');"></div>@ericwicak</div>
-                <a href="tel:+6285230515511" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/whatsapp-black.png');"></div>0852 3051 5511</a>
+                <a href="https://www.instagram.com/ericweephoto/" target="_blank" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/instagram.png?v=1');"></div>@ericweephoto</a>
+                <div class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/line.png?v=1');"></div>@ericwicak</div>
+                <a href="tel:+6285230515511" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/whatsapp.png?v=1');"></div>0852 3051 5511</a>
             </div>
         </div>
     </div>

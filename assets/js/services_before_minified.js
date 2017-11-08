@@ -33,6 +33,7 @@ $(function() {
     $(window).on("resize", function() {
         setVH();
         setThreshold();
+        container.scroll();
     });
 });
 
@@ -42,7 +43,7 @@ function setVH() {
 }
 
 function setThreshold() {
-    section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
+    section3Threshold = section2.offset().top + container.scrollTop() + parseInt(section2.css("height")) - vh100 / 2;
     group1Threshold = group1.offset().top - vh40 * 2;
     group2Threshold = group2.offset().top - vh40 * 2;
     group3Threshold = group3.offset().top - vh40 * 2;

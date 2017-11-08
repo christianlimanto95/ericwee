@@ -149,6 +149,13 @@ $(function() {
         setVH();
         setSection3Threshold();
         getSection2Transform();
+        container.scroll();
+
+        frontImageOnload($(".section-1-image")[0]);
+        imageSize = (isMobile) ? (isTablet) ? (59 * vw / 100 - 10) + "px" : (59 * vw / 100 - 10) + "px" : "380px";
+        $(".section-2 img").each(function() {
+            imgOnload(this);
+        });
     });
 });
 
@@ -159,9 +166,9 @@ function setVH() {
 
 function setSection3Threshold() {
     if (!isMobile) {
-        section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 / 2;
+        section3Threshold = section2.offset().top + container.scrollTop() + parseInt(section2.css("height")) - vh100 / 2;
     } else {
-        section3Threshold = section2.offset().top + parseInt(section2.css("height")) - vh100 * 2 / 3;
+        section3Threshold = section2.offset().top + container.scrollTop() + parseInt(section2.css("height")) - vh100 * 2 / 3;
     }
 }
 

@@ -5,8 +5,10 @@ var imageSize = (isMobile) ? (isTablet) ? (28 * vw / 100 - 10) + "px" : (80 * vw
 function imgOnload(element) {
     if (element.naturalWidth > element.naturalHeight) {
         element.setAttribute("width", imageSize);
+        element.removeAttribute("height");
     } else {
         element.setAttribute("height", imageSize);
+        element.removeAttribute("width");
     }
 }
 </script>
@@ -42,9 +44,9 @@ function imgOnload(element) {
         <div class="section-3-center">
             <div class="section-3-we-want" data-content-type="text">WE WANT TO BE YOUR PARTNER</div>
             <div class="social-media">
-                <a href="https://www.instagram.com/ericweephoto/" target="_blank" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/instagram.png');"></div>@ericweephoto</a>
-                <div class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/line.png');"></div>@ericwicak</div>
-                <a href="tel:+6285230515511" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/whatsapp.png');"></div>0852 3051 5511</a>
+                <a href="https://www.instagram.com/ericweephoto/" target="_blank" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/instagram.png?v=1');"></div>@ericweephoto</a>
+                <div class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/line.png?v=1');"></div>ericwicak</div>
+                <a href="tel:+6285230515511" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/whatsapp.png?v=1');"></div>0852 3051 5511</a>
             </div>
             <div class="section-3-contact-me" data-content-type="text">CONTACT US</div>
         </div>
