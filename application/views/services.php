@@ -122,3 +122,6 @@
         </div>
     </div>
 </div>
+<script>
+    var serviceGroupLength = 3;
+</script>
