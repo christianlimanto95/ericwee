@@ -38,20 +38,28 @@ function setVH() {
 function setThreshold() {
     section3Threshold = section2.offset().top + container.scrollTop() + parseInt(section2.css("height")) - vh100 / 2;
 
+    var servicePackageCtr = 1;
     for (var i = 1; i <= serviceGroupLength; i++) {
+        servicePackageCtr = 1;
         var serviceGroupItem = $(".service-group-" + i);
         if (!serviceGroupItem.hasClass("show")) {
             var itemThreshold = serviceGroupItem.offset().top + container.scrollTop() - vh40 * 2;
             var doneFunction = false;
+
+            serviceGroupItem.find(".service-package").each(function() {
+                var no = servicePackageCtr;
+                this.style.animationDelay = (0.2 * no) + "s";
+                if (no % 2 == 0) {
+                    this.style.float = "right";
+                }
+                servicePackageCtr++;
+            });
+
             (function(item, threshold, done) {
                 container.on("scroll", function() {
                     if (!done) {
                         if (container.scrollTop() >= threshold) {
                             done = true;
-                            item.find(".service-package").each(function() {
-                                var no = parseInt($(this).data("no"));
-                                this.style.animationDelay = (0.2 * no) + "s";
-                            });
                             item.addClass("show");
                         }
                     }

@@ -271,14 +271,7 @@
 
     .service-package {
         margin-top: 50px;
-    }
-
-    .service-package-left {
         float: left;
-    }
-    
-    .service-package-right {
-        float: right;
         min-width: 250px;
     }
 

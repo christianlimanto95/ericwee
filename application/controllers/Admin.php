@@ -269,4 +269,12 @@ class Admin extends General_controller {
 			redirect(base_url("admin/change_password"));
 		}
 	}
+
+	public function services() {
+		$data = array(
+			"title" => "Admin - services"
+		);
+		$data["services"] = $this->Admin_model->get_services();
+		parent::backview("admin_services", $data);
+	}
 }

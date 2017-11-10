@@ -22,6 +22,8 @@ class Services extends General_controller {
 			"title" => "Services",
 			"opening_words" => $opening_words
 		);
+
+		$data["services"] = $this->Services_model->getServices();
 		
 		parent::view("services", $data);
 	}
