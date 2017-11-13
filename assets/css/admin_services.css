@@ -40,11 +40,11 @@
 	margin-top: 150px;
 }
 
-input {
+input, textarea {
 	font-size: 14pt;
 }
 
-input[type="text"] {
+input[type="text"], input[type="number"], textarea {
 	padding: 5px;
 	margin-top: 10px;
 }
@@ -55,6 +55,8 @@ input[type="text"] {
 	margin-right: 10px;
 	border-radius: 5px;
 	font-size: 12pt;
+	vertical-align: top;
+	margin-top: 12px;
 }
 
 .service-group {
@@ -95,18 +97,24 @@ input[type="text"] {
 
 .service-name span {
 	background-color: #81D4FA;
+	margin-top: 20px;
 }
 
-.service-name input {
+.service-name textarea {
 	width: 500px;
+	min-height: 200px;
+	margin-top: 15px;
 }
 
 .service-note span {
 	background-color: #FFFF00;
+	margin-top: 20px;
 }
 
-.service-note input {
-	width: 300px;
+.service-note textarea {
+	width: 400px;
+	min-height: 200px;
+	margin-top: 15px;
 }
 
 .btn {

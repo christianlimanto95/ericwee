@@ -310,4 +310,37 @@ class Admin extends General_controller {
 		$this->Admin_model->update_service_package_name($updateData);
 		redirect(base_url("admin/services"));
 	}
+
+	public function update_service_package_price() {
+		$service_package_id = $this->input->post("service_package_id", true);
+		$service_package_price = $this->input->post("service_package_price", true);
+		$updateData = array(
+			"service_package_id" => $service_package_id,
+			"service_package_price" => $service_package_price
+		);
+		$this->Admin_model->update_service_package_price($updateData);
+		redirect(base_url("admin/services"));
+	}
+
+	public function update_service_package_description() {
+		$service_package_id = $this->input->post("service_package_id", true);
+		$service_package_description = $this->input->post("service_package_description", true);
+		$updateData = array(
+			"service_package_id" => $service_package_id,
+			"service_package_description" => $service_package_description
+		);
+		$this->Admin_model->update_service_package_description($updateData);
+		redirect(base_url("admin/services"));
+	}
+
+	public function update_service_package_addon() {
+		$service_package_id = $this->input->post("service_package_id", true);
+		$service_package_addon = $this->input->post("service_package_addon", true);
+		$updateData = array(
+			"service_package_id" => $service_package_id,
+			"service_package_addon" => $service_package_addon
+		);
+		$this->Admin_model->update_service_package_addon($updateData);
+		redirect(base_url("admin/services"));
+	}
 }

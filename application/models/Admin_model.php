@@ -118,10 +118,10 @@ class Admin_model extends CI_Model
 
     public function get_services() {
         $query = $this->db->query("
-            SELECT si.service_item_id, si.service_group_id, si.service_package_id, si.service_item_name AS service_item_name, si.service_item_type, sg.service_group_name AS service_group_name, sg.service_group_area AS service_group_area, sp.service_package_name AS service_package_name, sp.service_package_price
-            FROM `service_item` si, `service_group` sg, `service_package` sp
-            WHERE si.service_group_id = sg.service_group_id AND si.service_package_id = sp.service_package_id
-            ORDER BY si.service_group_id ASC, si.service_package_id ASC, si.service_item_type ASC, si.service_item_id ASC
+            SELECT sp.service_package_id, sp.service_package_name, sp.service_group_id, sg.service_group_name, sg.service_group_area, sp.service_package_description AS service_package_description, sp.service_package_price, sp.service_package_addon AS service_package_addon
+            FROM `service_package` sp, `service_group` sg
+            WHERE sp.service_group_id = sg.service_group_id
+            ORDER by sp.service_group_id ASC, sp.service_package_id
         ");
         return $query->result();
     }
@@ -143,6 +143,27 @@ class Admin_model extends CI_Model
     public function update_service_package_name($data) {
         $this->db->where("service_package_id", $data["service_package_id"]);
         $this->db->set("service_package_name", $data["service_package_name"]);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("service_package");
+    }
+
+    public function update_service_package_price($data) {
+        $this->db->where("service_package_id", $data["service_package_id"]);
+        $this->db->set("service_package_price", $data["service_package_price"]);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("service_package");
+    }
+
+    public function update_service_package_description($data) {
+        $this->db->where("service_package_id", $data["service_package_id"]);
+        $this->db->set("service_package_description", $data["service_package_description"]);
+        $this->db->set("modified_date", "NOW()", false);
+        $this->db->update("service_package");
+    }
+
+    public function update_service_package_addon($data) {
+        $this->db->where("service_package_id", $data["service_package_id"]);
+        $this->db->set("service_package_addon", $data["service_package_addon"]);
         $this->db->set("modified_date", "NOW()", false);
         $this->db->update("service_package");
     }
