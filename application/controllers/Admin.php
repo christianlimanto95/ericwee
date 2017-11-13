@@ -277,4 +277,37 @@ class Admin extends General_controller {
 		$data["services"] = $this->Admin_model->get_services();
 		parent::backview("admin_services", $data);
 	}
+
+	public function update_service_group_name() {
+		$service_group_id = $this->input->post("service_group_id", true);
+		$service_group_name = $this->input->post("service_group_name", true);
+		$updateData = array(
+			"service_group_id" => $service_group_id,
+			"service_group_name" => $service_group_name
+		);
+		$this->Admin_model->update_service_group_name($updateData);
+		redirect(base_url("admin/services"));
+	}
+
+	public function update_service_group_area() {
+		$service_group_id = $this->input->post("service_group_id", true);
+		$service_group_area = $this->input->post("service_group_area", true);
+		$updateData = array(
+			"service_group_id" => $service_group_id,
+			"service_group_area" => $service_group_area
+		);
+		$this->Admin_model->update_service_group_area($updateData);
+		redirect(base_url("admin/services"));
+	}
+
+	public function update_service_package_name() {
+		$service_package_id = $this->input->post("service_package_id", true);
+		$service_package_name = $this->input->post("service_package_name", true);
+		$updateData = array(
+			"service_package_id" => $service_package_id,
+			"service_package_name" => $service_package_name
+		);
+		$this->Admin_model->update_service_package_name($updateData);
+		redirect(base_url("admin/services"));
+	}
 }

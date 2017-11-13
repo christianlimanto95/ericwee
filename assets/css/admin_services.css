@@ -27,6 +27,7 @@
 .content {
 	clear: both;
 	padding: 50px 100px;
+	font-size: 14pt;
 }
 
 .content-title {
@@ -39,57 +40,83 @@
 	margin-top: 150px;
 }
 
-.edit-item {
-	display: block;
-	margin-bottom: 50px;
-	overflow: auto;
+input {
+	font-size: 14pt;
 }
 
-.no {
-	display: inline-block;
-	font-weight: bold;
-	font-size: 24pt;
-	margin-top: -200px;
-	vertical-align: middle;
-	margin-right: 20px;
-}
-
-.image {
-	display: inline-block;
-	overflow: auto;
-}
-
-img {
-	display: block;
+input[type="text"] {
+	padding: 5px;
 	margin-top: 10px;
-	max-width: 300px;
-	max-height: 300px;
 }
 
-.input-name {
+.label {
 	display: inline-block;
-	font-size: 14pt;
-	vertical-align: middle;
-	margin-top: -200px;
-	margin-left: 50px;
+	padding: 5px;
+	margin-right: 10px;
+	border-radius: 5px;
+	font-size: 12pt;
 }
 
-.btn-save {
-	padding: 10px 15px;
-	font-size: 14pt;
-	background-color: #191919;
+.service-group {
+	margin-bottom: 100px;
+}
+
+.service-group-title span {
+	background-color: #D1C4E9;
+}
+
+.service-area span {
+	background-color: #B388FF;
+}
+
+.service-package-title {
+	margin-top: 40px;
+}
+
+.service-package-title span {
+	background-color: #EF9A9A;
+}
+
+.service-package-title, .service-price {
+	margin-left: 30px;
+}
+
+.service-price span {
+	background-color: #76FF03;
+}
+
+.service-price input {
+	width: 70px;
+}
+
+.service-name, .service-note {
+	margin-left: 60px;
+}
+
+.service-name span {
+	background-color: #81D4FA;
+}
+
+.service-name input {
+	width: 500px;
+}
+
+.service-note span {
+	background-color: #FFFF00;
+}
+
+.service-note input {
+	width: 300px;
+}
+
+.btn {
+	padding: 5px 0;
+	width: 100px;
+	background-color: #1E88E5;
 	color: white;
-	border: 1px solid #191919;
+	border: 0;
+	font-size: 14pt;
 	cursor: pointer;
-	margin-top: -200px;
-	margin-left: 50px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.btn-save:disabled {
-	background-color: #DDD;
-	color: #777;
-	border: 1px solid #DDD;
-	cursor: default;
+	margin-left: 10px;
+	margin-right: 10px;
 }
