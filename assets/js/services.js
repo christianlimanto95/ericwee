@@ -50,7 +50,7 @@ function setThreshold() {
                 var no = servicePackageCtr;
                 this.style.animationDelay = (0.2 * no) + "s";
                 if (no % 2 == 0) {
-                    this.style.float = "right";
+                    this.className += " service-package-right";
                 }
                 servicePackageCtr++;
             });

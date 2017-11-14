@@ -167,4 +167,20 @@ class Admin_model extends CI_Model
         $this->db->set("modified_date", "NOW()", false);
         $this->db->update("service_package");
     }
+
+    public function insert_package($data) {
+        $insertData = array(
+            "service_group_id" => $data["service_group_id"],
+            "service_package_name" => $data["service_package_name"],
+            "service_package_price" => $data["service_package_price"],
+            "service_package_description" => $data["service_package_description"],
+            "service_package_addon" => $data["service_package_addon"]
+        );
+        $this->db->insert("service_package", $insertData);
+    }
+
+    public function delete_package($service_package_id) {
+        $this->db->where("service_package_id", $service_package_id);
+        $this->db->delete("service_package");
+    }
 }

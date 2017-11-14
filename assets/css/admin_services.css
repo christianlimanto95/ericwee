@@ -59,6 +59,14 @@ input[type="text"], input[type="number"], textarea {
 	margin-top: 12px;
 }
 
+.form-update-package-name {
+	display: inline-block;
+}
+
+.form-delete {
+	display: inline-block;
+}
+
 .service-group {
 	margin-bottom: 100px;
 }
@@ -69,6 +77,10 @@ input[type="text"], input[type="number"], textarea {
 
 .service-area span {
 	background-color: #B388FF;
+}
+
+.btn-insert-package {
+	width: 200px;
 }
 
 .service-package-title {
@@ -119,12 +131,89 @@ input[type="text"], input[type="number"], textarea {
 
 .btn {
 	padding: 5px 0;
-	width: 100px;
-	background-color: #1E88E5;
-	color: white;
 	border: 0;
 	font-size: 14pt;
 	cursor: pointer;
+}
+
+.btn-update {
+	width: 100px;
+	background-color: #1E88E5;
+	color: white;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.btn-insert-package {
+	padding: 10px 0;
+	margin-top: 30px;
+	margin-left: 30px;
+	width: 200px;
+	background-color: #1E88E5;
+	color: white;
+}
+
+.btn-submit-insert-package {
+	margin: 50px auto 0;
+	display: block;
+	padding: 10px 0;
+	width: 200px;
+	background-color: #1E88E5;
+	color: white;
+}
+
+.btn-delete {
+	background-color: #F44336;
+	color: white;
+	padding: 5px 10px;
+	margin-left: 20px;
+}
+
+.btn-insert-group {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background-color: #1E88E5;
+	color: white;
+	padding: 10px 20px;
+}
+
+.dialog {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	background-color: #EEE;
+	box-shadow: 0 0 10px #777;
+	padding: 20px;
+	height: 550px;
+	display: none;
+}
+
+.dialog.show {
+	display: block;
+}
+
+.btn-close-dialog {
+	float: right;
+	font-size: 18pt;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.dialog-title {
+	font-size: 18pt;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.dialog-item {
+	margin-bottom: 10px;
+}
+
+.dialog textarea {
+	width: 400px;
+	height: 100px;
+	margin-left: 5px;
 }
