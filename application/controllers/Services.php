@@ -19,7 +19,7 @@ class Services extends General_controller {
 
 		parent::set_url_referrer("services");
 		$data = array(
-			"title" => "Services",
+			"title" => "Ericweephoto | Services",
 			"opening_words" => $opening_words
 		);
 

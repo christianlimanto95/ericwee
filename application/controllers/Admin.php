@@ -364,7 +364,8 @@ class Admin extends General_controller {
 
 	public function delete_package() {
 		$service_package_id = $this->input->post("service_package_id", true);
-		$this->Admin_model->delete_package($service_package_id);
+		$service_group_id = $this->input->post("service_group_id", true);
+		$this->Admin_model->delete_package($service_package_id, $service_group_id);
 		redirect(base_url("admin/services"));
 	}
 
@@ -384,6 +385,12 @@ class Admin extends General_controller {
 			"service_package_addon" => $service_package_addon
 		);
 		$this->Admin_model->insert_group($insertData);
+		redirect(base_url("admin/services"));
+	}
+
+	public function delete_group() {
+		$service_group_id = $this->input->post("service_group_id", true);
+		$this->Admin_model->delete_group($service_group_id);
 		redirect(base_url("admin/services"));
 	}
 }

@@ -179,9 +179,19 @@ class Admin_model extends CI_Model
         $this->db->insert("service_package", $insertData);
     }
 
-    public function delete_package($service_package_id) {
+    public function delete_package($service_package_id, $service_group_id) {
+        $this->db->trans_start();
         $this->db->where("service_package_id", $service_package_id);
         $this->db->delete("service_package");
+        
+        $this->db->where("service_group_id", $service_group_id);
+        $this->db->select("service_package_id");
+        $num_rows = $this->db->get("service_package")->num_rows();
+        if ($num_rows == 0) {
+            $this->db->where("service_group_id", $service_group_id);
+            $this->db->delete("service_group");
+        }
+        $this->db->trans_complete();
     }
 
     public function insert_group($data) {
@@ -201,6 +211,15 @@ class Admin_model extends CI_Model
             "service_package_addon" => $data["service_package_addon"]
         );
         $this->db->insert("service_package", $insertData);
+        $this->db->trans_complete();
+    }
+
+    public function delete_group($service_group_id) {
+        $this->db->trans_start();
+        $this->db->where("service_group_id", $service_group_id);
+        $this->db->delete("service_package");
+        $this->db->where("service_group_id", $service_group_id);
+        $this->db->delete("service_group");
         $this->db->trans_complete();
     }
 }

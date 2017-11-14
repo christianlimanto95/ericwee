@@ -19,7 +19,7 @@ class Works extends General_controller {
 
 		parent::set_url_referrer("works");
 		$data = array(
-			"title" => "Works",
+			"title" => "Ericweephoto | Works",
 			"opening_words" => $opening_words
 		);
 

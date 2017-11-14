@@ -19,7 +19,7 @@ class Contact extends General_controller {
 
 		parent::set_url_referrer("contact");
 		$data = array(
-			"title" => "Contact",
+			"title" => "Ericweephoto | Contact",
 			"opening_words" => $opening_words
 		);
 		

@@ -14,7 +14,7 @@ class Home extends General_controller {
 	{
 		parent::set_url_referrer("home");
 		$data = array(
-			"title" => "Home",
+			"title" => "Ericweephoto",
 			"opening_words" => ""
 		);
 

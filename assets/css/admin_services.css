@@ -49,6 +49,11 @@ input[type="text"], input[type="number"], textarea {
 	margin-top: 10px;
 }
 
+.service-group-number {
+	font-size: 28pt;
+	font-weight: bold;
+}
+
 .label {
 	display: inline-block;
 	padding: 5px;
@@ -59,7 +64,7 @@ input[type="text"], input[type="number"], textarea {
 	margin-top: 12px;
 }
 
-.form-update-package-name {
+.form-update-group-name, .form-update-package-name {
 	display: inline-block;
 }
 
