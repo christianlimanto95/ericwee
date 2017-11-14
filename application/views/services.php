@@ -66,100 +66,6 @@
             echo "</div>";
         }
     ?>
-
-    <!--
-        <div class='service-group service-group-1'>
-            <div class='service-group-title' data-content-type='text' data-anim='fade-anim'>PREWEDDING</div>
-            <div class='service-area' data-content-type='text' data-anim='fade-anim'>(SURABAYA AREA)</div>
-            <div class='service-package' data-no='1' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>BASIC</div>
-                <div class='service-name' data-content-type='text'>- 1 DAY PHOTO SESSION</div>
-                <div class='service-name' data-content-type='text'>- 40 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- DVD ALL FILES & 40 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- 1 DAY PHOTO SESSION</div>
-                <div class='service-price' data-content-type='text'>IDR 8</div>
-                <div class='service-note' data-content-type='text'>- ADD ONE DAY: IDR 2</div>
-                <div class='service-note' data-content-type='text'>- ADD MAKE UP: IDR 1.5</div>
-                <div class='service-note' data-content-type='text'>- ADD PHOTOS: IDR 0.1/PHOTO</div>
-            </div>
-            <div class='service-package' data-no='2' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>GOLD</div>
-                <div class='service-name' data-content-type='text'>- MAKEUP & RETOUCH</div>
-                <div class='service-name' data-content-type='text'>- 1 ENLARGED CANVAS + CUSTOM FRAME 50X75 CM</div>
-                <div class='service-name' data-content-type='text'>- 50 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- 1 PHOTO ALBUM (22 PAGES) 20X30 CM</div>
-                <div class='service-name' data-content-type='text'>- DELUXE ALBUM BOX</div>
-                <div class='service-name' data-content-type='text'>- DVD ALL FILES & 50 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- PHOTO LOOPING</div>
-                <div class='service-price' data-content-type='text'>IDR 12</div>
-                <div class='service-note' data-content-type='text'>- ADD ONE DAY: IDR 2</div>
-            </div>
-        </div>
-        <div class='service-group service-group-2'>
-            <div class='service-group-title' data-content-type='text' data-anim='fade-anim'>PRESWEET</div>
-            <div class='service-area' data-content-type='text' data-anim='fade-anim'>(SURABAYA AREA)</div>
-            <div class='service-package' data-no='3' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>BASIC</div>
-                <div class='service-name' data-content-type='text'>- DVD ALL FILES & 20 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- PHOTO LOOPING</div>
-                <div class='service-price' data-content-type='text'>IDR 7</div>
-                <div class='service-note' data-content-type='text'>- ADD ONE DAY: IDR 2</div>
-                <div class='service-note' data-content-type='text'>- ADD MAKE UP: IDR 1.5</div>
-                <div class='service-note' data-content-type='text'>- ADD PHOTOS: IDR 1.5/PHOTO</div>
-            </div>
-            <div class='service-package' data-no='4' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>GOLD</div>
-                <div class='service-name' data-content-type='text'>- 1 ENLARGED CANVAS + CUSTOM FRAME 50X75 CM</div>
-                <div class='service-name' data-content-type='text'>- MAKEUP & RETOUCH</div>
-                <div class='service-name' data-content-type='text'>- 30 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- 1 PHOTOBOOK (22 PAGES) 20X30 CM</div>
-                <div class='service-name' data-content-type='text'>- DVD ALL FILES & 30 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- PHOTO LOOPING</div>
-                <div class='service-price' data-content-type='text'>IDR 10</div>
-                <div class='service-note' data-content-type='text'>- ADD ONE DAY: IDR 2</div>
-            </div>
-        </div>
-        <div class='service-group service-group-3'>
-            <div class='service-group-title' data-content-type='text' data-anim='fade-anim'>WEDDING JOURNALISM</div>
-            <div class='service-area' data-content-type='text' data-anim='fade-anim'>(SURABAYA AREA)</div>
-            <div class='service-package' data-no='5' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>PHOTOGRAPHY PACK</div>
-                <div class='service-name' data-content-type='text'>- 50 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- 1 ALBUM 20X30 CM (40 PAGES)</div>
-                <div class='service-name' data-content-type='text'>- DVD ALL FILES & 50 EDITED PHOTOS</div>
-                <div class='service-name' data-content-type='text'>- DELUXE ALBUM BOX</div>
-                <div class='service-price' data-content-type='text'>IDR 13</div>
-                <div class='service-note' data-content-type='text'>- ADD ONE DAY: IDR 3/DAY</div>
-                <div class='service-note' data-content-type='text'>- ADD PHOTOGRAPHER: IDR 2</div>
-            </div>
-            <div class='service-package' data-no='6' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>VIDEOGRAPHY</div>
-                <div class='service-name' data-content-type='text'>- 2 VIDEOGRAPHERS</div>
-                <div class='service-name' data-content-type='text'>- SAME-DAY EDIT</div>
-                <div class='service-name' data-content-type='text'>- 3 MINUTES HIGHLIGHT VIDEO</div>
-                <div class='service-name' data-content-type='text'>- 20 MINUTES WEDDING VIDEO</div>
-                <div class='service-name' data-content-type='text'>- 30 SEC TEASER VIDEO</div>
-                <div class='service-price' data-content-type='text'>IDR 14</div>
-            </div>
-            <div class='service-package-horizontal-separator'></div>
-            <div class='service-package' data-no='7' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>ENGAGEMENT JOURNALISM</div>
-                <div class='service-name' data-content-type='text'>- 1 PHOTOGRAPHER</div>
-                <div class='service-name' data-content-type='text'>- 1 ALBUM 20X30 CM (22 PAGES)</div>
-                <div class='service-name' data-content-type='text'>- DVD SOFT COPY ALL FILES</div>
-                <div class='service-name' data-content-type='text'>- DELUXE ALBUM BOX</div>
-                <div class='service-price' data-content-type='text'>IDR 5</div>
-            </div>
-            <div class='service-package' data-no='8' data-anim='fade-anim'>
-                <div class='service-package-title' data-content-type='text'>MATERNITY</div>
-                <div class='service-name' data-content-type='text'>- MAKEUP & RETOUCH</div>
-                <div class='service-name' data-content-type='text'>- 1 ALBUM 20X30 CM (22 PAGES)</div>
-                <div class='service-name' data-content-type='text'>- DVD SOFT COPY ALL FILES</div>
-                <div class='service-name' data-content-type='text'>- DELUXE ALBUM BOX</div>
-                <div class='service-price' data-content-type='text'>IDR 5</div>
-            </div>
-        </div>
-     -->
     </div>
     <div class="section section-3">
         <div class="section-3-center">
@@ -173,6 +79,3 @@
         </div>
     </div>
 </div>
-<script>
-    var serviceGroupLength = 3;
-</script>

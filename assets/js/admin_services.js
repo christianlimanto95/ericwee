@@ -11,6 +11,10 @@ $(function() {
 		$(".dialog-insert-package").addClass("show");
 	});
 
+	$(".btn-insert-group").on("click", function() {
+		$(".dialog-insert-group").addClass("show");
+	});
+
 	$(".btn-close-dialog").on("click", function() {
 		$(".dialog").removeClass("show");
 	});
@@ -32,6 +36,19 @@ $(function() {
 			alert("Nama Paket harus diisi");
 			e.preventDefault();
 		} else if ($(".dialog-insert-package input[name='service_package_price']").val().trim() == "") {
+			alert("Harga Paket harus diisi");
+			e.preventDefault();
+		}
+	});
+
+	$(".dialog-insert-group").on("submit", function(e) {
+		if ($(".dialog-insert-group input[name='service_group_name']").val().trim() == "") {
+			alert("Nama Group harus diisi");
+			e.preventDefault();
+		} else if ($(".dialog-insert-group input[name='service_package_name']").val().trim() == "") {
+			alert("Nama Paket harus diisi");
+			e.preventDefault();
+		} else if ($(".dialog-insert-group input[name='service_package_price']").val().trim() == "") {
 			alert("Harga Paket harus diisi");
 			e.preventDefault();
 		}

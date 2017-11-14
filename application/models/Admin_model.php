@@ -183,4 +183,24 @@ class Admin_model extends CI_Model
         $this->db->where("service_package_id", $service_package_id);
         $this->db->delete("service_package");
     }
+
+    public function insert_group($data) {
+        $this->db->trans_start();
+        $insertData = array(
+            "service_group_name" => $data["service_group_name"],
+            "service_group_area" => $data["service_group_area"]
+        );
+        $this->db->insert("service_group", $insertData);
+
+        $service_group_id = $this->db->insert_id();
+        $insertData = array(
+            "service_group_id" => $service_group_id,
+            "service_package_name" => $data["service_package_name"],
+            "service_package_price" => $data["service_package_price"],
+            "service_package_description" => $data["service_package_description"],
+            "service_package_addon" => $data["service_package_addon"]
+        );
+        $this->db->insert("service_package", $insertData);
+        $this->db->trans_complete();
+    }
 }

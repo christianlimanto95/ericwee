@@ -39,6 +39,7 @@ function setThreshold() {
     section3Threshold = section2.offset().top + container.scrollTop() + parseInt(section2.css("height")) - vh100 / 2;
 
     var servicePackageCtr = 1;
+    var serviceGroupLength = $(".service-group").length;
     for (var i = 1; i <= serviceGroupLength; i++) {
         servicePackageCtr = 1;
         var serviceGroupItem = $(".service-group-" + i);

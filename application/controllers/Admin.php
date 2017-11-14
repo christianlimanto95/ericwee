@@ -367,4 +367,23 @@ class Admin extends General_controller {
 		$this->Admin_model->delete_package($service_package_id);
 		redirect(base_url("admin/services"));
 	}
+
+	public function insert_group() {
+		$service_group_name = $this->input->post("service_group_name", true);
+		$service_group_area = $this->input->post("service_group_area", true);
+		$service_package_name = $this->input->post("service_package_name", true);
+		$service_package_price = $this->input->post("service_package_price", true);
+		$service_package_description = $this->input->post("service_package_description", true);
+		$service_package_addon = $this->input->post("service_package_addon", true);
+		$insertData = array(
+			"service_group_name" => $service_group_name,
+			"service_group_area" => $service_group_area,
+			"service_package_name" => $service_package_name,
+			"service_package_price" => $service_package_price,
+			"service_package_description" => $service_package_description,
+			"service_package_addon" => $service_package_addon
+		);
+		$this->Admin_model->insert_group($insertData);
+		redirect(base_url("admin/services"));
+	}
 }

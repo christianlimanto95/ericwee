@@ -53,8 +53,34 @@
     ?>
 </div>
 <button class="btn btn-insert-group">+ Tambah Group</button>
-<form method="post" action="<?php echo base_url("admin/insert_group"); ?>">
-    
+<form class="dialog dialog-insert-group" method="post" action="<?php echo base_url("admin/insert_group"); ?>">
+    <div class="btn-close-dialog">X</div>
+    <div class="dialog-title">Tambah Group</div>
+    <div class="dialog-item">
+        <span class="label">Nama Group</span>
+        <input type="text" class="dialog-input" name="service_group_name" />
+    </div>
+    <div class="dialog-item">
+        <span class="label">Keterangan</span>
+        <input type="text" class="dialog-input" name="service_group_area" />
+    </div>
+    <div class="dialog-item">
+        <span class="label">Nama Paket</span>
+        <input type="text" class="dialog-input" name="service_package_name" />
+    </div>
+    <div class="dialog-item">
+        <span class="label">Deskripsi</span>
+        <textarea class="dialog-input" name="service_package_description"></textarea>
+    </div>
+    <div class="dialog-item">
+        <span class="label">Harga Paket : IDR </span>
+        <input type="number" class="dialog-input" name="service_package_price" />
+    </div>
+    <div class="dialog-item">
+        <span class="label">Tambahan</span>
+        <textarea class="dialog-input" name="service_package_addon"></textarea>
+    </div>
+    <button class="btn btn-submit-insert-group">Tambah Group</button>
 </form>
 <form class="dialog dialog-insert-package" method="post" action="<?php echo base_url("admin/insert_package"); ?>">
     <input type="hidden" name="service_group_id" value="" />
