@@ -14,7 +14,7 @@ class Works extends General_controller {
 	{
 		$opening_words = "";
 		if (parent::get_url_referrer() != null) {
-			$opening_words = "WE ARE PROUD OF THESE";
+			$opening_words = "we are proud of these";
 		}
 
 		parent::set_url_referrer("works");

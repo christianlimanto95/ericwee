@@ -14,7 +14,7 @@ class Services extends General_controller {
 	{
 		$opening_words = "";
 		if (parent::get_url_referrer() != null) {
-			$opening_words = "Services that makes you satisfied";
+			$opening_words = "services that makes you satisfied";
 		}
 
 		parent::set_url_referrer("services");

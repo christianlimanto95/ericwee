@@ -14,7 +14,7 @@ class Contact extends General_controller {
 	{
 		$opening_words = "";
 		if (parent::get_url_referrer() != null) {
-			$opening_words = "LET'S TALK";
+			$opening_words = "let's talk";
 		}
 
 		parent::set_url_referrer("contact");
