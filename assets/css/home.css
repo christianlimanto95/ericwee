@@ -221,9 +221,9 @@
     }
     
     .selected-work {
-        width: 60vw;
-        height: 60vw;
-        margin: 0 auto 10vw;
+        width: 80vw;
+        height: 80vw;
+        margin: 0 auto 5vw;
     }
 
     .selected-works-arrow-left, .selected-works-arrow-right, .selected-works-left, .selected-works-right {

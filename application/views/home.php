@@ -24,7 +24,7 @@ function frontImageOnload(element) {
     }
 }
 
-var imageSize = (isMobile) ? (isTablet) ? (59 * vw / 100 - 10) + "px" : (59 * vw / 100 - 10) + "px" : "380px";
+var imageSize = (isMobile) ? (isTablet) ? (59 * vw / 100 - 10) + "px" : (79 * vw / 100 - 10) + "px" : "380px";
 function imgOnload(element) {
     if (element.naturalWidth > element.naturalHeight) {
         element.setAttribute("width", imageSize);
