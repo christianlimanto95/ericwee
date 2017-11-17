@@ -156,6 +156,10 @@ $(function() {
         $(".section-2 img").each(function() {
             imgOnload(this);
         });
+        $(".selected-work").removeAttr("style");
+        for (var i = 1; i <= 5; i++) {
+            $(".selected-work-" + i).attr("data-no", i);
+        }
     });
 });
 
