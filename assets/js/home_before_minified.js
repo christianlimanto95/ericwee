@@ -17,6 +17,17 @@ $(function() {
         $(".section-1").addClass("show");
     });
 
+    $(".image-wrapper").on("click", function() {
+        var src = $(this).prev().attr("src");
+        $(".preview-image").attr("src", src);
+        $(".preview-container").addClass("show");
+    });
+
+    $(".preview-container").on("click", function() {
+        $(this).removeClass("show");
+        $(".preview-image").attr("src", "");
+    });
+
     container.on("scroll", section2Show);
     container.on("scroll", checkSection2ScrollDown);
 

@@ -35,6 +35,10 @@ function imgOnload(element) {
     }
 }
 </script>
+<div class="preview-container">
+    <img class="preview-image" />
+    <div class="preview-image-wrapper"></div>
+</div>
 <div class="content">
     <div class="section section-1">
         <div class="section-1-image-container">
@@ -70,6 +74,7 @@ function imgOnload(element) {
                 <a href="tel:+6285230515511" class="social-media-item" data-content-type="text"><div class="social-media-item-icon" style="background-image: url('assets/icons/whatsapp.png?v=1');"></div>0852 3051 5511</a>
             </div>
             <div class="section-3-contact-me" data-content-type="text">CONTACT US</div>
+            <div class="powered-by">Powered by <a class="dnp-project" href="https://dnp-project.com">dnp PROJECT</a></div>
         </div>
     </div>
 </div>

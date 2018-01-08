@@ -13,6 +13,7 @@ var timeout = setTimeout(function() {
         }, 1000, function() {
             $(".loading-container").addClass("hidden");
             $("body").trigger("allLoaded");
+            container[0].focus();
         });
     }
 }, 1000);
@@ -175,6 +176,7 @@ $(window).on("load", function() {
         }, 1000, function() {
             $(".loading-container").addClass("hidden");
             $("body").trigger("allLoaded");
+            container[0].focus();
         });
     }
 });

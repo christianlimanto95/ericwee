@@ -1,0 +1,323 @@
+.content {
+    background-color: #F9F9F9;
+}
+
+.section-1-center {
+    position: absolute;
+}
+
+.section-1-title {
+    text-align: center;
+    opacity: 0;
+}
+
+.section-1-services-container {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.section-1.show .section-1-services-container {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.section-1-description {
+    text-align: center;
+    font-family: copperplate-light;
+}
+
+.section-1-down-icon {
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    -webkit-animation-name: section-1-down-icon-anim;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: section-1-down-icon-anim;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-name: section-1-down-icon-anim;
+    -ms-animation-duration: 2s;
+    -ms-animation-fill-mode: both;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-name: section-1-down-icon-anim;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: both;
+    -o-animation-iteration-count: infinite;
+    animation-name: section-1-down-icon-anim;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes section-1-down-icon-anim {
+    50% {
+        -webkit-transform: translateY(5px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@keyframes section-1-down-icon-anim {
+    50% {
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    100% {
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+.section-2 {
+    background-color: #F9F9F9;
+}
+
+.service-group {
+    overflow: auto;
+}
+
+.service-group-title {
+    text-align: center;
+    opacity: 0;
+}
+
+.service-area {
+    text-align: center;
+    opacity: 0;
+}
+
+.service-package {
+    opacity: 0;
+}
+
+.service-name, .service-note {
+    font-family: copperplate-light;
+}
+
+.service-package-horizontal-separator {
+    width: 100%;
+    height: 1px;
+    clear: both;
+}
+
+.service-group.show [data-anim="fade-anim"] {
+    -webkit-animation-name: fade-out-anim;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: fade-out-anim;
+    -moz-animation-duration: 0.6s;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-name: fade-out-anim;
+    -ms-animation-duration: 0.6s;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-name: fade-out-anim;
+    -o-animation-duration: 0.6s;
+    -o-animation-fill-mode: forwards;
+    animation-name: fade-out-anim;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.service-group.show .service-package {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.powered-by {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+}
+
+.dnp-project {
+    color: white;
+}
+
+@media all and (max-width: 1024px) {
+    .section-1-center {
+        display: block;
+        top: 80vw;
+        width: 100vw;
+        text-align: center;
+
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .section-1-title {
+        font-size: 4vw;
+    }
+
+    .section-1-description {
+        font-size: 4vw;
+        margin-top: 5vw;
+    }
+
+    .section-1-down-icon {
+        width: 7vw;
+        height: 7vw;
+        margin: 1vw auto 0;
+    }
+
+    .section-2 {
+        height: auto;
+        padding-top: 15vw;
+        padding-bottom: 0;
+    }
+
+    .service-group {
+        width: 100vw;
+        padding: 5vw;
+        margin: 0 auto 25vw;
+    }
+
+    .service-group-title {
+        font-size: 5.5vw;
+    }
+
+    .service-area {
+        font-size: 3.5vw;
+        margin-top: 2vw;
+    }
+
+    .service-package {
+        margin-top: 15vw;
+    }
+
+    .service-package-title {
+        font-size: 4vw;
+        margin-bottom: 5vw;
+    }
+
+    .service-name, .service-note {
+        font-size: 3vw;
+        margin-bottom: 1vw;
+        line-height: 6vw;
+    }
+
+    .service-price {
+        margin: 3vw 0;
+        font-size: 3.5vw;
+    }
+
+    .powered-by {
+        font-size: 3vw;
+        bottom: -40vw;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .section-1-center {
+        top: 65vw;
+    }
+    
+    .section-1-title {
+        font-size: 4vw;
+        width: 60vw;
+        margin: 0 auto;
+    }
+
+    .section-1-description {
+        font-size: 4vw;
+        margin-top: 5vw;
+    }
+
+    .powered-by {
+        font-size: 2.5vw;
+        bottom: -30vw;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .section-1-center {
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .section-1-description {
+        margin-top: 20px;
+    }
+
+    .section-1-down-icon {
+        width: 30px;
+        height: 30px;
+        margin: 5px auto 0;
+    }
+
+    .section-2 {
+        padding: 50px 0;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .service-group {
+        width: 850px;
+        padding: 20px;
+        margin: 0 auto 100px;
+    }
+
+    .service-group-title {
+        font-size: 16pt;
+    }
+
+    .service-area {
+        font-size: 10pt;
+        margin-top: 5px;
+    }
+
+    .service-package {
+        margin-top: 50px;
+        float: left;
+        min-width: 250px;
+    }
+
+    .service-package-right {
+        float: right;
+    }
+
+    .service-package-title {
+        font-size: 12pt;
+        margin-bottom: 20px;
+    }
+
+    .service-name, .service-note {
+        font-size: 8pt;
+        margin-bottom: 6px;
+    }
+
+    .service-price {
+        margin: 10px 0;
+        font-size: 10pt;
+    }
+
+    .powered-by {
+        bottom: -180px;
+        font-size: 8pt;
+    }
+}
