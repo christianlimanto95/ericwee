@@ -146,6 +146,7 @@
 }
 
 .selected-works-item-container, .archived-works-item-container {
+    cursor: pointer;
     opacity: 0;
     position: relative;
     overflow: hidden;
@@ -157,18 +158,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.selected-works-item, .archived-works-item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px #555;
 }
 
 .archived-works-title {
@@ -189,6 +178,17 @@
 
 .dnp-project {
     color: white;
+}
+
+@media all and (max-width: 767px) {
+    .selected-works-item-container, .archived-works-item-container {
+        display: block;
+        margin: 0 5vw 5vw;
+    }
+    
+    .selected-works-item, .archived-works-item {
+        width: 90vw;
+    }
 }
 
 @media all and (max-width: 1024px) {
@@ -235,13 +235,6 @@
         width: 100vw;
     }
 
-    .selected-works-item-container, .archived-works-item-container {
-        display: block;
-        width: 80vw;
-        height: 80vw;
-        margin: 0 auto 5vw;
-    }
-
     .archived-works-title {
         font-size: 4vw;
         margin: 20vw 0 10vw;
@@ -282,6 +275,18 @@
 
     .selected-works-item-container:nth-child(3n) {
         margin-right: 0;
+    }
+
+    .selected-works-item, .archived-works-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px #555;
     }
 
     .archived-works-container {
@@ -346,6 +351,18 @@
 
     .selected-works-item-container:nth-child(3n) {
         margin-right: 0;
+    }
+
+    .selected-works-item, .archived-works-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px #555;
     }
 
     .archived-works-title {

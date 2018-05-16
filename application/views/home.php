@@ -24,14 +24,16 @@ function frontImageOnload(element) {
     }
 }
 
-var imageSize = (isMobile) ? (isTablet) ? (59 * vw / 100 - 10) + "px" : (79 * vw / 100 - 10) + "px" : "380px";
+var imageSize = (isMobile) ? (isTablet) ? (59 * vw / 100 - 10) + "px" : (99 * vw / 100 - 10) + "px" : "380px";
 function imgOnload(element) {
-    if (element.naturalWidth > element.naturalHeight) {
-        element.setAttribute("width", imageSize);
-        element.removeAttribute("height");
-    } else {
-        element.setAttribute("height", imageSize);
-        element.removeAttribute("width");
+    if (isTablet || !isMobile) {
+        if (element.naturalWidth > element.naturalHeight) {
+            element.setAttribute("width", imageSize);
+            element.removeAttribute("height");
+        } else {
+            element.setAttribute("height", imageSize);
+            element.removeAttribute("width");
+        }
     }
 }
 </script>
@@ -56,7 +58,7 @@ function imgOnload(element) {
         <div class="selected-works-container" data-anim="fade-anim">
             <?php
                 for ($i = 0; $i < sizeof($front_works); $i++) {
-                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "'><div class='selected-work-image-container'><img class='selected-work-image' src='" . base_url("assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date)) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div></div>";
+                    echo "<div class='selected-work selected-work-" . ($i + 1) . "' data-no='" . ($i + 1) . "'><div class='selected-work-image-container image-container'><img class='selected-work-image' src='" . base_url("assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date)) . "' data-src='" . base_url("assets/images/front_works/" . $front_works[$i]->front_works_id . "." . $front_works[$i]->front_works_extension . "?" . strtotime($front_works[$i]->modified_date)) . "' onload='imgOnload(this);' /><div class='image-wrapper'></div></div></div>";
                 }
             ?>
             <div class="selected-works-left"></div>

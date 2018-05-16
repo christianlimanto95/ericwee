@@ -17,8 +17,8 @@ $(function() {
         $(".section-1").addClass("show");
     });
 
-    $(".image-wrapper").on("click", function() {
-        var src = $(this).prev().attr("src");
+    $(".selected-work-image-container").on("click", function() {
+        var src = $(this).find("img").attr("src");
         $(".preview-image").attr("src", src);
         $(".preview-container").addClass("show");
     });

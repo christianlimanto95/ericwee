@@ -23,8 +23,8 @@ $(function() {
         });
     });
 
-    $(".image-wrapper").on("click", function() {
-        var src = $(this).prev().attr("src");
+    $(".selected-works-item-container, .archived-works-item-container").on("click", function() {
+        var src = $(this).find("img").attr("src");
         $(".preview-image").attr("src", src);
         $(".preview-container").addClass("show");
     });
